@@ -1,0 +1,252 @@
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.dll.config
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessLogicalLayer.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessObject.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.ADO.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.IPagare.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessLogicalLayer.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessObject.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.ADO.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.xml
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Configuration.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.IPagare.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.xml
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Interception.pdb
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\obj\Debug\GrupoA.Sincronizacao.dll
+C:\Documents and Settings\bittencourtlf\Meus documentos\Projetos\Artmed\NovoPortal\component\GrupoA.Sincronizacao\obj\Debug\GrupoA.Sincronizacao.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.dll.config
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessLogicalLayer.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessObject.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.ADO.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.IPagare.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessLogicalLayer.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessObject.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.ADO.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.IPagare.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Configuration.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.xml
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.xml
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Interception.pdb
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\obj\Debug\GrupoA.Sincronizacao.dll
+C:\Inetpub\wwwroot\artmed\component\GrupoA.Sincronizacao\obj\Debug\GrupoA.Sincronizacao.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.dll.config
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessLogicalLayer.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessObject.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.ADO.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.IPagare.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessLogicalLayer.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessObject.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.ADO.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Configuration.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.IPagare.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.xml
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.xml
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Interception.pdb
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\obj\Debug\ResolveAssemblyReference.cache
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\obj\Debug\GrupoA.Sincronizacao.dll
+C:\Projetos\GrupoA\trunk\component\GrupoA.Sincronizacao\obj\Debug\GrupoA.Sincronizacao.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.dll.config
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessLogicalLayer.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessObject.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.SFTP.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoaA.Log.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.ADO.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.GlobalResources.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.IPagare.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Org.Mentalis.Security.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\DiffieHellman.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessLogicalLayer.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessObject.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.SFTP.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoaA.Log.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.ADO.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.GlobalResources.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Configuration.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.xml
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.IPagare.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.xml
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Interception.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\obj\Debug\ResolveAssemblyReference.cache
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\obj\Debug\GrupoA.Sincronizacao.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.Sincronizacao\obj\Debug\GrupoA.Sincronizacao.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.dll.config
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessLogicalLayer.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessObject.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.SFTP.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoaA.Log.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.ADO.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.GlobalResources.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.IPagare.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\DiffieHellman.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Org.Mentalis.Security.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessLogicalLayer.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessObject.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.SFTP.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoaA.Log.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.ADO.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.GlobalResources.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.IPagare.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Configuration.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.xml
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.xml
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Interception.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\obj\Debug\GrupoA.Sincronizacao.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.Sincronizacao\obj\Debug\GrupoA.Sincronizacao.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.dll.config
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.Sincronizacao.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessLogicalLayer.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessObject.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.SFTP.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoaA.Log.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.ADO.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.IPagare.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.GlobalResources.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\DiffieHellman.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Org.Mentalis.Security.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Interception.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessLogicalLayer.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.BusinessObject.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.SFTP.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoaA.Log.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.DataAccessLayer.ADO.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.PaymentGateway.IPagare.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\GrupoA.GlobalResources.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Configuration.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.xml
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Validation.xml
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\bin\Debug\Microsoft.Practices.Unity.Interception.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\obj\Debug\GrupoA.Sincronizacao.csprojResolveAssemblyReference.cache
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\obj\Debug\GrupoA.Sincronizacao.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.Sincronizacao\obj\Debug\GrupoA.Sincronizacao.pdb

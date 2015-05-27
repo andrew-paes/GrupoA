@@ -1,0 +1,5 @@
+C:\Inetpub\wwwroot\Artmed\trunk\component\GrupoA.PaymentGateway\bin\Release\GrupoA.PaymentGateway.dll
+C:\Inetpub\wwwroot\Artmed\trunk\component\GrupoA.PaymentGateway\bin\Release\GrupoA.PaymentGateway.pdb
+C:\Inetpub\wwwroot\Artmed\trunk\component\GrupoA.PaymentGateway\obj\Release\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\Artmed\trunk\component\GrupoA.PaymentGateway\obj\Release\GrupoA.PaymentGateway.dll
+C:\Inetpub\wwwroot\Artmed\trunk\component\GrupoA.PaymentGateway\obj\Release\GrupoA.PaymentGateway.pdb

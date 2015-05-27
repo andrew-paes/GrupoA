@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DE7B5C56-956E-49AB-AEE0-8BA677C9DF7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrupoA.BusinessObject</RootNamespace>
+    <AssemblyName>GrupoA.BusinessObject</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/GrupoA.BusinessObject/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\library\Microsoft Enterprise Library 5.0\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\library\Microsoft Enterprise Library 5.0\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\library\Microsoft Enterprise Library 5.0\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arquivo.cs" />
+    <Compile Include="Autor.cs" />
+    <Compile Include="AvisoDisponibilidade.cs" />
+    <Compile Include="AvisoDisponibilidadeStatus.cs" />
+    <Compile Include="Banner.cs" />
+    <Compile Include="BannerArea.cs" />
+    <Compile Include="Capitulo.cs" />
+    <Compile Include="CapituloEletronico.cs" />
+    <Compile Include="CapituloImpresso.cs" />
+    <Compile Include="Carrinho.cs" />
+    <Compile Include="CarrinhoItem.cs" />
+    <Compile Include="CarrinhoItemCompraConjunta.cs" />
+    <Compile Include="CarrinhoItemCompraConjuntaPartial.cs" />
+    <Compile Include="CarrinhoItemPartial.cs" />
+    <Compile Include="CarrinhoPartial.cs" />
+    <Compile Include="CarrinhoStatus.cs" />
+    <Compile Include="Categoria.cs" />
+    <Compile Include="CategoriaNoticia.cs" />
+    <Compile Include="Clipping.cs" />
+    <Compile Include="ClippingImagem.cs" />
+    <Compile Include="ComentarioFormato.cs" />
+    <Compile Include="CompraConjunta.cs" />
+    <Compile Include="CompraConjuntaDesconto.cs" />
+    <Compile Include="CompraConjuntaPagina.cs" />
+    <Compile Include="CompraConjuntaStatus.cs" />
+    <Compile Include="Configuracao.cs" />
+    <Compile Include="ConfiguracaoValor.cs" />
+    <Compile Include="ContatoAssunto.cs" />
+    <Compile Include="ContatoFaleConosco.cs" />
+    <Compile Include="ContatoIndique.cs" />
+    <Compile Include="ContatoResponsavel.cs" />
+    <Compile Include="ContatoSetor.cs" />
+    <Compile Include="Conteudo.cs" />
+    <Compile Include="ConteudoAvaliacao.cs" />
+    <Compile Include="ConteudoHits.cs" />
+    <Compile Include="ConteudoImprensa.cs" />
+    <Compile Include="ConteudoTipo.cs" />
+    <Compile Include="Blog.cs" />
+    <Compile Include="AvisoDisponibilidadePartial.cs" />
+    <Compile Include="Enumerator\AreaDeRevista.cs" />
+    <Compile Include="Enumerator\TipoSelo.cs" />
+    <Compile Include="Link.cs" />
+    <Compile Include="LogPaymentGateway.cs" />
+    <Compile Include="MidiaCategoria.cs" />
+    <Compile Include="MidiaRevista.cs" />
+    <Compile Include="NewsletterDestinatario.cs" />
+    <Compile Include="ProdutoFormato.cs" />
+    <Compile Include="PromocaoPartial.cs" />
+    <Compile Include="Oferta.cs" />
+    <Compile Include="OfertaCategoria.cs" />
+    <Compile Include="OfertaProduto.cs" />
+    <Compile Include="OfertaTipo.cs" />
+    <Compile Include="PromocaoCupom.cs" />
+    <Compile Include="PromocaoCupomPedido.cs" />
+    <Compile Include="RetornoCarrinho.cs" />
+    <Compile Include="RevistaArtigoControversia.cs" />
+    <Compile Include="RevistaPacote.cs" />
+    <Compile Include="RevistaPacoteBrindeRegra.cs" />
+    <Compile Include="RevistaPagina.cs" />
+    <Compile Include="TituloInformacaoComentarioEspecialistaCategoria.cs" />
+    <Compile Include="UsuarioPartial.cs" />
+    <Compile Include="ProdutoPartial.cs" />
+    <Compile Include="Curso.cs" />
+    <Compile Include="CursoNivel.cs" />
+    <Compile Include="CursoPanamericano.cs" />
+    <Compile Include="Dados.cs" />
+    <Compile Include="DestaqueTituloImpresso.cs" />
+    <Compile Include="Disciplina.cs" />
+    <Compile Include="Endereco.cs" />
+    <Compile Include="EnderecoTipo.cs" />
+    <Compile Include="Enquete.cs" />
+    <Compile Include="EnqueteOpcao.cs" />
+    <Compile Include="EnquetePagina.cs" />
+    <Compile Include="Enumerator\AreaDeConhecimento.cs" />
+    <Compile Include="Enumerator\AreasDoBanner.cs" />
+    <Compile Include="Enumerator\StatusDeAvisoDisponibilidade.cs" />
+    <Compile Include="Enumerator\RetornoCancelarCompraConjunta.cs" />
+    <Compile Include="Enumerator\RetornoPagamento.cs" />
+    <Compile Include="Enumerator\LogCategoria.cs" />
+    <Compile Include="Enumerator\LogEvento.cs" />
+    <Compile Include="Enumerator\MeiosDePagamento.cs" />
+    <Compile Include="Enumerator\StatusSolicitacaoDeTitulo.cs" />
+    <Compile Include="Enumerator\TipoDeProduto.cs" />
+    <Compile Include="Enumerator\StatusDoCarrinho.cs" />
+    <Compile Include="Enumerator\StatusDoPedido.cs" />
+    <Compile Include="Enumerator\TipoDeImagemDoTitulo.cs" />
+    <Compile Include="Enumerator\TipoDeImagemDoProduto.cs" />
+    <Compile Include="Enumerator\Perfis.cs" />
+    <Compile Include="Enumerator\TipoDePromocao.cs" />
+    <Compile Include="Enumerator\TipoDeTelefone.cs" />
+    <Compile Include="Enumerator\TipoDeConteudo.cs" />
+    <Compile Include="Evento.cs" />
+    <Compile Include="EventoAlerta.cs" />
+    <Compile Include="EventoImagem.cs" />
+    <Compile Include="Fabricante.cs" />
+    <Compile Include="FaqCategoria.cs" />
+    <Compile Include="FaqItem.cs" />
+    <Compile Include="Favorito.cs" />
+    <Compile Include="GraduacaoProfessor.cs" />
+    <Compile Include="Instituicao.cs" />
+    <Compile Include="LogCategoria.cs" />
+    <Compile Include="LogDados.cs" />
+    <Compile Include="LogEvento.cs" />
+    <Compile Include="LogOcorrencia.cs" />
+    <Compile Include="MeioPagamento.cs" />
+    <Compile Include="MeioPagamentoFaixa.cs" />
+    <Compile Include="Midia.cs" />
+    <Compile Include="MidiaTipo.cs" />
+    <Compile Include="Municipio.cs" />
+    <Compile Include="Noticia.cs" />
+    <Compile Include="NoticiaImagem.cs" />
+    <Compile Include="NotificacaoDisponibilidade.cs" />
+    <Compile Include="NotificacaoStatus.cs" />
+    <Compile Include="Pagamento.cs" />
+    <Compile Include="PaginaPromocional.cs" />
+    <Compile Include="Pedido.cs" />
+    <Compile Include="PedidoCompraConjunta.cs" />
+    <Compile Include="PedidoControle.cs" />
+    <Compile Include="PedidoEndereco.cs" />
+    <Compile Include="PedidoFreteGrupo.cs" />
+    <Compile Include="PedidoFretePreco.cs" />
+    <Compile Include="PedidoFreteTipo.cs" />
+    <Compile Include="PedidoItem.cs" />
+    <Compile Include="PedidoItemCompraConjunta.cs" />
+    <Compile Include="PedidoItemPromocao.cs" />
+    <Compile Include="PedidoSituacao.cs" />
+    <Compile Include="PedidoStatus.cs" />
+    <Compile Include="Perfil.cs" />
+    <Compile Include="Posts.cs" />
+    <Compile Include="Produto.cs" />
+    <Compile Include="ProdutoImagem.cs" />
+    <Compile Include="ProdutoImagemTipo.cs" />
+    <Compile Include="ProdutoTipo.cs" />
+    <Compile Include="Professor.cs" />
+    <Compile Include="ProfessorComprovanteDocencia.cs" />
+    <Compile Include="ProfessorCurso.cs" />
+    <Compile Include="ProfessorDisciplina.cs" />
+    <Compile Include="ProfessorInstituicao.cs" />
+    <Compile Include="ProfissionalOcupacao.cs" />
+    <Compile Include="ProgramaAtualizacaoChamada.cs" />
+    <Compile Include="ProgramaAtualizacaoPagina.cs" />
+    <Compile Include="Promocao.cs" />
+    <Compile Include="PromocaoFaixa.cs" />
+    <Compile Include="PromocaoTipo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regiao.cs" />
+    <Compile Include="Revista.cs" />
+    <Compile Include="RevistaArtigo.cs" />
+    <Compile Include="RevistaArtigoPermissao.cs" />
+    <Compile Include="RevistaAssinatura.cs" />
+    <Compile Include="RevistaEdicao.cs" />
+    <Compile Include="RevistaGrupoAEdicao.cs" />
+    <Compile Include="RevistaSecao.cs" />
+    <Compile Include="Selo.cs" />
+    <Compile Include="Telefone.cs" />
+    <Compile Include="TelefoneTipo.cs" />
+    <Compile Include="Titulo.cs" />
+    <Compile Include="TituloAutor.cs" />
+    <Compile Include="TituloAvaliacao.cs" />
+    <Compile Include="TituloConteudoExtraArquivo.cs" />
+    <Compile Include="TituloConteudoExtraMidia.cs" />
+    <Compile Include="TituloConteudoExtraUrl.cs" />
+    <Compile Include="TituloEletronico.cs" />
+    <Compile Include="TituloEletronicoAluguel.cs" />
+    <Compile Include="TituloImagemResumo.cs" />
+    <Compile Include="TituloImpresso.cs" />
+    <Compile Include="TituloInformacaoComentarioEspecialista.cs" />
+    <Compile Include="TituloInformacaoFicha.cs" />
+    <Compile Include="TituloInformacaoMaterialDidatico.cs" />
+    <Compile Include="TituloInformacaoResumo.cs" />
+    <Compile Include="TituloInformacaoSobreAutor.cs" />
+    <Compile Include="TituloInformacaoSumario.cs" />
+    <Compile Include="TituloSolicitacao.cs" />
+    <Compile Include="TituloSolicitacaoStatus.cs" />
+    <Compile Include="Transportadora.cs" />
+    <Compile Include="TransportadoraServico.cs" />
+    <Compile Include="Usuario.cs" />
+    <Compile Include="UsuarioControle.cs" />
+    <Compile Include="UsuarioRevista.cs" />
+    <Compile Include="ViewHelper\AbasEstanteVH.cs" />
+    <None Include="ViewHelper\CarrinhoItemVH.cs.exclude" />
+    <Compile Include="ViewHelper\TituloSolicitacaoVH.cs" />
+    <Compile Include="ViewHelper\ItemMenuBuscaVH.cs" />
+    <Compile Include="ViewHelper\CarrinhoItemVH.cs" />
+    <Compile Include="ViewHelper\CategoriaVH.cs" />
+    <Compile Include="ViewHelper\ComentarioEspecialistaDestaqueVH.cs" />
+    <Compile Include="ViewHelper\ConfirmacaoPedidoVH.cs" />
+    <Compile Include="ViewHelper\MenuBuscaVH.cs" />
+    <Compile Include="ViewHelper\PublicacaoUsuarioVH.cs" />
+    <Compile Include="ViewHelper\RevistaGaleriaArtigoImagem.cs" />
+    <Compile Include="ViewHelper\PedidoItemVH.cs" />
+    <Compile Include="ViewHelper\DisciplinaCursoVH.cs" />
+    <Compile Include="ViewHelper\EstanteAbaVH.cs" />
+    <Compile Include="ViewHelper\ProdutoListaVH.cs" />
+    <Compile Include="ViewHelper\EstanteTituloVH.cs" />
+    <Compile Include="ViewHelper\ProfessorInstituicaoEnsinoVH.cs" />
+    <Compile Include="ViewHelper\TituloVH.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

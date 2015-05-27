@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0A984C63-063A-4265-AA66-AC4773D23184}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrupoA.DataAccessLayer.ADO</RootNamespace>
+    <AssemblyName>GrupoA.DataAccessLayer.ADO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/GrupoA.DataAccessLayer.ADO/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\library\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\library\Microsoft Enterprise Library 5.0\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\library\Microsoft Enterprise Library 5.0\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\library\Microsoft Enterprise Library 5.0\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADOSuper.cs" />
+    <Compile Include="ArquivoADO.cs" />
+    <Compile Include="AutorADO.cs" />
+    <Compile Include="AutorPartialADO.cs" />
+    <Compile Include="AvisoDisponibilidadeADO.cs" />
+    <Compile Include="AvisoDisponibilidadeStatusADO.cs" />
+    <Compile Include="BannerADO.cs" />
+    <Compile Include="BannerAreaADO.cs" />
+    <Compile Include="BannerPartialADO.cs" />
+    <Compile Include="CapituloADO.cs" />
+    <Compile Include="CapituloEletronicoADO.cs" />
+    <Compile Include="CapituloImpressoADO.cs" />
+    <Compile Include="CarrinhoADO.cs" />
+    <Compile Include="CarrinhoItemADO.cs" />
+    <Compile Include="CarrinhoItemCompraConjuntaADO.cs" />
+    <Compile Include="CarrinhoItemCompraConjuntaPartialADO.cs" />
+    <Compile Include="CarrinhoPartialADO.cs" />
+    <Compile Include="CarrinhoStatusADO.cs" />
+    <Compile Include="CategoriaADO.cs" />
+    <Compile Include="CategoriaNoticiaADO.cs" />
+    <Compile Include="CategoriaPartialADO.cs" />
+    <Compile Include="ClippingADO.cs" />
+    <Compile Include="ClippingImagemADO.cs" />
+    <Compile Include="ClippingImagemPartialADO.cs" />
+    <Compile Include="ClippingPartialADO.cs" />
+    <Compile Include="ComentarioFormatoADO.cs" />
+    <Compile Include="CompraConjuntaADO.cs" />
+    <Compile Include="CompraConjuntaDescontoADO.cs" />
+    <Compile Include="CompraConjuntaDescontoPartialADO.cs" />
+    <Compile Include="CompraConjuntaPaginaADO.cs" />
+    <Compile Include="CompraConjuntaPartialADO.cs" />
+    <Compile Include="CompraConjuntaStatusADO.cs" />
+    <Compile Include="ConfiguracaoADO.cs" />
+    <Compile Include="ConfiguracaoValorADO.cs" />
+    <Compile Include="ContatoAssuntoADO.cs" />
+    <Compile Include="ContatoAssuntoPartialADO.cs" />
+    <Compile Include="ContatoResponsavelADO.cs" />
+    <Compile Include="ContatoSetorADO.cs" />
+    <Compile Include="ConteudoADO.cs" />
+    <Compile Include="ConteudoAvaliacaoADO.cs" />
+    <Compile Include="ConteudoHitsADO.cs" />
+    <Compile Include="ConteudoHitsPartialADO.cs" />
+    <Compile Include="ConteudoImprensaADO.cs" />
+    <Compile Include="ConteudoPartialADO.cs" />
+    <Compile Include="ConteudoTipoADO.cs" />
+    <Compile Include="CompraConjuntaPaginaPartialADO.cs" />
+    <Compile Include="CapituloEletronicoPartialADO.cs" />
+    <Compile Include="CapituloImpressoPartialADO.cs" />
+    <Compile Include="CapituloPartialADO.cs" />
+    <Compile Include="CarrinhoItemPartialADO.cs" />
+    <Compile Include="ContatoSetorADOPartial.cs" />
+    <Compile Include="ConfiguracaoADOPartial.cs" />
+    <Compile Include="ArquivoADOPartial.cs" />
+    <Compile Include="AvisoDisponibilidadePartialADO.cs" />
+    <Compile Include="BlogADO.cs" />
+    <Compile Include="RevistaPacoteBrindeRegraADOPartial.cs" />
+    <Compile Include="RevistaPacoteADOPartial.cs" />
+    <Compile Include="FilterHelper\NewsletterDestinatarioFH.cs" />
+    <Compile Include="FilterHelper\RevistaPacoteBrindeRegraFH.cs" />
+    <Compile Include="FilterHelper\RevistaPacoteFH.cs" />
+    <Compile Include="NewsletterDestinatarioADO.cs" />
+    <Compile Include="RevistaPacoteADO.cs" />
+    <Compile Include="RevistaPacoteBrindeRegraADO.cs" />
+    <Compile Include="RevistaPaginaADOPartial.cs" />
+    <Compile Include="RevistaArtigoControversiaADOPartial.cs" />
+    <Compile Include="RevistaArtigoControversiaADO.cs" />
+    <Compile Include="RevistaPaginaADO.cs" />
+    <Compile Include="TituloAvaliacaoADOPartial.cs" />
+    <Compile Include="UsuarioRevistaADOPartial.cs" />
+    <Compile Include="FilterHelper\LinkFH.cs" />
+    <Compile Include="LinkADO.cs" />
+    <Compile Include="TituloConteudoExtraMidiaADOPartial.cs" />
+    <Compile Include="TituloConteudoExtraUrlADOPartial.cs" />
+    <Compile Include="ProdutoFormatoADOPartial.cs" />
+    <Compile Include="ProdutoFormatoADO.cs" />
+    <Compile Include="TituloInformacaoMaterialDidaticoADOPartial.cs" />
+    <Compile Include="TituloInformacaoSumarioADOPartial.cs" />
+    <Compile Include="TituloInformacaoResumoADOPartial.cs" />
+    <Compile Include="TituloInformacaoSobreAutorADOPartial.cs" />
+    <Compile Include="MidiaRevistaADOPartial.cs" />
+    <Compile Include="MidiaCategoriaADOPartial.cs" />
+    <Compile Include="FilterHelper\MidiaCategoriaFH.cs" />
+    <Compile Include="FilterHelper\MidiaRevistaFH.cs" />
+    <Compile Include="MidiaCategoriaADO.cs" />
+    <Compile Include="MidiaRevistaADO.cs" />
+    <Compile Include="PaginaPromocionalADOPartial.cs" />
+    <Compile Include="TituloSolicitacaoStatusADOPartial.cs" />
+    <Compile Include="ProfessorComprovanteDocenciaPartialADO.cs" />
+    <Compile Include="LogPaymentGatewayADO.cs" />
+    <Compile Include="TituloConteudoExtraArquivoADOPartial.cs" />
+    <Compile Include="PromocaoCupomPedidoADOPartial.cs" />
+    <Compile Include="PromocaoCupomADOPartial.cs" />
+    <Compile Include="OfertaProdutoADOPartial.cs" />
+    <Compile Include="OfertaADOPartial.cs" />
+    <Compile Include="OfertaCategoriaADOPartial.cs" />
+    <Compile Include="MidiaADOPartial.cs" />
+    <Compile Include="OfertaADO.cs" />
+    <Compile Include="OfertaCategoriaADO.cs" />
+    <Compile Include="OfertaProdutoADO.cs" />
+    <Compile Include="OfertaTipoADO.cs" />
+    <Compile Include="PromocaoCupomADO.cs" />
+    <Compile Include="PromocaoCupomPedidoADO.cs" />
+    <Compile Include="TituloInformacaoComentarioEspecialistaCategoriaADOPartial.cs" />
+    <Compile Include="ProfissionalOcupacaoADOPartial.cs" />
+    <Compile Include="TituloEletronicoAluguelADOPartial.cs" />
+    <Compile Include="RevistaAssinaturaADOPartial.cs" />
+    <Compile Include="RevistaADOPartial.cs" />
+    <Compile Include="SeloADOPartial.cs" />
+    <Compile Include="PedidoItemPartialADO.cs" />
+    <Compile Include="FilterHelper\AvisoDisponibilidadeFH.cs" />
+    <Compile Include="FilterHelper\AvisoDisponibilidadeStatusFH.cs" />
+    <Compile Include="TituloEletronicoADOPartial.cs" />
+    <Compile Include="FilterHelper\TituloImagemResumoFH.cs" />
+    <Compile Include="PostsADO.cs" />
+    <Compile Include="PromocaoFaixaADOPartial.cs" />
+    <Compile Include="TituloImagemResumoADO.cs" />
+    <Compile Include="TituloInformacaoComentarioEspecialistaCategoriaADO.cs" />
+    <Compile Include="UsuarioControlePartialADO.cs" />
+    <Compile Include="FilterHelper\PaginaPromocionalFH.cs" />
+    <Compile Include="FilterHelper\TituloEletronicoAluguelFH.cs" />
+    <Compile Include="PaginaPromocionalADO.cs" />
+    <Compile Include="ProfessorCursoPartialADO.cs" />
+    <Compile Include="ProfessorDisciplinaPartialADO.cs" />
+    <Compile Include="FavoritoPartialADO.cs" />
+    <Compile Include="FilterHelper\UsuarioControleFH.cs" />
+    <Compile Include="ProfessorInstituicaoPartialADO.cs" />
+    <Compile Include="CursoPartialADO.cs" />
+    <Compile Include="FilterHelper\PedidoControleFH.cs" />
+    <Compile Include="FilterHelper\RevistaAssinaturaFH.cs" />
+    <Compile Include="InstituicaoPartialADO.cs" />
+    <Compile Include="PedidoControleADO.cs" />
+    <Compile Include="RevistaArtigoADOPartial.cs" />
+    <Compile Include="RevistaAssinaturaADO.cs" />
+    <Compile Include="RevistaSecaoADOPartial.cs" />
+    <Compile Include="CursoPanamericanoPartialADO.cs" />
+    <Compile Include="ImportacaoADO.cs" />
+    <Compile Include="ImportacaoProdutos.cs" />
+    <Compile Include="RevistaEdicaoADOParcial.cs" />
+    <Compile Include="TituloEletronicoAluguelADO.cs" />
+    <Compile Include="TituloInformacaoComentarioEspecialistaADOPartial.cs" />
+    <Compile Include="CursoPanamericanoADO.cs" />
+    <Compile Include="FilterHelper\CarrinhoItemCompraConjuntaFH.cs" />
+    <Compile Include="FilterHelper\CursoPanamericanoFH.cs" />
+    <Compile Include="FilterHelper\PedidoItemCompraConjuntaFH.cs" />
+    <Compile Include="FilterHelper\RevistaArtigoFH.cs" />
+    <Compile Include="FilterHelper\RevistaArtigoPermissaoFH.cs" />
+    <Compile Include="FilterHelper\RevistaSecaoFH.cs" />
+    <Compile Include="MunicipioPartialADO.cs" />
+    <Compile Include="DisciplinaPartial.cs" />
+    <Compile Include="CursoNivelADO.cs" />
+    <Compile Include="FilterHelper\ComentarioFormatoFH.cs" />
+    <Compile Include="FilterHelper\ContatoAssuntoFH.cs" />
+    <Compile Include="FilterHelper\ContatoResponsavelFH.cs" />
+    <Compile Include="FilterHelper\ContatoSetorFH.cs" />
+    <Compile Include="FilterHelper\ConteudoImprensaFH.cs" />
+    <Compile Include="FilterHelper\CursoNivelFH.cs" />
+    <Compile Include="FilterHelper\PedidoFreteGrupoFH.cs" />
+    <Compile Include="FilterHelper\PedidoFretePrecoFH.cs" />
+    <Compile Include="FilterHelper\PedidoFreteTipoFH.cs" />
+    <Compile Include="FilterHelper\ProfissionalOcupacaoFH.cs" />
+    <Compile Include="NoticiaPartialADO.cs" />
+    <Compile Include="PedidoCompraConjuntaPartialADO.cs" />
+    <Compile Include="PedidoFreteGrupoADO.cs" />
+    <Compile Include="PedidoFretePrecoADO.cs" />
+    <Compile Include="PedidoFreteTipoADO.cs" />
+    <Compile Include="PedidoItemCompraConjuntaADO.cs" />
+    <Compile Include="ProfissionalOcupacaoADO.cs" />
+    <Compile Include="RevistaArtigoADO.cs" />
+    <Compile Include="RevistaArtigoPermissaoADO.cs" />
+    <Compile Include="RevistaSecaoADO.cs" />
+    <Compile Include="DestaqueTituloImpressoPartialADO.cs" />
+    <Compile Include="FilterHelper\CapituloFH.cs" />
+    <Compile Include="FilterHelper\CompraConjuntaPaginaFH.cs" />
+    <Compile Include="FilterHelper\ProfessorCursoFH.cs" />
+    <Compile Include="FilterHelper\ProfessorDisciplinaFH.cs" />
+    <Compile Include="FilterHelper\ProfessorInstituicaoFH.cs" />
+    <Compile Include="FilterHelper\TituloImpressoFH.cs" />
+    <Compile Include="ProfessorCursoADO.cs" />
+    <Compile Include="ProfessorDisciplinaADO.cs" />
+    <Compile Include="ProfessorInstituicaoADO.cs" />
+    <Compile Include="ProgramaAtualizacaoChamadaPartialADO.cs" />
+    <Compile Include="FilterHelper\ProgramaAtualizacaoChamadaFH.cs" />
+    <Compile Include="FilterHelper\ProgramaAtualizacaoPaginaFH.cs" />
+    <Compile Include="ProdutoPartialADO.cs" />
+    <Compile Include="ProdutoTipoPartialADO.cs" />
+    <Compile Include="ProfessorPartialADO.cs" />
+    <Compile Include="DadosADO.cs" />
+    <Compile Include="FilterHelper\DadosFH.cs" />
+    <Compile Include="FilterHelper\TituloConteudoExtraArquivoFH.cs" />
+    <Compile Include="FilterHelper\TituloConteudoExtraMidiaFH.cs" />
+    <Compile Include="FilterHelper\TituloConteudoExtraUrlFH.cs" />
+    <Compile Include="FilterHelper\TituloInformacaoComentarioEspecialistaFH.cs" />
+    <Compile Include="FilterHelper\TituloInformacaoFichaFH.cs" />
+    <Compile Include="FilterHelper\TituloInformacaoMaterialDidaticoFH.cs" />
+    <Compile Include="FilterHelper\TituloInformacaoResumoFH.cs" />
+    <Compile Include="FilterHelper\TituloInformacaoSobreAutorFH.cs" />
+    <Compile Include="FilterHelper\TituloInformacaoSumarioFH.cs" />
+    <Compile Include="MeioPagamentoFaixaPartialADO.cs" />
+    <Compile Include="MeioPagamentoPartialADO.cs" />
+    <Compile Include="ProgramaAtualizacaoChamadaADO.cs" />
+    <Compile Include="ProgramaAtualizacaoPaginaADO.cs" />
+    <Compile Include="PromocaoADOPartial.cs" />
+    <Compile Include="TituloConteudoExtraArquivoADO.cs" />
+    <Compile Include="TituloConteudoExtraMidiaADO.cs" />
+    <Compile Include="TituloConteudoExtraUrlADO.cs" />
+    <Compile Include="DestaqueTituloImpressoADO.cs" />
+    <Compile Include="EventoPartialADO.cs" />
+    <Compile Include="FilterHelper\CompraConjuntaStatusFH.cs" />
+    <Compile Include="FilterHelper\DestaqueTituloImpressoFH.cs" />
+    <Compile Include="FilterHelper\MeioPagamentoFaixaFH.cs" />
+    <Compile Include="FilterHelper\PedidoCompraConjuntaFH.cs" />
+    <Compile Include="FilterHelper\RevistaGrupoAEdicaoFH.cs" />
+    <Compile Include="FilterHelper\TransportadoraFH.cs" />
+    <Compile Include="FilterHelper\TransportadoraServicoFH.cs" />
+    <Compile Include="PedidoPartialADO.cs" />
+    <Compile Include="CursoADO.cs" />
+    <Compile Include="DisciplinaADO.cs" />
+    <Compile Include="EnderecoADO.cs" />
+    <Compile Include="EnderecoPartialADO.cs" />
+    <Compile Include="EnderecoTipoADO.cs" />
+    <Compile Include="EnqueteADO.cs" />
+    <Compile Include="EnqueteOpcaoADO.cs" />
+    <Compile Include="EnqueteOpcaoPartialADO.cs" />
+    <Compile Include="EnquetePaginaADO.cs" />
+    <Compile Include="EnquetePartialADO.cs" />
+    <Compile Include="EventoADO.cs" />
+    <Compile Include="EventoAlertaADO.cs" />
+    <Compile Include="EventoAlertaPartialADO.cs" />
+    <Compile Include="EventoImagemADO.cs" />
+    <Compile Include="EventoImagemPartialADO.cs" />
+    <Compile Include="FabricanteADO.cs" />
+    <Compile Include="FaqCategoriaADO.cs" />
+    <Compile Include="FaqItemADO.cs" />
+    <Compile Include="FavoritoADO.cs" />
+    <Compile Include="FilterHelper\MeioPagamentoFH.cs" />
+    <Compile Include="FilterHelper\PagamentoFH.cs" />
+    <Compile Include="FilterHelper\ProdutoImagemFH.cs" />
+    <Compile Include="FilterHelper\ProdutoImagemTipoFH.cs" />
+    <Compile Include="FilterHelper\ProfessorComprovanteDocenciaFH.cs" />
+    <Compile Include="FilterHelper\PromocaoTipoFH.cs" />
+    <Compile Include="FilterHelper\CursoFH.cs" />
+    <Compile Include="FilterHelper\DisciplinaFH.cs" />
+    <Compile Include="FilterHelper\EnqueteFH.cs" />
+    <Compile Include="FilterHelper\EnqueteOpcaoFH.cs" />
+    <Compile Include="FilterHelper\EnquetePaginaFH.cs" />
+    <Compile Include="FilterHelper\EventoImagemFH.cs" />
+    <Compile Include="FilterHelper\GraduacaoProfessorFH.cs" />
+    <Compile Include="FilterHelper\InstituicaoFH.cs" />
+    <Compile Include="FilterHelper\ProfessorFH.cs" />
+    <Compile Include="FilterHelper\PromocaoFaixaFH.cs" />
+    <Compile Include="FilterHelper\TituloAvaliacaoFH.cs" />
+    <Compile Include="FilterHelper\TituloSolicitacaoFH.cs" />
+    <Compile Include="FilterHelper\TituloSolicitacaoStatusFH.cs" />
+    <Compile Include="FilterHelper\ArquivoFH.cs" />
+    <Compile Include="FilterHelper\AutorFH.cs" />
+    <Compile Include="FilterHelper\BannerAreaFH.cs" />
+    <Compile Include="FilterHelper\BannerFH.cs" />
+    <Compile Include="FilterHelper\CapituloEletronicoFH.cs" />
+    <Compile Include="FilterHelper\CapituloImpressoFH.cs" />
+    <Compile Include="FilterHelper\CarrinhoFH.cs" />
+    <Compile Include="FilterHelper\CarrinhoItemFH.cs" />
+    <Compile Include="FilterHelper\CarrinhoStatusFH.cs" />
+    <Compile Include="FilterHelper\CategoriaFH.cs" />
+    <Compile Include="FilterHelper\CategoriaNoticiaFH.cs" />
+    <Compile Include="FilterHelper\ClippingFH.cs" />
+    <Compile Include="FilterHelper\ClippingImagemFH.cs" />
+    <Compile Include="FilterHelper\CompraConjuntaDescontoFH.cs" />
+    <Compile Include="FilterHelper\CompraConjuntaFH.cs" />
+    <Compile Include="FilterHelper\ConfiguracaoFH.cs" />
+    <Compile Include="FilterHelper\ConfiguracaoValorFH.cs" />
+    <Compile Include="FilterHelper\ConteudoAvaliacaoFH.cs" />
+    <Compile Include="FilterHelper\ConteudoFH.cs" />
+    <Compile Include="FilterHelper\ConteudoHitsFH.cs" />
+    <Compile Include="FilterHelper\ConteudoTipoFH.cs" />
+    <Compile Include="FilterHelper\EnderecoFH.cs" />
+    <Compile Include="FilterHelper\EnderecoTipoFH.cs" />
+    <Compile Include="FilterHelper\EventoAlertaFH.cs" />
+    <Compile Include="FilterHelper\EventoFH.cs" />
+    <Compile Include="FilterHelper\FabricanteFH.cs" />
+    <Compile Include="FilterHelper\FaqCategoriaFH.cs" />
+    <Compile Include="FilterHelper\FaqItemFH.cs" />
+    <Compile Include="FilterHelper\FavoritoFH.cs" />
+    <Compile Include="FilterHelper\LogCategoriaFH.cs" />
+    <Compile Include="FilterHelper\LogEventoFH.cs" />
+    <Compile Include="FilterHelper\LogOcorrenciaFH.cs" />
+    <Compile Include="FilterHelper\MidiaFH.cs" />
+    <Compile Include="FilterHelper\MidiaTipoFH.cs" />
+    <Compile Include="FilterHelper\MunicipioFH.cs" />
+    <Compile Include="FilterHelper\NoticiaFH.cs" />
+    <Compile Include="FilterHelper\NoticiaImagemFH.cs" />
+    <Compile Include="FilterHelper\NotificacaoDisponibilidadeFH.cs" />
+    <Compile Include="FilterHelper\NotificacaoStatusFH.cs" />
+    <Compile Include="FilterHelper\PedidoEnderecoFH.cs" />
+    <Compile Include="FilterHelper\PedidoFH.cs" />
+    <Compile Include="FilterHelper\PedidoItemFH.cs" />
+    <Compile Include="FilterHelper\PedidoItemPromocaoFH.cs" />
+    <Compile Include="FilterHelper\PedidoSituacaoFH.cs" />
+    <Compile Include="FilterHelper\PedidoStatusFH.cs" />
+    <Compile Include="FilterHelper\PerfilFH.cs" />
+    <Compile Include="FilterHelper\ProdutoFH.cs" />
+    <Compile Include="FilterHelper\ProdutoTipoFH.cs" />
+    <Compile Include="FilterHelper\PromocaoFH.cs" />
+    <Compile Include="FilterHelper\RegiaoFH.cs" />
+    <Compile Include="FilterHelper\RevistaEdicaoFH.cs" />
+    <Compile Include="FilterHelper\RevistaFH.cs" />
+    <Compile Include="FilterHelper\SeloFH.cs" />
+    <Compile Include="FilterHelper\TelefoneFH.cs" />
+    <Compile Include="FilterHelper\TelefoneTipoFH.cs" />
+    <Compile Include="FilterHelper\TituloAutorFH.cs" />
+    <Compile Include="FilterHelper\TituloEletronicoFH.cs" />
+    <Compile Include="FilterHelper\TituloFH.cs" />
+    <Compile Include="FilterHelper\UsuarioFH.cs" />
+    <Compile Include="GraduacaoProfessorADO.cs" />
+    <Compile Include="GraduacaoProfessorPartialADO.cs" />
+    <Compile Include="InstituicaoADO.cs" />
+    <Compile Include="LogCategoriaADO.cs" />
+    <Compile Include="LogEventoADO.cs" />
+    <Compile Include="LogOcorrenciaADO.cs" />
+    <Compile Include="MeioPagamentoADO.cs" />
+    <Compile Include="MeioPagamentoFaixaADO.cs" />
+    <Compile Include="MidiaADO.cs" />
+    <Compile Include="MidiaTipoADO.cs" />
+    <Compile Include="MunicipioADO.cs" />
+    <Compile Include="NoticiaADO.cs" />
+    <Compile Include="NoticiaImagemADO.cs" />
+    <Compile Include="NoticiaImagemPartialADO.cs" />
+    <Compile Include="NotificacaoDisponibilidadeADO.cs" />
+    <Compile Include="NotificacaoStatusADO.cs" />
+    <Compile Include="PagamentoADO.cs" />
+    <Compile Include="PedidoADO.cs" />
+    <Compile Include="PedidoCompraConjuntaADO.cs" />
+    <Compile Include="PedidoEnderecoADO.cs" />
+    <Compile Include="PedidoItemADO.cs" />
+    <Compile Include="PedidoItemPromocaoADO.cs" />
+    <Compile Include="PedidoSituacaoADO.cs" />
+    <Compile Include="PedidoStatusADO.cs" />
+    <Compile Include="PerfilADO.cs" />
+    <Compile Include="PerfilPartialADO.cs" />
+    <Compile Include="ProdutoADO.cs" />
+    <Compile Include="ProdutoImagemADO.cs" />
+    <Compile Include="ProdutoImagemPartialADO.cs" />
+    <Compile Include="ProdutoImagemTipoADO.cs" />
+    <Compile Include="ProdutoTipoADO.cs" />
+    <Compile Include="ProfessorADO.cs" />
+    <Compile Include="ProfessorComprovanteDocenciaADO.cs" />
+    <Compile Include="PromocaoADO.cs" />
+    <Compile Include="PromocaoFaixaADO.cs" />
+    <Compile Include="PromocaoTipoADO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegiaoADO.cs" />
+    <Compile Include="RevistaADO.cs" />
+    <Compile Include="RevistaEdicaoADO.cs" />
+    <Compile Include="RevistaGrupoAEdicaoADO.cs" />
+    <Compile Include="RevistaGrupoAEdicaoPartialADO.cs" />
+    <Compile Include="SeloADO.cs" />
+    <Compile Include="TelefoneADO.cs" />
+    <Compile Include="TelefonePartialADO.cs" />
+    <Compile Include="TelefoneTipoADO.cs" />
+    <Compile Include="TituloADO.cs" />
+    <Compile Include="TituloAutorADO.cs" />
+    <Compile Include="TituloAutorPartialADO.cs" />
+    <Compile Include="TituloAvaliacaoADO.cs" />
+    <Compile Include="TituloEletronicoADO.cs" />
+    <Compile Include="TituloImpressoADO.cs" />
+    <Compile Include="TituloImpressoPartialADO.cs" />
+    <Compile Include="TituloInformacaoComentarioEspecialistaADO.cs" />
+    <Compile Include="TituloInformacaoFichaADO.cs" />
+    <Compile Include="TituloInformacaoMaterialDidaticoADO.cs" />
+    <Compile Include="TituloInformacaoResumoADO.cs" />
+    <Compile Include="TituloInformacaoSobreAutorADO.cs" />
+    <Compile Include="TituloInformacaoSumarioADO.cs" />
+    <Compile Include="TituloPartialADO.cs" />
+    <Compile Include="TituloSolicitacaoADO.cs" />
+    <Compile Include="TituloSolicitacaoADOPartial.cs" />
+    <Compile Include="TituloSolicitacaoStatusADO.cs" />
+    <Compile Include="TransportadoraADO.cs" />
+    <Compile Include="TransportadoraServicoADO.cs" />
+    <Compile Include="UsuarioADO.cs" />
+    <Compile Include="UsuarioControleADO.cs" />
+    <Compile Include="UsuarioPartialADO.cs" />
+    <Compile Include="UsuarioRevistaADO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrupoA.BusinessObject\GrupoA.BusinessObject.csproj">
+      <Project>{DE7B5C56-956E-49AB-AEE0-8BA677C9DF7C}</Project>
+      <Name>GrupoA.BusinessObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GrupoA.DataAccessLayer\GrupoA.DataAccessLayer.csproj">
+      <Project>{2DAFC8F4-2B89-4A29-A490-00EE392F40C5}</Project>
+      <Name>GrupoA.DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

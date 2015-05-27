@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DAFC8F4-2B89-4A29-A490-00EE392F40C5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrupoA.DataAccessLayer</RootNamespace>
+    <AssemblyName>GrupoA.DataAccessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>http://localhost/GrupoA.DataAccessLayer/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IRevistaPacoteBrindeRegraDALPartial.cs" />
+    <Compile Include="IRevistaPacoteDALPartial.cs" />
+    <Compile Include="INewsletterDestinatarioDAL.cs" />
+    <Compile Include="IRevistaPacoteBrindeRegraDAL.cs" />
+    <Compile Include="IRevistaPacoteDAL.cs" />
+    <Compile Include="IRevistaPaginaDALPartial.cs" />
+    <Compile Include="IRevistaArtigoControversiaDALPartial.cs" />
+    <Compile Include="IRevistaArtigoControversiaDAL.cs" />
+    <Compile Include="IRevistaPaginaDAL.cs" />
+    <Compile Include="ITituloAvaliacaoDALPartial.cs" />
+    <Compile Include="IUsuarioRevistaDALPartial.cs" />
+    <Compile Include="ILinkDAL.cs" />
+    <Compile Include="ITituloConteudoExtraMidiaDALPartial.cs" />
+    <Compile Include="ITituloConteudoExtraUrlDALPartial.cs" />
+    <Compile Include="IProdutoFormatoDALPartial.cs" />
+    <Compile Include="IProdutoFormatoDAL.cs" />
+    <Compile Include="ITituloInformacaoMaterialDidaticoDALPartial.cs" />
+    <Compile Include="ITituloInformacaoSumarioDALPartial.cs" />
+    <Compile Include="ITituloInformacaoResumoDALPartial.cs" />
+    <Compile Include="ITituloInformacaoSobreAutorDALPartial.cs" />
+    <Compile Include="IMidiaRevistaDALPartial.cs" />
+    <Compile Include="IMidiaCategoriaDALPartial.cs" />
+    <Compile Include="IMidiaCategoriaDAL.cs" />
+    <Compile Include="IMidiaRevistaDAL.cs" />
+    <Compile Include="IPaginaPromocionalDALPartial.cs" />
+    <Compile Include="IPedidoItemDALPartial.cs" />
+    <Compile Include="ITituloSolicitacaoStatusDALPartial.cs" />
+    <Compile Include="ILogPaymentGatewayDAL.cs" />
+    <Compile Include="ITituloConteudoExtraArquivoDALPartial.cs" />
+    <Compile Include="IBlogDAL.cs" />
+    <Compile Include="IPromocaoCupomPedidoDALPartial.cs" />
+    <Compile Include="IPromocaoCupomDALPartial.cs" />
+    <Compile Include="IOfertaProdutoDALPartial.cs" />
+    <Compile Include="IOfertaDALPartial.cs" />
+    <Compile Include="IOfertaCategoriaDALPartial.cs" />
+    <Compile Include="IMidiaDALPartial.cs" />
+    <Compile Include="IOfertaCategoriaDAL.cs" />
+    <Compile Include="IOfertaDAL.cs" />
+    <Compile Include="IOfertaProdutoDAL.cs" />
+    <Compile Include="IOfertaTipoDAL.cs" />
+    <Compile Include="IPromocaoCupomDAL.cs" />
+    <Compile Include="IPromocaoCupomPedidoDAL.cs" />
+    <Compile Include="ITituloInformacaoComentarioEspecialistaCategoriaDALPartial.cs" />
+    <Compile Include="IProfissionalOcupacaoDALPartial.cs" />
+    <Compile Include="ITituloEletronicoAluguelDALPartial.cs" />
+    <Compile Include="IRevistaAssinaturaDALPartial.cs" />
+    <Compile Include="IRevistaDALPartial.cs" />
+    <Compile Include="ISeloDALPartial.cs" />
+    <Compile Include="IAvisoDisponibilidadePartialDAL.cs" />
+    <Compile Include="IAvisoDisponibilidadeDAL.cs" />
+    <Compile Include="IAvisoDisponibilidadeStatusDAL.cs" />
+    <Compile Include="ITituloEletronicoDALPartial.cs" />
+    <Compile Include="IPostsDAL.cs" />
+    <Compile Include="IArquivoDALPartial.cs" />
+    <Compile Include="IPromocaoFaixaDALPartial.cs" />
+    <Compile Include="ITituloImagemResumoDAL.cs" />
+    <Compile Include="ITituloInformacaoComentarioEspecialistaCategoriaDAL.cs" />
+    <Compile Include="IUsuarioControlePartialDAL.cs" />
+    <Compile Include="IFavoritoPartialDAL.cs" />
+    <Compile Include="IPaginaPromocionalDAL.cs" />
+    <Compile Include="IProfessorCursoPartialDAL.cs" />
+    <Compile Include="IProfessorDisciplinaPartialDAL.cs" />
+    <Compile Include="IConfiguracaoDALPartial.cs" />
+    <Compile Include="IProfessorInstituicaoPartialDAL.cs" />
+    <Compile Include="IContatoSetorDALPartial.cs" />
+    <Compile Include="ICursoPartialDAL.cs" />
+    <Compile Include="IInstituicaoPartialDAL.cs" />
+    <Compile Include="IPedidoControleDAL.cs" />
+    <Compile Include="IRevistaArtigoDALPartial.cs" />
+    <Compile Include="IRevistaAssinaturaDAL.cs" />
+    <Compile Include="IRevistaSecaoDALPartial.cs" />
+    <Compile Include="ICursoPanamericanoPartialDAL.cs" />
+    <Compile Include="IEventoDALPartial.cs" />
+    <Compile Include="IImportacaoDAL.cs" />
+    <Compile Include="IRevistaEdicaoDALPartial.cs" />
+    <Compile Include="ITituloEletronicoAluguelDAL.cs" />
+    <Compile Include="ITituloInformacaoComentarioEspecialistaDALPartial.cs" />
+    <Compile Include="ICarrinhoItemCompraConjuntaDAL.cs" />
+    <Compile Include="ICarrinhoItemCompraConjuntaPartialDAL.cs" />
+    <Compile Include="ICursoPanamericanoDAL.cs" />
+    <Compile Include="IMunicipioPartialDAL.cs" />
+    <Compile Include="ICarrinhoItemPartialDAL.cs" />
+    <Compile Include="ICarrinhoPartialDAL.cs" />
+    <Compile Include="IClippingPartialDAL.cs" />
+    <Compile Include="IContatoAssuntoDAL.cs" />
+    <Compile Include="IContatoAssuntoPartialDAL.cs" />
+    <Compile Include="IContatoResponsavelDAL.cs" />
+    <Compile Include="IContatoSetorDAL.cs" />
+    <Compile Include="IDisciplinaPartialDAL.cs" />
+    <Compile Include="IComentarioFormatoDAL.cs" />
+    <Compile Include="IConteudoImprensaDAL.cs" />
+    <Compile Include="ICursoNivelDAL.cs" />
+    <Compile Include="INoticiaPartialDAL.cs" />
+    <Compile Include="IPedidoCompraConjuntaPartialDAL.cs" />
+    <Compile Include="IPedidoFreteGrupoDAL.cs" />
+    <Compile Include="IPedidoFretePrecoDAL.cs" />
+    <Compile Include="IPedidoFreteTipoDAL.cs" />
+    <Compile Include="IPedidoItemCompraConjuntaDAL.cs" />
+    <Compile Include="IProfissionalOcupacaoDAL.cs" />
+    <Compile Include="IRevistaArtigoDAL.cs" />
+    <Compile Include="IRevistaArtigoPermissaoDAL.cs" />
+    <Compile Include="IRevistaSecaoDAL.cs" />
+    <Compile Include="IBannerPartialDAL.cs" />
+    <Compile Include="ICapituloPartialDAL.cs" />
+    <Compile Include="ICapituloDAL.cs" />
+    <Compile Include="ICapituloImpressoPartialDAL.cs" />
+    <Compile Include="ICapituloEletronicoPartialDAL.cs" />
+    <Compile Include="ICompraConjuntaPaginaPartialDAL.cs" />
+    <Compile Include="IAutorPartialDAL.cs" />
+    <Compile Include="ICompraConjuntaPaginaDAL.cs" />
+    <Compile Include="IDestaqueTituloImpressoPartialDAL.cs" />
+    <Compile Include="IProdutoPartialDAL.cs" />
+    <Compile Include="IProdutoTipoPartialDAL.cs" />
+    <Compile Include="IProfessorCursoDAL.cs" />
+    <Compile Include="IProfessorDisciplinaDAL.cs" />
+    <Compile Include="IProfessorInstituicaoDAL.cs" />
+    <Compile Include="IProfessorPartialDAL.cs" />
+    <Compile Include="ICompraConjuntaDescontoPartialDAL.cs" />
+    <Compile Include="ICompraConjuntaPartialDAL.cs" />
+    <Compile Include="IDadosDAL.cs" />
+    <Compile Include="IMeioPagamentoFaixaPartialDAL.cs" />
+    <Compile Include="IMeioPagamentoPartialDAL.cs" />
+    <Compile Include="IProgramaAtualizacaoChamadaDAL.cs" />
+    <Compile Include="IProgramaAtualizacaoChamadaPartialDAL.cs" />
+    <Compile Include="IProgramaAtualizacaoPaginaDAL.cs" />
+    <Compile Include="IPromocaolDALPartial.cs" />
+    <Compile Include="ITituloConteudoExtraArquivoDAL.cs" />
+    <Compile Include="ITituloConteudoExtraMidiaDAL.cs" />
+    <Compile Include="ITituloConteudoExtraUrlDAL.cs" />
+    <Compile Include="IPedidoPartialDAL.cs" />
+    <Compile Include="ICompraConjuntaStatusDAL.cs" />
+    <Compile Include="IConteudoHitsPartialDAL.cs" />
+    <Compile Include="IDestaqueTituloImpressoDAL.cs" />
+    <Compile Include="IEventoAlertaPartialDAL.cs" />
+    <Compile Include="IEventoPartialDAL.cs" />
+    <Compile Include="IGraduacaoProfessorPartialDAL.cs" />
+    <Compile Include="IMeioPagamentoFaixaDAL.cs" />
+    <Compile Include="IPedidoCompraConjuntaDAL.cs" />
+    <Compile Include="IProdutoImagemPartialDAL.cs" />
+    <Compile Include="IEnqueteOpcaoPartialDAL.cs" />
+    <Compile Include="IEnquetePartialDAL.cs" />
+    <Compile Include="IMeioPagamentoDAL.cs" />
+    <Compile Include="IPagamentoDAL.cs" />
+    <Compile Include="IPerfilPartialDAL.cs" />
+    <Compile Include="IProdutoImagemDAL.cs" />
+    <Compile Include="IProdutoImagemTipoDAL.cs" />
+    <Compile Include="IProfessorComprovanteDocenciaDAL.cs" />
+    <Compile Include="IEventoImagemPartialDAL.cs" />
+    <Compile Include="IPromocaoTipoDAL.cs" />
+    <Compile Include="IRevistaGrupoAEdicaoDAL.cs" />
+    <Compile Include="IRevistaGrupoAEdicaoPartialDAL.cs" />
+    <Compile Include="ITelefonePartialDAL.cs" />
+    <Compile Include="IEnderecoPartialDAL.cs" />
+    <Compile Include="IClippingImagemPartialDAL.cs" />
+    <Compile Include="IConteudoPartialDAL.cs" />
+    <Compile Include="IArquivoDAL.cs" />
+    <Compile Include="IAutorDAL.cs" />
+    <Compile Include="IBannerAreaDAL.cs" />
+    <Compile Include="IBannerDAL.cs" />
+    <Compile Include="ICapituloEletronicoDAL.cs" />
+    <Compile Include="ICapituloImpressoDAL.cs" />
+    <Compile Include="ICarrinhoDAL.cs" />
+    <Compile Include="ICarrinhoItemDAL.cs" />
+    <Compile Include="ICarrinhoStatusDAL.cs" />
+    <Compile Include="ICategoriaDAL.cs" />
+    <Compile Include="ICategoriaNoticiaDAL.cs" />
+    <Compile Include="ICategoriaPartialDAL.cs" />
+    <Compile Include="IClippingDAL.cs" />
+    <Compile Include="IClippingImagemDAL.cs" />
+    <Compile Include="ICompraConjuntaDAL.cs" />
+    <Compile Include="ICompraConjuntaDescontoDAL.cs" />
+    <Compile Include="IConfiguracaoDAL.cs" />
+    <Compile Include="IConfiguracaoValorDAL.cs" />
+    <Compile Include="IConteudoAvaliacaoDAL.cs" />
+    <Compile Include="IConteudoDAL.cs" />
+    <Compile Include="IConteudoHitsDAL.cs" />
+    <Compile Include="IConteudoTipoDAL.cs" />
+    <Compile Include="ICursoDAL.cs" />
+    <Compile Include="IDisciplinaDAL.cs" />
+    <Compile Include="IEnderecoDAL.cs" />
+    <Compile Include="IEnderecoTipoDAL.cs" />
+    <Compile Include="IEnqueteDAL.cs" />
+    <Compile Include="IEnqueteOpcaoDAL.cs" />
+    <Compile Include="IEnquetePaginaDAL.cs" />
+    <Compile Include="IEventoAlertaDAL.cs" />
+    <Compile Include="IEventoDAL.cs" />
+    <Compile Include="IEventoImagemDAL.cs" />
+    <Compile Include="IFabricanteDAL.cs" />
+    <Compile Include="IFaqCategoriaDAL.cs" />
+    <Compile Include="IFaqItemDAL.cs" />
+    <Compile Include="IFavoritoDAL.cs" />
+    <Compile Include="IFilterHelper.cs" />
+    <Compile Include="IGraduacaoProfessorDAL.cs" />
+    <Compile Include="IInstituicaoDAL.cs" />
+    <Compile Include="ILogCategoriaDAL.cs" />
+    <Compile Include="ILogEventoDAL.cs" />
+    <Compile Include="ILogOcorrenciaDAL.cs" />
+    <Compile Include="IMidiaDAL.cs" />
+    <Compile Include="IMidiaTipoDAL.cs" />
+    <Compile Include="IMunicipioDAL.cs" />
+    <Compile Include="INoticiaDAL.cs" />
+    <Compile Include="INoticiaImagemDAL.cs" />
+    <Compile Include="INoticiaImagemPartialDAL.cs" />
+    <Compile Include="INotificacaoDisponibilidadeDAL.cs" />
+    <Compile Include="INotificacaoStatusDAL.cs" />
+    <Compile Include="IPedidoDAL.cs" />
+    <Compile Include="IPedidoEnderecoDAL.cs" />
+    <Compile Include="IPedidoItemDAL.cs" />
+    <Compile Include="IPedidoItemPromocaoDAL.cs" />
+    <Compile Include="IPedidoSituacaoDAL.cs" />
+    <Compile Include="IPedidoStatusDAL.cs" />
+    <Compile Include="IPerfilDAL.cs" />
+    <Compile Include="IProdutoDAL.cs" />
+    <Compile Include="IProdutoTipoDAL.cs" />
+    <Compile Include="IProfessorDAL.cs" />
+    <Compile Include="IPromocaoDAL.cs" />
+    <Compile Include="IPromocaoFaixaDAL.cs" />
+    <Compile Include="IRegiaoDAL.cs" />
+    <Compile Include="IRevistaDAL.cs" />
+    <Compile Include="IRevistaEdicaoDAL.cs" />
+    <Compile Include="ISeloDAL.cs" />
+    <Compile Include="ITelefoneDAL.cs" />
+    <Compile Include="ITelefoneTipoDAL.cs" />
+    <Compile Include="ITituloAutorDAL.cs" />
+    <Compile Include="ITituloAutorPartialDAL.cs" />
+    <Compile Include="ITituloAvaliacaoDAL.cs" />
+    <Compile Include="ITituloDAL.cs" />
+    <Compile Include="ITituloEletronicoDAL.cs" />
+    <Compile Include="ITituloImpressoDAL.cs" />
+    <Compile Include="ITituloImpressoPartialDAL.cs" />
+    <Compile Include="ITituloInformacaoComentarioEspecialistaDAL.cs" />
+    <Compile Include="ITituloInformacaoFichaDAL.cs" />
+    <Compile Include="ITituloInformacaoMaterialDidaticoDAL.cs" />
+    <Compile Include="ITituloInformacaoResumoDAL.cs" />
+    <Compile Include="ITituloInformacaoSobreAutorDAL.cs" />
+    <Compile Include="ITituloInformacaoSumarioDAL.cs" />
+    <Compile Include="ITituloPartialDAL.cs" />
+    <Compile Include="ITituloSolicitacaoDAL.cs" />
+    <Compile Include="ITituloSolicitacaoDALPartial.cs" />
+    <Compile Include="ITituloSolicitacaoStatusDAL.cs" />
+    <Compile Include="ITransportadoraDAL.cs" />
+    <Compile Include="ITransportadoraServicoDAL.cs" />
+    <Compile Include="IUsuarioControleDAL.cs" />
+    <Compile Include="IUsuarioDAL.cs" />
+    <Compile Include="IUsuarioPartialDAL.cs" />
+    <Compile Include="IUsuarioRevistaDAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrupoA.BusinessObject\GrupoA.BusinessObject.csproj">
+      <Project>{DE7B5C56-956E-49AB-AEE0-8BA677C9DF7C}</Project>
+      <Name>GrupoA.BusinessObject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

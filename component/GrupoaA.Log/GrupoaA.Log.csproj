@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{51FA354F-E127-4AD5-AC68-76B2DE0311F2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrupoaA.Log</RootNamespace>
+    <AssemblyName>GrupoaA.Log</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LogHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrupoA.BusinessLogicalLayer\GrupoA.BusinessLogicalLayer.csproj">
+      <Project>{771C5B50-D762-4147-94EF-39FAEE5F6077}</Project>
+      <Name>GrupoA.BusinessLogicalLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GrupoA.BusinessObject\GrupoA.BusinessObject.csproj">
+      <Project>{DE7B5C56-956E-49AB-AEE0-8BA677C9DF7C}</Project>
+      <Name>GrupoA.BusinessObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GrupoA.DataAccessLayer.ADO\GrupoA.DataAccessLayer.ADO.csproj">
+      <Project>{0A984C63-063A-4265-AA66-AC4773D23184}</Project>
+      <Name>GrupoA.DataAccessLayer.ADO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GrupoA.DataAccessLayer\GrupoA.DataAccessLayer.csproj">
+      <Project>{2DAFC8F4-2B89-4A29-A490-00EE392F40C5}</Project>
+      <Name>GrupoA.DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

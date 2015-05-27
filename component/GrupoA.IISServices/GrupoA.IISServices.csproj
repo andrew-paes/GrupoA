@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08FC7182-2328-4D03-91F3-E2C214A79AE0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrupoA.IISServices</RootNamespace>
+    <AssemblyName>GrupoA.IISServices</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ServicoLembretes.cs" />
+    <Compile Include="ServicoAniversariantes.cs" />
+    <Compile Include="ServicoDisponibilidade.cs" />
+    <Compile Include="ServicoCompraConjunta.cs" />
+    <Compile Include="ServicoOferta.cs" />
+    <Compile Include="SincronizadorMaisVendido.cs" />
+    <Compile Include="SincronizarProduto.cs" />
+    <Compile Include="SincronizadorPedido.cs" />
+    <Compile Include="ServicoGerenciador.cs" />
+    <Compile Include="ServicoHandler.cs" />
+    <Compile Include="IServico.cs" />
+    <Compile Include="SincronizadorCadastro.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GrupoA.BusinessLogicalLayer\GrupoA.BusinessLogicalLayer.csproj">
+      <Project>{771C5B50-D762-4147-94EF-39FAEE5F6077}</Project>
+      <Name>GrupoA.BusinessLogicalLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GrupoA.Sincronizacao\GrupoA.Sincronizacao.csproj">
+      <Project>{A584742B-1D3B-4F3F-B00E-109543331E7F}</Project>
+      <Name>GrupoA.Sincronizacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GrupoaA.Log\GrupoaA.Log.csproj">
+      <Project>{51FA354F-E127-4AD5-AC68-76B2DE0311F2}</Project>
+      <Name>GrupoaA.Log</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

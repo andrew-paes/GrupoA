@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s0="http://10.1.1.25:8182/ws/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" targetNamespace="http://10.1.1.25:8182/ws/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://10.1.1.25:8182/ws/">
+      <s:element name="GETCLIENTES">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WSEMPRESA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSFILIAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSLOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSSENHA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_CGC" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_TIPO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_PESSOA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_NOME" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_NREDUZ" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_INSCR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_INSCRM" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_END" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_BAIRRO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_COD_MUN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_MUN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_EST" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_CEP" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_EMAIL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_DDD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_TEL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA1_HPAGE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETCLIENTESRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETCLIENTESRESULT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETFORNECEDORES">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WSEMPRESA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSFILIAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSLOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSSENHA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_CGC" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_TIPO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_NOME" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_NREDUZ" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_INSCR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_INSCRM" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_END" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_BAIRRO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_COD_MUN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_MUN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_EST" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_CEP" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_EMAIL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_DDD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_TEL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_HPAGE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WA2_CONTATO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETFORNECEDORESRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETFORNECEDORESRESULT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETNOTASFISCAIS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WSEMPRESA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSFILIAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSCPF" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETNOTASFISCAISRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETNOTASFISCAISRESULT" type="s0:ARRAYOFNFISCAISVIEW" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETPEDIDOVENDA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WSEMPRESA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSFILIAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSLOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSSENHA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WC5_CLI_CNPJ" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WC5_CONDPAG" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WC5_TPFRETE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WC5_FRETE" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="WC5_DESC1" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="WC5_DESCONT" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="ITEMPVENDA" type="s0:ITEMPEDVENDA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETPEDIDOVENDARESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETPEDIDOVENDARESULT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETPRENFE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WSEMPRESA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSFILIAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSLOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSSENHA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WF1_FOR_CNPJ" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WF1_DOC" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WF1_SERIE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WF1_TIPO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WF1_EST" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WF1_EMISSAO" type="s:date" />
+            <s:element minOccurs="1" maxOccurs="1" name="WF1_ESPECIE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WF1_OBSNFE" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ITEMP_NFE" type="s0:ITEMPRENFE" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETPRENFERESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETPRENFERESULT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETPROSPECT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WSEMPRESA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSFILIAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSLOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSSENHA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_CGC" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_NOME" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_NREDUZ" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_PESSOA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_END" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_BAIRRO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_MUN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_EST" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_CEP" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_EMAIL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_DDD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_TEL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_URL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_COD_MUN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WUS_PAIS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETPROSPECTRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETPROSPECTRESULT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETSTATUSPEDNF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WSEMPRESA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSFILIAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSLOGIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSSENHA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSNOTAFISCAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WSSERIENOTAFISCAL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GETSTATUSPEDNFRESPONSE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GETSTATUSPEDNFRESULT" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ITEMPRENFE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ITENSP_NFE" type="s0:ARRAYOFPRENFEESTRU" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ITEMPEDVENDA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ITENSPV" type="s0:ARRAYOFITEMPVENDAESTRU" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="NFISCAISVIEW">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NF_DATAEMISSAO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NF_DATAENTREGAITEMPV01" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NF_DESCRICAOITEMPV01" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NF_ITEMPV01" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NF_NUMERO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NF_PRODUTOITEMPV01" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PRENFEESTRU">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="WD1_CC" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WD1_COD" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WD1_CONTA" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WD1_QUANT" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="WD1_VUNIT" type="s:float" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ITEMPVENDAESTRU">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="WC6_DESCONT" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="WC6_ENTREG" type="s:date" />
+          <s:element minOccurs="1" maxOccurs="1" name="WC6_PEDCLI" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WC6_PRCVEN" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="WC6_PRODUTO" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WC6_QTDVEN" type="s:float" />
+          <s:element minOccurs="1" maxOccurs="1" name="WC6_VALDESC" type="s:float" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFNFISCAISVIEW">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="NFISCAISVIEW" type="s0:NFISCAISVIEW" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFPRENFEESTRU">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PRENFEESTRU" type="s0:PRENFEESTRU" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ARRAYOFITEMPVENDAESTRU">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ITEMPVENDAESTRU" type="s0:ITEMPVENDAESTRU" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="GETCLIENTESSOAPIN">
+    <part name="parameters" element="s0:GETCLIENTES" />
+  </message>
+  <message name="GETCLIENTESSOAPOUT">
+    <part name="parameters" element="s0:GETCLIENTESRESPONSE" />
+  </message>
+  <message name="GETFORNECEDORESSOAPIN">
+    <part name="parameters" element="s0:GETFORNECEDORES" />
+  </message>
+  <message name="GETFORNECEDORESSOAPOUT">
+    <part name="parameters" element="s0:GETFORNECEDORESRESPONSE" />
+  </message>
+  <message name="GETNOTASFISCAISSOAPIN">
+    <part name="parameters" element="s0:GETNOTASFISCAIS" />
+  </message>
+  <message name="GETNOTASFISCAISSOAPOUT">
+    <part name="parameters" element="s0:GETNOTASFISCAISRESPONSE" />
+  </message>
+  <message name="GETPEDIDOVENDASOAPIN">
+    <part name="parameters" element="s0:GETPEDIDOVENDA" />
+  </message>
+  <message name="GETPEDIDOVENDASOAPOUT">
+    <part name="parameters" element="s0:GETPEDIDOVENDARESPONSE" />
+  </message>
+  <message name="GETPRENFESOAPIN">
+    <part name="parameters" element="s0:GETPRENFE" />
+  </message>
+  <message name="GETPRENFESOAPOUT">
+    <part name="parameters" element="s0:GETPRENFERESPONSE" />
+  </message>
+  <message name="GETPROSPECTSOAPIN">
+    <part name="parameters" element="s0:GETPROSPECT" />
+  </message>
+  <message name="GETPROSPECTSOAPOUT">
+    <part name="parameters" element="s0:GETPROSPECTRESPONSE" />
+  </message>
+  <message name="GETSTATUSPEDNFSOAPIN">
+    <part name="parameters" element="s0:GETSTATUSPEDNF" />
+  </message>
+  <message name="GETSTATUSPEDNFSOAPOUT">
+    <part name="parameters" element="s0:GETSTATUSPEDNFRESPONSE" />
+  </message>
+  <portType name="AM_PORTALSOAP">
+    <operation name="GETCLIENTES">
+      <documentation>Inclusao de Cliente</documentation>
+      <input message="s0:GETCLIENTESSOAPIN" />
+      <output message="s0:GETCLIENTESSOAPOUT" />
+    </operation>
+    <operation name="GETFORNECEDORES">
+      <documentation>Inclusao de Fornecedores</documentation>
+      <input message="s0:GETFORNECEDORESSOAPIN" />
+      <output message="s0:GETFORNECEDORESSOAPOUT" />
+    </operation>
+    <operation name="GETNOTASFISCAIS">
+      <documentation>Retorna as Notas Fiscais do cliente</documentation>
+      <input message="s0:GETNOTASFISCAISSOAPIN" />
+      <output message="s0:GETNOTASFISCAISSOAPOUT" />
+    </operation>
+    <operation name="GETPEDIDOVENDA">
+      <documentation>Pedido de Venda</documentation>
+      <input message="s0:GETPEDIDOVENDASOAPIN" />
+      <output message="s0:GETPEDIDOVENDASOAPOUT" />
+    </operation>
+    <operation name="GETPRENFE">
+      <documentation>Inclusao de Pre-NF Entrada</documentation>
+      <input message="s0:GETPRENFESOAPIN" />
+      <output message="s0:GETPRENFESOAPOUT" />
+    </operation>
+    <operation name="GETPROSPECT">
+      <documentation>Inclusao de Prospect</documentation>
+      <input message="s0:GETPROSPECTSOAPIN" />
+      <output message="s0:GETPROSPECTSOAPOUT" />
+    </operation>
+    <operation name="GETSTATUSPEDNF">
+      <documentation>Retorna Status Pedido ref. a Nota Fiscal</documentation>
+      <input message="s0:GETSTATUSPEDNFSOAPIN" />
+      <output message="s0:GETSTATUSPEDNFSOAPOUT" />
+    </operation>
+  </portType>
+  <binding name="AM_PORTALSOAP" type="s0:AM_PORTALSOAP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="GETCLIENTES">
+      <soap:operation soapAction="http://10.1.1.25:8182/ws/GETCLIENTES" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETFORNECEDORES">
+      <soap:operation soapAction="http://10.1.1.25:8182/ws/GETFORNECEDORES" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETNOTASFISCAIS">
+      <soap:operation soapAction="http://10.1.1.25:8182/ws/GETNOTASFISCAIS" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETPEDIDOVENDA">
+      <soap:operation soapAction="http://10.1.1.25:8182/ws/GETPEDIDOVENDA" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETPRENFE">
+      <soap:operation soapAction="http://10.1.1.25:8182/ws/GETPRENFE" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETPROSPECT">
+      <soap:operation soapAction="http://10.1.1.25:8182/ws/GETPROSPECT" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="GETSTATUSPEDNF">
+      <soap:operation soapAction="http://10.1.1.25:8182/ws/GETSTATUSPEDNF" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="AM_PORTAL">
+    <documentation>Serviços utilizados no Portal Artmed </documentation>
+    <port name="AM_PORTALSOAP" binding="s0:AM_PORTALSOAP">
+      <soap:address location="http://200.162.111.226:8182/ws/AM_PORTAL.apw" />
+    </port>
+  </service>
+</definitions>

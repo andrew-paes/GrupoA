@@ -1,0 +1,7 @@
+C:\Inetpub\wwwroot\Artmed\trunk\component\GrupoA.PaymentGateway.IPagare\bin\Release\GrupoA.PaymentGateway.IPagare.dll
+C:\Inetpub\wwwroot\Artmed\trunk\component\GrupoA.PaymentGateway.IPagare\bin\Release\GrupoA.PaymentGateway.IPagare.pdb
+C:\Inetpub\wwwroot\Artmed\trunk\component\GrupoA.PaymentGateway.IPagare\bin\Release\GrupoA.PaymentGateway.dll
+C:\Inetpub\wwwroot\Artmed\trunk\component\GrupoA.PaymentGateway.IPagare\bin\Release\GrupoA.PaymentGateway.pdb
+C:\Inetpub\wwwroot\Artmed\trunk\component\GrupoA.PaymentGateway.IPagare\obj\Release\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\Artmed\trunk\component\GrupoA.PaymentGateway.IPagare\obj\Release\GrupoA.PaymentGateway.IPagare.dll
+C:\Inetpub\wwwroot\Artmed\trunk\component\GrupoA.PaymentGateway.IPagare\obj\Release\GrupoA.PaymentGateway.IPagare.pdb

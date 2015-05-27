@@ -1,0 +1,15 @@
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.SFTP\bin\Debug\GrupoA.SFTP.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.SFTP\bin\Debug\GrupoA.SFTP.pdb
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.SFTP\obj\Debug\ResolveAssemblyReference.cache
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.SFTP\obj\Debug\GrupoA.SFTP.dll
+C:\Projetos\ARTMED\sistemas\trunk\component\GrupoA.SFTP\obj\Debug\GrupoA.SFTP.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.SFTP\bin\Debug\GrupoA.SFTP.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.SFTP\bin\Debug\GrupoA.SFTP.pdb
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.SFTP\obj\Debug\ResolveAssemblyReference.cache
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.SFTP\obj\Debug\GrupoA.SFTP.dll
+C:\inetpub\wwwroot\Artmed\trunk\component\GrupoA.SFTP\obj\Debug\GrupoA.SFTP.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.SFTP\bin\Debug\GrupoA.SFTP.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.SFTP\bin\Debug\GrupoA.SFTP.pdb
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.SFTP\obj\Debug\GrupoA.SFTP.csprojResolveAssemblyReference.cache
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.SFTP\obj\Debug\GrupoA.SFTP.dll
+D:\Projetos\Desenvolvimento\ASP.NET\wwwroot2k8\Artmed\1.trunk\component\GrupoA.SFTP\obj\Debug\GrupoA.SFTP.pdb
