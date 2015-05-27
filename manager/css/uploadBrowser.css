@@ -1,0 +1,201 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+}
+body, div, p
+{
+    font: 11px "Verdana";
+    color: #3F3F3F;
+    overflow: hidden;
+}
+.txt
+{
+    border: 1px solid #ccc;
+    height: 20px;
+}
+.txtError
+{
+    border: 1px solid red;
+}
+.clear
+{
+    clear: both;
+}
+.divConteudo
+{
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    height: 590px;
+    padding: 4px;
+}
+.divColuna1
+{
+    float: left;
+    margin-right: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 3px;
+    width: 220px;
+    height: 580px;
+    overflow: auto;
+}
+.divColuna2
+{
+    float: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 3px;
+    width: 598px;
+    height: 430px;
+    overflow: auto;
+}
+.divUpload
+{
+    float: left;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 3px;
+    width: 598px;
+    height: 138px;
+    margin-top: 4px;
+}
+.divDadosArquivo
+{
+    padding: 2px;
+    font-weight: bold;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+}
+
+.divFecharSalvar
+{
+    height: 0px;
+    text-align: right;
+    background-color: #FFFDD3;
+    display: none;
+    border: 1px solid #ccc;
+    float: none;
+    position: absolute;
+    bottom: 10px;
+    width: 596px;
+    left: 242px;
+}
+
+.FileUpload1
+{
+    border: 1px solid #ccc;
+}
+.btnUpload
+{
+    border: 1px solid #ccc;
+}
+.divFilesEscuro
+{
+    background-color: #f4f4f4;
+}
+.iconsFile
+{
+    background: url(../img/mini_icons.png) no-repeat;
+    float: left;
+}
+.icoPdf
+{
+    width: 18px;
+    height: 18px;
+    background-position: 0px 1px;
+}
+.icoPpt
+{
+    width: 18px;
+    height: 18px;
+    background-position: -18px 1px;
+}
+.icoZip
+{
+    width: 18px;
+    height: 18px;
+    background-position: -36px 1px;
+}
+.icoXls
+{
+    width: 18px;
+    height: 18px;
+    background-position: -54px 1px;
+}
+.icoDoc
+{
+    width: 18px;
+    height: 18px;
+    background-position: -70px 1px;
+}
+.icoTxt
+{
+    width: 18px;
+    height: 18px;
+    background-position: -88px 1px;
+}
+.icoImg
+{
+    width: 18px;
+    height: 18px;
+    background-position: -106px 1px;
+}
+.icoOutros
+{
+    width: 18px;
+    height: 18px;
+    background-position: -124px 1px;
+}
+.divFilesLista
+{
+    cursor: pointer;
+}
+.divFilesListaEscuro
+{
+    background-color: #ccc;
+}
+.divChkList
+{
+    float: left;
+    width: 18px;
+    padding-top: 1px;
+    margin-right: 6px;
+}
+.divFilesLista
+{
+    border-bottom: 1px solid #f4f4f4;
+    overflow: auto;
+}
+.divNomeArquivo
+{
+    float: left;
+    padding-left: 4px;
+    padding-top: 2px;
+}
+.divFileInfo
+{
+    float: right;
+    padding-left: 4px;
+    padding-top: 2px;
+}
+.accordion .itemAccordion
+{
+    background-color: #f4f4f4;
+    padding: 2px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-bottom: 3px;
+}
+.itemAccordionConteudo
+{
+    margin-bottom: 5px;
+}
+#btnBuscar
+{
+    vertical-align: bottom;
+    margin-left: 2px;
+}
+.lnkMenu{display: block; border: 1px solid #ccc; padding: 2px; margin-top: 2px; text-decoration: none; color: #000; margin-left: 10px;}
+.lnkMenu:hover{font-weight:bold; padding-left: 8px;}

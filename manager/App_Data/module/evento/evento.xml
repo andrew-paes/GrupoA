@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="Titulo" version="1.0">
+        <settings>
+            <title><![CDATA[Evento]]></title>
+            <description><![CDATA[Gerenciamento de Eventos do portal.]]></description>
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+            <setting name="assemblyName" value="App_Code" />
+            <setting name="className" value="DeleteEvento" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="evento" primaryKey="EventoId" />
+
+        <events>
+            <add name="BeforeRegisterDelete" />
+        </events>
+
+        <queries>
+            <query section="list" sql="SELECT
+                                            e.*
+                                            , ci.*
+                                            , CASE WHEN ci.destaque = 1 THEN 'Sim' ELSE 'Não'END AS StrDestaque
+                                        FROM
+                                            Evento e
+                                            INNER JOIN ConteudoImprensa ci ON ci.conteudoImprensaId = e.eventoId
+                                        ORDER BY
+                                            e.eventoId DESC
+            " />
+        </queries>
+
+        <forms>
+            <edit type="control" src="evento.ascx" />
+        </forms>
+
+        <!-- Configuracao dos campos que compoe um modulo -->
+        <fields>
+            <TextBox name="nomeEvento" label="Nome" sort="true" dataFieldName="titulo" showInList="true" required="false" maxlength="256" >
+                <attributes>
+                    <attribute name="Width" value="250px" />
+                </attributes>
+            </TextBox>
+            <Date name="dataEventoInicio" label="Data de Início" sort="true" dataFieldName="dataEventoInicio" showInList="true" required="false" maxlength="256" >
+                <attributes>
+                    <attribute name="Width" value="250px" />
+                </attributes>
+            </Date>
+            <Date name="dataEventoFim" label="Data de Fim" sort="true" dataFieldName="dataEventoFim" showInList="true" required="false" maxlength="256" >
+                <attributes>
+                    <attribute name="Width" value="250px" />
+                </attributes>
+            </Date>
+            <CheckBox name="destaque" label="Destaque" dataFieldName="StrDestaque" dbType="StringFixedLength" Checked="true" translation="true" showInList="true" sort="true" />
+        </fields>
+
+        <filters>
+            <filter label="Nome" field="nomeCategoriaEvento" />
+            <filter label="Data de Início" field="dataEventoInicio" filterExpression="dataEventoInicio &gt;=" />
+            <filter label="Data de Fim" field="dataEventoFim" filterExpression="dataEventoFim &lt;=" />
+            <filter label="Destaque" field="destaque" filterExpression="destaque=" />
+        </filters>
+
+    </module>
+
+</AG2Manager>

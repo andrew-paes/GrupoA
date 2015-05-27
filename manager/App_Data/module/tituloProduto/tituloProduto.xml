@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="tituloProduto" version="1.0">
+        <settings>
+            <title><![CDATA[Produtos de Titulo]]></title>
+            <description><![CDATA[Gerenciamento de Produtos de Titulo.]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+            <!--<setting name="assemblyName" value="App_Code" />-->
+        </settings>
+
+        <options>
+            <option querySection="export" value="excel" name="Exportar (Excel)" />
+            <option querySection="export" value="csv" name="Exportar (CSV)" />
+        </options>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="Titulo" primaryKey="tituloId" />
+
+        <queries>
+            <query section="list" sql="SELECT 
+	                                        *
+                                        FROM
+	                                        viewProdutosTituloListagemManager
+                                        ORDER BY
+	                                        nomeTitulo
+            " />
+
+            <query section="export" sql="SELECT 
+	                                        *
+                                        FROM
+	                                        viewProdutosTituloListagemManager
+                                        ORDER BY
+	                                        nomeTitulo
+            " />
+        </queries>
+
+        <forms>
+            <edit type="control" src="tituloProduto.ascx" />
+        </forms>
+
+        <!-- Configuracao dos campos que compoe um modulo -->
+        <fields>
+            <TextBox name="nomeTitulo" label="Nome Título" sort="true" dataFieldName="nomeTitulo" showInList="true" required="false" maxlength="256" >
+                <attributes>
+                    <attribute name="Width" value="250px" />
+                </attributes>
+            </TextBox>
+            <Date name="dataLancamento" label="Data Lançamento" sort="true" dataFieldName="dataLancamento" required="false" showInList="true" dbType="date" />
+            <TextBox name="tituloImpressoISBN13" label="Titulo Impresso ISBN13" sort="true" dataFieldName="tituloImpressoISBN13" required="false" showInList="true" maxlength="17" />
+            <CheckBox name="tituloImpressoExibirSite" label="Impresso Exibe Site" sort="true" dataFieldName="tituloImpressoStrExibeSite" required="false" showInList="true" dbType="boolean" />
+            <CheckBox name="tituloImpressoHomologado" label="Impresso Homologado" sort="true" dataFieldName="tituloImpressoStrHomologado" required="false" showInList="true" dbType="boolean" />
+            <CheckBox name="tituloImpressoPossuiCapa" label="Impresso Possui Capa" sort="true" dataFieldName="tituloImpressoStrPossuiCapa" required="false" showInList="true" dbType="boolean" />
+            <TextBox name="tituloEletronicoISBN13" label="Titulo eBook ISBN13" sort="true" dataFieldName="tituloEletronicoISBN13" required="false" showInList="true" maxlength="17" />
+            <CheckBox name="tituloEletronicoExibirSite" label="eBook Exibe Site" sort="true" dataFieldName="tituloEletronicoStrExibeSite" required="false" showInList="false" dbType="boolean" />
+            <CheckBox name="tituloEletronicoHomologado" label="eBook Homologado" sort="true" dataFieldName="tituloEletronicoStrHomologado" required="false" showInList="false" dbType="boolean" />
+        </fields>
+        <filters>
+            <filter label="Nome Título" field="nomeTitulo"/>
+            <filter label="Titulo Impresso ISBN13" field="tituloImpressoISBN13"/>
+            <filter label="Impresso Exibe Site" field="tituloImpressoExibirSite" filterExpression="viewProdutosTituloListagemManager.tituloImpressoExibirSite="/>
+            <filter label="Impresso Homologado" field="tituloImpressoHomologado" filterExpression="viewProdutosTituloListagemManager.tituloImpressoHomologado="/>
+            <filter label="Impresso Possui Capa" field="tituloImpressoPossuiCapa" filterExpression="viewProdutosTituloListagemManager.tituloImpressoPossuiCapa=" />
+            <filter label="Titulo eBook ISBN13" field="tituloEletronicoISBN13"/>
+            <filter label="eBook Exibe Site" field="tituloEletronicoExibirSite" filterExpression="viewProdutosTituloListagemManager.tituloEletronicoExibirSite="/>
+            <filter label="eBook Homologado" field="tituloEletronicoHomologado" filterExpression="viewProdutosTituloListagemManager.tituloEletronicoHomologado="/>
+            <filter label="Data Lançamento" field="dataLancamento" filterType="range"/>
+        </filters>
+    </module>
+</AG2Manager>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="nossosSites" version="1.0">
+        <settings>
+            <title><![CDATA[Nossos Sites]]></title>
+            <description><![CDATA[Gerenciamento de Links de Nossos Sites.]]></description>
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="Link" primaryKey="linkId" />
+
+        <queries>
+            <query section="list" sql="SELECT 
+											*              
+										FROM 
+											Link
+										ORDER BY 
+											Link.nomeLink ASC
+             " />
+        </queries>
+
+        <forms>
+            <edit type="control" src="nossosSites.ascx" />
+        </forms>
+
+        <!-- Configuracao dos campos que compoe um modulo -->
+        <fields>
+            <TextBox name="nomeLink" label="Nome do Link" sort="true" dataFieldName="nomeLink" showInList="true" maxlength="1000" >
+                <attributes>
+                    <attribute name="Width" value="250px" />
+                </attributes>
+            </TextBox>
+            <TextBox name="urlLink" label="Url do Link" sort="true" dataFieldName="urlLink" showInList="true" required="true" maxlength="1000" >
+                <attributes>
+                    <attribute name="Width" value="250px" />
+                </attributes>
+            </TextBox>
+            <!--<CheckBox name="ativo" label="Ativo" dataFieldName="ativo" dbType="boolean" sort="true" showInList="true" required="false" />
+            <CheckBox name="targetBlank" label="Nova Janela" dataFieldName="targetBlank" dbType="boolean" sort="true" showInList="true" required="false" />-->
+        </fields>
+
+        <filters>
+            <filter label="Nome do Link" field="nomeLink" />
+        </filters>
+
+    </module>
+
+</AG2Manager>

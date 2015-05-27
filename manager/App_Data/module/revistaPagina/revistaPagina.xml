@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="revistaPagina" version="1.0">
+		<settings>
+			<title><![CDATA[Cadastro Página de Seção]]></title>
+			<description><![CDATA[Cadastro Página de Seção]]></description>
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+			<setting name="assemblyName" value="App_Code" />
+			<setting name="className" value="DeleteRevistaPagina" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="RevistaPagina" primaryKey="revistaPaginaId" />
+
+		<events>
+			<add name="BeforeRegisterDelete" />
+		</events>
+
+		<queries>
+			<query section="list" sql="SELECT RevistaPagina.*,
+	                                        CASE WHEN RevistaPagina.ativo = 1 THEN 'Sim' ELSE 'Não'END AS StrAtivo,
+	                                        Revista.nomeRevista
+                                        FROM RevistaPagina
+                                        INNER JOIN Revista ON RevistaPagina.revistaId = Revista.revistaId
+                                        ORDER BY RevistaPagina.nomePagina"
+			/>
+		</queries>
+		
+		<forms>
+			<edit type="control" src="revistaPagina.ascx" />
+		</forms>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+            <TextBox name="tituloPagina" label="Título da Página" sort="true" dataFieldName="tituloPagina" showInList="true" required="true" maxlength="100" />
+			<ListBox
+				label="Nome da Revista"
+				name="nomeRevista"
+				dataFieldName="nomeRevista"
+				inListUseField="nomeRevista"
+				dataSource="Revista"
+				dataTextField="nomeRevista"
+				dataValueField="revistaId"
+				showInList="true"
+				required="true"
+				sort="true"
+			/>
+            <CheckBox name="ativo" label="Ativo" dataFieldName="StrAtivo" sort="true" required="false" showInList="true" dbType="boolean" />
+		</fields>
+		
+		<filters>
+			<filter label="Título da Página" field="tituloPagina" />
+			<filter label="Nome da Revista" field="nomeRevista" filterExpression="Revista.revistaId="/>
+            <filter label="Ativo" field="ativo" filterExpression="RevistaPagina.ativo=" />
+		</filters>
+		
+	</module>
+	
+</AG2Manager>

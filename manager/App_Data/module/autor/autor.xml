@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="autor" version="1.0">
+    <settings>
+      <title><![CDATA[Autor]]></title>
+      <description><![CDATA[Autor]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+      <setting name="assemblyName" value="App_Code" />
+      <setting name="className" value="DeleteAutor" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="autor" primaryKey="autorId" />
+
+    <events>
+      <add name="BeforeRegisterDelete" />
+    </events>
+
+    <queries>
+      <query section="list" sql="SELECT * FROM autor ORDER BY nomeautor" />
+    </queries>
+    <forms>
+      <edit type="control" src="autor.ascx" />
+    </forms>
+
+    <!-- Configuracao dos campos que compoe um modulo -->
+    <fields>
+      <TextBox name="nome" label="Nome" sort="true" dataFieldName="nomeautor" showInList="true" required="true" maxlength="128" />
+      <TextBox name="email" label="Email" sort="true" dataFieldName="email" showInList="true" required="true" maxlength="256" ValidationExpression="!email" />
+      <TextBox name="url" label="Url" sort="true" dataFieldName="url" showInList="false" required="true" maxlength="256" />
+      <TextBox name="blog" label="Blog" sort="true" dataFieldName="blog" showInList="true" required="true" maxlength="256" />
+    </fields>
+
+    <filters>
+      <filter label="Nome" field="nome" />
+      <filter label="Email" field="email" />
+      <filter label="URL" field="url" />
+      <filter label="Blog" field="blog" />
+    </filters>
+  </module>
+</AG2Manager>

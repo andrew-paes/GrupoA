@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="Titulo" version="1.0">
+    <settings>
+      <title><![CDATA[Capítulo Eletrônico]]></title>
+      <description><![CDATA[Gerenciamento de Capitulos Eletrônico do portal.]]></description>
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+    </settings>
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="CapituloEletronico" primaryKey="CapituloEletronicoId" />
+    <queries>
+      <query section="list" sql="
+          SELECT 
+            CapituloEletronico.CapituloEletronicoId,
+            Produto.NomeProduto tituloCapitulo,
+            ProdutoTituloEletronico.NomeProduto tituloLivro,
+            TituloEletronico.Isbn13,
+            CASE WHEN Produto.Disponivel = 1 THEN 'Sim' ELSE 'Não'END AS strDisponivel,
+            CASE WHEN Produto.ExibirSite = 1 THEN 'Sim' ELSE 'Não'END AS strExibeSite,
+            CASE WHEN Produto.Homologado = 1 THEN 'Sim' ELSE 'Não'END AS strHomologado
+          FROM CapituloEletronico
+            INNER JOIN Produto ON CapituloEletronico.CapituloEletronicoId = Produto.produtoId
+            INNER JOIN TituloEletronico ON TituloEletronico.TituloEletronicoId = CapituloEletronico.TituloEletronicoId
+            INNER JOIN Conteudo ON Produto.produtoId=Conteudo.conteudoId
+            INNER JOIN Produto ProdutoTituloEletronico ON TituloEletronico.TituloEletronicoId = ProdutoTituloEletronico.produtoId
+          ORDER BY ProdutoTituloEletronico.NomeProduto DESC
+              " />
+    </queries>
+    <forms>
+      <edit type="control" src="CapituloEletronico.ascx" />
+    </forms>
+    <fields>
+      <TextBox name="tituloCapitulo" label="Capítulo Eletrônico" sort="true" dataFieldName="tituloCapitulo" showInList="true" required="false" maxlength="0" />
+      <TextBox name="tituloLivro" label="Título Livro" sort="true" dataFieldName="tituloLivro" showInList="true" required="false" maxlength="0" />
+      <TextBox name="isbn13" label="ISBN 13" sort="true" dataFieldName="isbn13" showInList="true" required="false" maxlength="0" />
+      <CheckBox name="disponivel" label="Disponível" sort="true" dataFieldName="strDisponivel" required="false" showInList="true" dbType="boolean" />
+      <CheckBox name="exibeSite" label="Exibe Site" sort="true" dataFieldName="strExibeSite" required="false" showInList="true" dbType="boolean" />
+      <CheckBox name="homologado" label="Homologado" sort="true" dataFieldName="strHomologado" required="false" showInList="true" dbType="boolean" />
+    </fields>
+    <filters>
+      <filter label="Título Capítulo Eletrônico" field="tituloCapitulo" filterExpression="Produto.NomeProduto" />
+      <filter label="Título Livro" field="tituloLivro" filterExpression="ProdutoTituloEletronico.NomeProduto"/>
+      <filter label="ISBN 13" field="isbn13"/>
+      <filter label="Disponível" field="disponivel" filterExpression="Produto.Disponivel="/>
+      <filter label="Exibe Site" field="exibeSite" filterExpression="Produto.ExibirSite="/>
+      <filter label="Homologado" field="homologado" filterExpression="Produto.Homologado="/>
+    </filters>
+  </module>
+</AG2Manager>

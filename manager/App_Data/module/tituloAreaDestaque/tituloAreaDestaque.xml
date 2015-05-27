@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="tituloAreaDestaque" version="1.0">
+        <settings>
+            <title><![CDATA[Área Destaque de Título]]></title>
+            <description><![CDATA[Área Destaque de Título]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="destaqueTituloImpresso" primaryKey="destaqueTituloImpressoId" />
+
+        <queries>
+            <!-- Importante: essa query tem um código fixo 2 para o Perfil = Professor -->
+            <query section="list" sql=" SELECT destaqueTituloImpresso.*, count(destaqueTituloImpressoRelacionado.destaqueTituloImpressoId) as titulosAssociados
+                                          FROM destaqueTituloImpresso
+                                     LEFT JOIN destaqueTituloImpressoRelacionado on destaqueTituloImpressoRelacionado.destaqueTituloImpressoId = destaqueTituloImpresso.destaqueTituloImpressoId
+                                      GROUP BY destaqueTituloImpresso.destaqueTituloImpressoId, destaqueTituloImpresso.nomeArea
+                                      ORDER BY nomeArea            " />
+        </queries >
+        <forms>
+            <edit type="control" src="../tituloAreaDestaque/tituloAreaDestaque.ascx" />
+        </forms>
+
+        <fields>
+            <TextBox name="nomeArea" label="Nome da Área" sort="true" dataFieldName="nomeArea" showInList="true" required="true" maxlength="100" />
+            <TextBox name="titulosAssociados" label="Total de títulos associados" sort="true" dataFieldName="titulosAssociados" showInList="true" required="true" maxlength="20" />
+        </fields>
+
+        <filters>
+            <filter label="Nome da Área" field="nomeArea" />
+        </filters>
+
+    </module>
+
+
+</AG2Manager>

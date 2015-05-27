@@ -1,0 +1,222 @@
+/*##### PADRAO INICIAIS ######*/
+a{text-decoration: none;}
+a:hover{text-decoration: underline;}
+*{margin: 0;padding: 0;}
+#lnkAlteraSenha{position: absolute; right: 90px; top: 5px; cursor: pointer; text-decoration: underline;}
+img{border: 0px;}
+html, body{height: 100%; border: none;}
+body, div, p, .txt{font: 11px "Trebuchet MS";color: #3F3F3F;line-height: 16px;}
+body{background: #FFFFFF;}
+/*############################*/
+
+/*######### Forms ##########*/
+.frmborder{border: solid 1px #CCCCCC;font: 11px "Trebuchet MS";color: #3F3F3F;background-color: #FFF7F2;padding: 2px 4px;}
+.ReadOnly{border: solid 1px #CCCCCC;font: 11px "Trebuchet MS";color: #3F3F3F;background-color: #f4f4f4;padding: 2px 4px;}
+/*############################*/
+
+/*########FILTROS#########*/
+.filtrofont{float: left;color: #333;font: 11px Trebuchet MS;padding: 8px 0 0 5px;font-weight: bold;}
+.filtro2{float:right;right: 0px;top: 0px;padding: 8px;}
+.pesquisa{color: #3F3F3F;font: 11px Trebuchet MS;}
+.barra{background: url(../img/bgr_gray.jpg);height: 29px;border-bottom: 2px solid Red;}
+.filtro{background-color: #F4F4F4;border: 1px solid #D8D8D8;margin-bottom: 10px;}
+.boxfilter{width: 100%;}
+.filter{float: left;padding-right: 15px;padding-bottom: 15px;}
+.divBtnFilter{float: left;}
+/*############################*/
+
+/*##### Classes ######*/
+/* Textos */
+.txtmenor{font: 10px "Trebuchet MS";}
+.alerta{font: 10px "Trebuchet MS";color: Red;}
+.cmdPaging{font-family: Verdana;font-size: 11px;}
+
+/* Box Ajuda */
+.boxfloat{border: solid 1px #CCCCCC;background: url(../img/bgr_degrade_boxfloat.gif) top left repeat-x;text-align: left;width: 160px;position: relative;}
+.boxfloat_cont{display: none;border: solid 1px #CCCCCC;border-top: none;position: absolute;top: 26px;left: 0;background: #F4F4F4;text-align: left;padding: 12px;width: 136px;}
+.boxfloat_cont li{ list-style: none; background: url(../img/blt_esc.gif) 0px 7px no-repeat; padding-left: 8px; margin-bottom: 3px;}
+.boxfloat_cont li a{ font: 11px "Trebuchet MS"; color: #3F3F3F; font-weight: bold;}
+.boxfloat_cont li div{ font: 10px "Trebuchet MS"; color: #3F3F3F; margin: 5px 0 15px 0;}
+.boxfloat_cont li a:hover{ text-decoration: none;}
+.seta{ position: absolute; top: 10px; right: 10px;}
+.blt{ position: absolute; top: 4px; left: 6px;}
+.ajuda{ display: block; font: 11px Tahoma; color: #3F3F3F; padding: 5px 0 6px 28px; font-weight: bold; width: 132px;}
+.ajuda:hover{ text-decoration: none;}
+/* Box */
+.boxesc{ padding: 10px; background: #E2E2E2; text-align: right;}
+.boxcinzacom{ border-top: solid 1px #D8D8D8; border-bottom: solid 1px #D8D8D8; background: #F4F4F4; padding: 10px; margin-bottom: 0px;}
+.boxcinzasem{ background: #F4F4F4; padding: 3px 10px; margin-bottom: 0px;}
+/* botões */
+.btnLar{ background: url(../img/bgr_btn_lar_left.gif) top left no-repeat; white-space: nowrap; width: 24px;}
+.btnLaright{ background: url(../img/bgr_btn_lar_right.gif) top right no-repeat; white-space: nowrap; margin-left: 24px;}
+.btnLaright a{ font: 9px "Trebuchet MS"; color: #3F3F3F; padding: 3px 8px 4px 0; white-space: nowrap; display: block;}
+.btnLaright a:hover{ text-decoration: none;}
+
+/* janelas */
+.janela{ border: solid 1px #797979; padding-bottom: 1px; background: #FFFFFF;}
+.topJanela{ background: url(../img/bgr_degrade_cabecalho_tabela.gif) repeat-x #E9E9E9; text-align: right;}
+.topJanela span{ float: left; font: 11px Verdana; color: #FF6500; font-weight: bold; padding: 8px 0 0 13px;}
+.listaAddCol{ list-style: none; margin-top: 3px;}
+.listaAddCol dt{ color: #3F3F3F; font: 11px "Trebuchet MS"; margin: 0 6px;}
+.listaAddCol dd{ height: 1px; margin: 3px 0 3px 24px; display: block; border-bottom: dashed 1px #CCCCCC;}
+.listaAddCol dt input{ margin: 0 5px 0 0; width: 13px; height: 13px;}
+.janela a{ float: right; margin-right: 5px;}
+.mouseOver{ cursor: pointer;}
+
+/* Margens // Padding*/
+.pr12{ padding-right: 12px;}
+.mr12{ margin-right: 12px;}
+.mb10{ margin-bottom: 10px;}
+.mb3{ margin-bottom: 3px;}
+.mlr10{ margin: 0 10px 0 10px;}
+.ml10{ margin-left: 10px;}
+
+/* Outros */
+.absmiddle{ vertical-align: middle;}
+.posrelative{ position: relative;}
+
+/* Selecione // Paginação */
+.contpag{ border-top: 1px solid #D8D8D8; border-bottom: 1px solid #D8D8D8; background-color: #F4F4F4;}
+.cboselecione{ width: 190px;}
+.formselect{ width: 148px; font: 11px "Trebuchet MS"; color: #000000; padding: 0 0 0 5px; margin: 2px 0 0 0;}
+.imgselecione{ margin: 0 6px 0 6px;}
+.contpag2{ background-color: #E2E2E2;}
+.pagprimeiras{ margin-left: 7px; width: 134px;}
+.pagultimas{ margin-right: 7px; width: 128px;}
+
+/* Imagens de Fundo */
+.imgSetaSelecionaCima{ background: url(../img/img_seta_seleciona_cima.gif) no-repeat; width: 36px; height: 55px;}
+.imgSetaSelecionaBaixo{ background: url(../img/img_seta_seleciona_baixo.gif) no-repeat; width: 36px; height: 48px;}
+
+/*##### ID's #####*/
+#login{ position: relative; width: 100%; height: 25px; background-color: #666666; font: 11px "Trebuchet MS"; color: #FFFFFF;}
+#login .logado{ position: absolute; top: 4px; left: 11px;}
+#login .usuario{ font-weight: bold; text-decoration: underline;}
+#login .alterar{ position: absolute; right: 94px; top: 4px; text-decoration: underline;}
+#login a.alterar{ color: #FFFFFF;}
+#login .sair{ position: absolute; right: 10px; top: 3px;}
+#geral{ border-left: 2px solid #F00000; height: 100%; voice-family: "\"}\""; voice-family: inherit;}
+#topo{ position: relative; width: 100%; height: 90px; background: url(../img/bgr_topo.jpg) top left repeat-x;}
+#topo .cliente{ position: absolute; float: left; top: 15px; left: 16px;}
+#topo .ag2{ position: absolute; float: right; top: 26px; right: 21px;}
+#caminho_pao{ position: relative; width: 100%; height: 13px; background: url(../img/bgr_caminho_pao.gif) repeat-x #BEBEBE; font: 11px Tahoma; color: #3F3F3F; padding: 7px 0 7px 0;}
+#caminho_pao .caminho{ margin: 0 0 0 61px;}
+#caminho_pao .sep{ margin: 0 11px 0 11px; font-weight: bold;}
+#caminho_pao .secao{ text-decoration: underline;}
+#caminho_pao a.secao{ color: #3F3F3F;}
+#caminho_pao .atual{ font-weight: bold;}
+#caminho_pao .busca{ position: absolute; top: 5px; right: 0; font-weight: bold;}
+#caminho_pao .form{ width: 100px; height: 16px; border: 0; padding: 0 0 0 3px; font: 11px Tahoma; color: #3F3F3F; margin: 0 40px 0 7px;}
+#caminho_pao .seta{ position: absolute; top: -2px; right: 10px;}
+.divisor{ background: url(../img/bgr_divisor.gif) repeat-y;}
+.divisor2{ width: 6px;}
+.conteudo{ width: 100%; padding: 11px; background-color: #FFFFFF; border-left: 1px solid #B4B4B4; border-top: 1px solid #B4B4B4;}
+#ctl00_holderPrincipal_managerContent{ width: 100%;}
+#ctl00_holderPrincipal_managerContent tr{ height: 26px; color: #3F3F3F;}
+#ctl00_holderPrincipal_managerContent tr.cinza{ background-color: #F4F4F4;}
+#ctl00_holderPrincipal_managerContent a.ativada{ color: #3F3F3F;}
+#ctl00_holderPrincipal_managerContent a.ativada:hover{ text-decoration: underline;}
+#ctl00_holderPrincipal_managerContent tr.desativada, #ctl00_holderPrincipal_managerContent a.desativada{ color: #ADADAD;}
+#ctl00_holderPrincipal_managerContent a.desativada:hover{ text-decoration: underline;}
+#ctl00_holderPrincipal_managerContent td{ text-align: left; padding-left: 3px;}
+#ctl00_holderPrincipal_managerContent tr.cabecalho{ width: 100%; height: 26px; background: url(../img/bgr_degrade_cabecalho_tabela.gif) repeat-x #E9E9E9;}
+#ctl00_holderPrincipal_managerContent th.cabecalhoprimeiro{ border-right: 1px solid #888888; border-left: 1px solid #EEEEEE; border-top: 1px solid #EEEEEE; border-bottom: 1px solid #D8D8D8;}
+#ctl00_holderPrincipal_managerContent th.cabecalhoitem{ border-right: 1px solid #888888; border-left: 1px solid #FFFFFF; border-top: 1px solid #EEEEEE; border-bottom: 1px solid #D8D8D8;}
+#ctl00_holderPrincipal_managerContent th.cabecalhoselecionado{ background: url(../img/bgr_degrade_cabecalho_tabela2.gif) repeat-x #FFFFFF; border-right: 1px solid #888888; border-left: 1px solid #FFFFFF; border-top: 1px solid #EEEEEE; border-bottom: 1px solid #D8D8D8; font-weight: bold;}
+#ctl00_holderPrincipal_managerContent th.cabecalhoselecionadoultimo{ background: url(../img/bgr_degrade_cabecalho_tabela2.gif) repeat-x #FFFFFF; border-left: 1px solid #FFFFFF; border-right: 1px solid #EEEEEE; border-top: 1px solid #EEEEEE; border-bottom: 1px solid #D8D8D8; font-weight: bold;}
+#ctl00_holderPrincipal_managerContent th.cabecalhoultimo{ border-left: 1px solid #FFFFFF; border-right: 1px solid #EEEEEE; border-top: 1px solid #EEEEEE; border-bottom: 1px solid #D8D8D8; text-align:left; padding-left: 3px;}
+
+/*##### FLASH #####*/
+
+h1, h2{ font-family: Verdana; font-weight: bold; text-align: left; font-size: 18px; padding: 0 0 0 0; margin: 2px 0 0 0; color: #6B6B6B;}
+.cabecalhoApresentacao{ padding: 3px; font-weight: bold; background-color: #ccc; background-image: url(../img/bgr_gray.jpg);}
+.divConteudo{ border: 1px solid #ccc; padding: 2px;}
+.grupoCatalogo{ padding: 5px;}
+.btnDefault{ background-color: #f4f4f4; border: 1px solid #cccccc; color: #333333; font-size: 11px;}
+.ManagerMessage{ color: White; font-weight: bold; background-color: #FF6500; border: solid 0px; text-align: center; display: none; padding: 3px;}
+#divMenu{ padding: 3px;}
+#divMenu TABLE TR TD{ padding: 3px; background-image: url(../img/bgr_item_menu.gif);}
+.MenuHover{ color: red;}
+.pnlRegisterNavigator{ margin-top: 5px; background-color: #E2E2E2; padding: 3px; overflow: auto; text-align: center;}
+.fl{ float: left;}
+.fr{ float: right;}
+.pnlInfoRegisterNavigator{ font-weight: bold; padding-top: 3px;}
+.divOptions{ float: right; padding-top: 5px;}
+.divModalCad{ padding: 3px;}
+.divScrolling{ height: 200px; width: 386px; overflow: auto; margin-top: 3px; margin-bottom: 3px; padding: 2px;}
+.tblCad{ width: 365px;}
+.icoAction{ vertical-align: bottom; margin-left: 3px;}
+.flagSpace{ margin-right: 2px;}
+.barraIdioma {border: 0px solid blue; width: 300px; margin-right: 10px;}
+.barraIdioma div{float:right; margin-right: 3px; vertical-align: middle; padding: 4px; vertical-align:middle;}
+.ActiveIdioma{background-color: #f4f4f4; border: 1px solid #ccc;}
+.contentFilter{margin: 5px; overflow:auto;}
+.Ag2Btn{cursor: pointer; text-decoration: none !important;}
+.ModalAlteracaoSenha{color: #fff;}
+.ctrlSubform{border: 1px solid #ccc;}
+.ctrlSubform .divTitulo{ background-color: #f2f2f2; padding: 3px; }
+.ctrlSubform .divTitulo SPAN{ color: #333; font-weight:bold; }
+.ctrlSubform .divConteudoSubForm{ padding: 3px; }
+.ag2SubForm{ border-top: 1px solid #ccc; border-left: 1px solid #ccc; width: 100%;}
+.ag2SubForm .tdHeader{background-color: #f4f4f4; border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; padding: 2px; font-weight:bold;}
+.ag2SubForm .first{width: 12px;}
+.ag2SubForm .tdId{ border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; padding: 2px;}
+.ag2SubForm .tdItem{ border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; padding: 2px;}
+.btnManager{cursor:pointer; text-decoration: none;}
+.btnManager:hover{cursor:pointer; text-decoration: none;}
+.tabelaSubForm{border-top: 1px solid #ccc; border-left: 1px solid #ccc;}
+.tabelaSubForm TR TD{border-bottom: 1px solid #ccc; border-right: 1px solid #ccc; padding: 3px;}
+.btnPostBak{display:none;}
+.divGridHeader{border: 0px solid blue;overflow: hidden;}
+.divGridTitulo{border: 0px solid green; float: left; margin-left: 3px;}
+.divSetaOrdenacao{border: 0px solid red; width: 12px; float: right; margin-right: 2px;}
+.lnkOrdenacao{border: 0px solid red; display:block;padding-top: 6px;padding-bottom: 6px;}
+.divTreeView{border: 1px solid #ccc; margin-top: 2px; background-color: #fff; padding: 3px 3px 0 0; height: 20px; overflow:auto;}
+.divTreeView .lnkTitulo{color: #333;}
+.pnlLinha{border: 0px solid #ccc; padding-left: 13px; display: block;}
+.linhaEscura{background-color: #ccc;}
+.AlteraNivel{border: 0px solid #ccc; padding: 3px;}
+.highlight{background-color: yellow;}
+.divConteudoModulo{ border: 1px solid #ccc; padding: 10px 10px 10px 0px; background-color: #f2f2f2;}
+#btnFecharForm{ cursor: pointer;}
+.btnNovaSecao:hover{cursor: pointer; text-decoration: none;}
+
+.showMessageBox{padding: 5px;border: 5px solid #FF6500; height: 135px; width: 450px;}
+.showMessageBox .icon{border: 0px solid #ccc; float: left; height: 128px; width: 128px;}
+.showMessageBox DIV{border: 0px solid #ccc; font-weight: bold; font-size: 16px; float: left; width: 300px; height: 128px; padding: 3px; vertical-align:text-bottom;}
+.showMessageBox TABLE{border: 0px solid #ccc; font-weight: bold; font-size: 16px; float: left; width: 300px; height: 128px; padding: 3px; vertical-align:text-bottom;}
+
+.showMessageBoxNone{padding: 5px;border: 5px solid #FF6500; height: 135px; width: 450px;}
+.showMessageBoxNone .icon{display: none;}
+.showMessageBoxNone DIV{border: 0px solid #ccc; font-weight: bold; font-size: 16px; float: left; width: 442px; height: 128px; padding: 3px; vertical-align:text-bottom;}
+.showMessageBoxNone TABLE{border: 0px solid #ccc; font-weight: bold; font-size: 16px; float: left; width: 442px; height: 128px; padding: 3px; vertical-align:text-bottom;}
+.showMessageBoxNone TABLE TR TD{text-align: center;}
+.pnlUploadBrowser{width: 500px; background-color: #f4f4f4; border: 1px solid #ccc; padding: 3px; margin-top: 10px;}
+.AdicionarUploadBrowser:hover{cursor:pointer; text-decoration: none;}
+
+/*##### COMPONENTE DE LISTAGEM DE ARQUIVOS #####*/
+.divListFiles{border: 1px solid #ccc; background-color: #f4f4f4; padding: 3px;}
+.divItemListaArquivo{border: 1px solid #ccc; padding: 3px; background-color: #fff; margin-top: 3px; overflow: auto;}
+.divItemThumbDOC{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px; background-image: url(../img/icon_word.png);}
+.divItemThumbPPT{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px; background-image: url(../img/icon_powerPoint.png);}
+.divItemThumbPDF{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px; background-image: url(../img/icon_pdf.png);}
+.divItemThumbXLS{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px; background-image: url(../img/icon_excel.png);}
+.divItemThumbZIP{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px; background-image: url(../img/icon_zip.png);}
+.divItemThumbTXT{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px; background-image: url(../img/icon_txt.png);}
+.divItemThumbIMG{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px;}
+.divItemThumbMP3{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px; background-image: url(../img/icon_mp3.png);}
+.divInfoArquivo{float: right; text-align: right; border: 0px solid red;}
+.divInfoArquivo div span{color: #000;}
+.divDeleteFile{float: right; border: 0px solid red; margin-left: 5px;}
+.divEditFile{margin-top: 3px;}
+
+
+
+
+.divCampo{margin-top: 10px;}
+
+/*inicio modulo ofertas*/
+.tree { padding-left:15px; list-style:none !important; } 
+/*fim modulo ofertas*/
+
+.bordaDiv{border:1px solid #000; padding:10px;}

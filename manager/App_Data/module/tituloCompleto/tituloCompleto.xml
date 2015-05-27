@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="Titulo e Informaões" version="1.0">
+        <settings>
+            <title><![CDATA[Titulo e Informações]]></title>
+            <description><![CDATA[Gerenciamento de Titulo e Informações.]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="Titulo" primaryKey="tituloId" />
+
+        <queries>
+            <query section="list" sql="SELECT
+                                            *
+                                        FROM
+                                            viewTituloCompletoListagemManager
+                                        ORDER BY
+                                            nomeTitulo
+            " />
+        </queries>
+
+        <forms>
+            <edit type="control" src="tituloCompleto.ascx" />
+        </forms>
+
+        <!-- Configuracao dos campos que compoe um modulo -->
+        <fields>
+            <TextBox name="nomeTitulo" label="Nome Título" sort="true" dataFieldName="nomeTitulo" showInList="true" required="false" maxlength="256" >
+                <attributes>
+                    <attribute name="Width" value="250px" />
+                </attributes>
+            </TextBox>
+            <Date name="dataLancamento" label="Data Lançamento" sort="true" dataFieldName="dataLancamento" required="false" showInList="true" dbType="date" />
+            <TextBox name="tituloImpressoISBN13" label="Titulo Impresso ISBN13" sort="true" dataFieldName="tituloImpressoISBN13" required="false" showInList="true" maxlength="17" />
+            <TextBox name="tituloEletronicoISBN13" label="Titulo eBook ISBN13" sort="true" dataFieldName="tituloEletronicoISBN13" required="false" showInList="true" maxlength="17" />
+            <CheckBox name="existeAutor" label="Existe Autor" dataFieldName="existeAutor" sort="true" required="false" showInList="false" dbType="boolean" />
+            <TextBox name="autores" label="Autores" sort="true" dataFieldName="autores" required="false" showInList="false" maxlength="17" />
+        </fields>
+        <filters>
+            <filter label="Nome Título" field="nomeTitulo"/>
+            <filter label="Titulo Impresso ISBN13" field="tituloImpressoISBN13"/>
+            <filter label="Titulo eBook ISBN13" field="tituloEletronicoISBN13"/>
+            <filter label="Autor" field="autores"/>
+            <filter label="Possui Autor" field="existeAutor" filterExpression="existeAutor="/>
+            <filter label="Data Lançamento" field="dataLancamento" filterType="range"/>
+        </filters>
+    </module>
+</AG2Manager>

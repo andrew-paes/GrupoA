@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="oferta" version="1.0">
+    <settings>
+      <title><![CDATA[Oferta]]></title>
+      <description><![CDATA[Consulta de Pedidos do manager]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+      <setting name="assemblyName" value="App_Code" />
+      <setting name="className" value="DeleteOferta" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="oferta" primaryKey="ofertaId" />
+
+    <events>
+      <add name="BeforeRegisterDelete" />
+    </events>
+
+    <queries>
+      <query section="list" sql="SELECT Oferta.ofertaId,
+                                    Oferta.nomeOferta,
+	                                  Convert(varchar(20), Oferta.dataHoraInicio, 103) + ' ' + Convert(varchar(20), Oferta.dataHoraInicio, 108) + ' a ' +
+	                                  Convert(varchar(20), Oferta.dataHoraTermino, 103) + ' ' + Convert(varchar(20), Oferta.dataHoraTermino, 108) AS periodo,
+	                                  Oferta.dataHoraInicio,
+	                                  Oferta.dataHoraTermino,
+	                                  OfertaTipo.tipoOferta
+                                  FROM Oferta
+                                  INNER JOIN OfertaTipo
+	                                  ON Oferta.ofertaTipoId = OfertaTipo.ofertaTipoId
+                                  ORDER BY Oferta.nomeOferta" />
+    </queries>
+
+    <forms>
+      <edit type="control" src="oferta.ascx" />
+    </forms>
+    <fields>
+      <TextBox name="nomeOferta" label="Oferta" sort="true" dataFieldName="nomeOferta" dbType="String"  showInList="true" required="true" maxlength="250"  />
+      <Date name="dataHoraInicio" label="Início da Oferta" sort="true" dataFieldName="dataHoraInicio" required="false" showInList="true" dbType="date" />
+      <Date name="dataHoraTermino" label="Fim da Oferta" sort="true" dataFieldName="dataHoraTermino" required="false" showInList="true" dbType="date" />
+      <TextBox name="tipoOferta" label="Tipo" sort="true" dataFieldName="tipoOferta" dbType="String"  showInList="true" required="true" maxlength="250"  />
+    </fields>
+    <filters>
+      <filter label="Oferta" field="nomeOferta"/>
+      <filter label="Data Início" field="dataHoraInicio" filterExpression="Oferta.dataHoraInicio>="/>
+      <filter label="Data Fim" field="dataHoraTermino" filterExpression="Oferta.dataHoraTermino &lt;="/>
+    </filters>
+  </module>
+</AG2Manager>

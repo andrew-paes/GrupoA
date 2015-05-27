@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="artigos" version="1.0">
+		<settings>
+			<title><![CDATA[Cadastro de Artigos]]></title>
+			<description><![CDATA[Cadastro de Artigos]]></description>
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+			<setting name="assemblyName" value="App_Code" />
+			<setting name="className" value="DeleteRevistaArtigo" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="RevistaArtigo" primaryKey="revistaArtigoId" />
+
+		<events>
+			<add name="BeforeRegisterDelete" />
+		</events>
+
+		<queries>
+			<query section="list" sql="select     RevistaArtigo.*, CASE WHEN RevistaArtigo.destaqueHome = 1 THEN 'Sim' ELSE 'Não'END AS destaqueHomeSecond,
+                                          CASE WHEN RevistaArtigo.destaquePrincipal = 1 THEN 'Sim' ELSE 'Não'END AS destaquePrincipalSecond,
+                                          Revista.nomeRevista, RevistaEdicao.numeroEdicao , RevistaSecao.nomeSecao,
+                                          CASE WHEN RevistaArtigo.ativo = 1 THEN 'Sim' ELSE 'Não'END AS StrAtivo
+                                          FROM       RevistaArtigo
+                                          INNER JOIN RevistaSecao        ON RevistaArtigo.revistaSecaoId = RevistaSecao.revistaSecaoId 
+                                          INNER JOIN Revista             ON RevistaSecao.revistaId = Revista.revistaId
+                                          LEFT JOIN RevistaEdicao       ON RevistaArtigo.revistaEdicaoId = RevistaEdicao.revistaEdicaoId
+                                          ORDER BY   RevistaArtigo.tituloArtigo"
+			/>
+		</queries>
+
+		<forms>
+			<edit type="control" src="revistaArtigo.ascx" />
+		</forms>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+			<TextBox name="tituloArtigo"   label="Título do Artigo" sort="true" dataFieldName="tituloArtigo" showInList="true" required="true" maxlength="256" />
+			<ListBox
+				label="Nome da Revista"
+				name="nomeRevista"
+				dataFieldName="nomeRevista"
+				inListUseField="nomeRevista"
+				dataSource="Revista"
+				dataTextField="nomeRevista"
+				dataValueField="revistaId"
+				showInList="true"
+				required="true"
+				sort="true"
+			/>
+			<TextBox name="numeroEdicao" label="Edição"             sort="true" dataFieldName="numeroEdicao" showInList="true" required="true" maxlength="20" />
+			<TextBox name="nomeSecao"    label="Seção"              sort="true" dataFieldName="nomeSecao" showInList="true" required="true" maxlength="20" />
+			<TextBox name="destaqueHome" label="Destaque na Home?"  sort="true" dataFieldName="destaqueHomeSecond" showInList="true" required="true" maxlength="20" />
+            <TextBox name="destaquePrincipal" label="Destaque Principal de Capa?"  sort="true" dataFieldName="destaquePrincipalSecond" showInList="true" required="true" maxlength="20" />
+            <CheckBox name="ativo" label="Ativo" dataFieldName="StrAtivo" required="false" showInList="true" dbType="boolean" />
+		</fields>
+
+		<filters>
+			<filter label="Título do Artigo" field="tituloArtigo"/>
+			<filter label="Nome da Revista"  field="nomeRevista" filterExpression="Revista.revistaId=" />
+			<filter label="Edição"           field="numeroEdicao"/>
+            <filter label="Ativo" field="ativo" filterExpression="RevistaArtigo.ativo=" />
+		</filters>
+
+	</module>
+</AG2Manager>

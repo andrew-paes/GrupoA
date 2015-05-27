@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="pessoa" version="1.0">
+		<settings>
+			<title><![CDATA[Assinatura de Revista]]></title>
+			<description><![CDATA[Assinatura de Revista.]]></description>
+
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+            <setting name="assemblyName" value="App_Code" />
+            <setting name="className" value="DeleteUsuarioRevista" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="Usuario" primaryKey="usuarioRevistaId" />
+
+        <events>
+            <add name="BeforeRegisterDelete" />
+        </events>
+
+		<queries>
+			<query section="list" sql="SELECT UsuarioRevista.usuarioRevistaId,
+                                            Usuario.cadastroPessoa,
+	                                        Usuario.nomeUsuario,
+	                                        Revista.nomeRevista,
+	                                        UsuarioRevista.dataFimAssinatura,
+                                            UsuarioRevista.dataInicioAssinatura
+                                        FROM UsuarioRevista
+                                        INNER JOIN Usuario ON Usuario.usuarioId = UsuarioRevista.usuarioId
+                                        INNER JOIN Revista ON Revista.revistaId = UsuarioRevista.revistaId
+                                        WHERE Usuario.ativo = 1"
+			/>
+		</queries>
+		<forms>
+			<edit type="control" src="UsuarioRevista.ascx" />
+		</forms>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+            <TextBox name="cpf" label="CPF/CNPJ" sort="true" dataFieldName="cadastroPessoa" showInList="true" required="false" maxlength="50" />
+            <TextBox name="nome" label="Nome/Razão Social" sort="true" dataFieldName="nomeUsuario" showInList="true" required="true" maxlength="200" />
+            <ListBox label="Nome da Revista" name="nomeRevista" dataFieldName="nomeRevista" inListUseField="nomeRevista" dataSource="Revista" dataTextField="nomeRevista" dataValueField="revistaId" showInList="true" required="true" sort="true" />
+            <Date name="dataInicioAssinatura" label="Data Inicial da Assinatura" dataFieldName="dataInicioAssinatura" required="false" showInList="true" dbType="date" maxlength="10" />
+            <Date name="dataFimAssinatura" label="Data Final da Assinatura" dataFieldName="dataFimAssinatura" required="false" showInList="true" dbType="date" maxlength="10" />
+		</fields>
+
+		<filters>
+			<filter label="Nome/Razão Social" field="nome" />
+			<filter label="CPF/CNPJ" field="cpf" />
+            <filter label="Nome da Revista"  field="nomeRevista" filterExpression="Revista.revistaId=" />
+		</filters>
+
+	</module>
+
+
+</AG2Manager>

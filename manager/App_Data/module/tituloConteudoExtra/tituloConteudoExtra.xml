@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="tituloConteudoExtra" version="1.0">
+    <settings>
+      <title><![CDATA[Material Complementar]]></title>
+      <description><![CDATA[Gerenciamento de Conteúdo Extra de Títulos do portal.]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="titulo" primaryKey="tituloId" />
+
+
+    <queries>
+      <query section="list" sql="
+            
+          SELECT * FROM 
+          (
+          SELECT 
+          Titulo.TituloId, 
+          Tituloimpresso.isbn13,
+          Produto.NomeProduto,
+          Produto.produtoId, 
+          Produto.produtoTipoId, 
+          Produto.disponivel  
+          FROM Titulo
+          INNER JOIN TituloImpresso ON TituloImpresso.TituloId = Titulo.TituloId 
+          INNER JOIN Produto ON TituloImpresso.TituloImpressoId=Produto.produtoId
+
+          UNION ALL
+
+          SELECT 
+          Titulo.TituloId, 
+          TituloEletronico.isbn13,
+          Produto.NomeProduto,
+          Produto.produtoId, 
+          Produto.produtoTipoId, 
+          Produto.disponivel  
+          FROM Titulo
+          INNER JOIN TituloEletronico ON TituloEletronico.TituloId = Titulo.TituloId 
+          INNER JOIN Produto ON TituloEletronico.TituloEletronicoId=Produto.produtoId
+          ) as tb
+          ORDER BY NomeProduto DESC
+
+      " />
+    </queries>
+
+    <forms>
+      <edit type="control" src="tituloConteudoExtra.ascx" />
+    </forms>
+    <fields>
+      <TextBox name="titulo" label="Título" sort="true" dataFieldName="NomeProduto" showInList="true" required="false" maxlength="256" >
+        <attributes>
+          <attribute name="Width" value="250px" />
+        </attributes>
+      </TextBox>
+      <TextBox name="isbn13" label="ISBN 13" sort="true" dataFieldName="isbn13" showInList="true" required="false" maxlength="17" />
+    </fields>
+    <filters>
+      <filter label="Título" field="titulo"/>
+      <filter label="ISBN 13" field="isbn13"/>
+    </filters>
+  </module>
+</AG2Manager>
+

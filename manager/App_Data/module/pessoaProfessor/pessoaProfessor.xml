@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="pessoa" version="1.0">
+
+		<settings>
+			<title><![CDATA[Professor]]></title>
+			<description><![CDATA[Professor.]]></description>
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+		</settings>
+
+        <options>
+            <option querySection="export" value="excel" name="Exportar (Excel)" />
+        </options>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="Usuario" primaryKey="usuarioId" />
+
+		<queries>
+			<!-- Importante: essa query tem um código fixo 2 para o Perfil = Professor -->
+			<query section="list" sql="SELECT
+                                            *
+                                        FROM    
+                                            viewProfessores
+                                        ORDER BY 
+                                            nomeUsuario" />
+            <query section="export" sql="SELECT
+                                             usuarioId  
+                                            , nomeUsuario  
+                                            , '''' + CONVERT(VARCHAR(50), cadastroPessoa) AS cadastroPessoa
+                                            , dataHoraCadastro  
+                                            , emailUsuario  
+                                            , strAtivo AS Ativo
+                                            , docenciaComprovadaStr AS DocenciaComprovada
+                                        FROM
+                                            viewProfessores
+                                        ORDER BY 
+                                            nomeUsuario" />
+		</queries>
+
+		<forms>
+			<edit type="control" src="../pessoaProfessor/pessoaProfessor.ascx" />
+		</forms>
+
+		<fields>
+			<TextBox name="nome" label="Nome" sort="true" dataFieldName="nomeUsuario" showInList="true" required="true" maxlength="200" />
+			<TextBox name="email" label="E-mail" sort="true" dataFieldName="emailUsuario" showInList="true" required="true" maxlength="200" />
+			<TextBox name="cpf" label="CPF" sort="true" dataFieldName="cadastroPessoa" showInList="true" required="false" maxlength="50" />
+			<!--<Date name="dataI" label="Data Cadastro" dataFieldName="dataHoraCadastro" sort="true" required="false" showInList="false" dbType="date" maxlength="10" />
+			<Date name="dataF" label="Data Cadastro" dataFieldName="dataHoraCadastro" sort="true" required="false" showInList="false" dbType="date" maxlength="10" />-->
+			<Date name="dataHoraCadastro" label="Data Cadastro" dataFieldName="dataHoraCadastro" sort="true" required="false" showInList="true" dbType="date" maxlength="10" />
+			<CheckBox name="ativo" label="Ativo" dataFieldName="strAtivo" sort="true" required="false" showInList="true" dbType="boolean" />
+            <CheckBox name="docenciaComprovada" label="Docência Comprovada" dataFieldName="docenciaComprovada" sort="true" required="false"  />
+		</fields>
+
+		<filters>
+			<filter label="Nome" field="nome" />
+			<filter label="E-mail" field="email" />
+			<filter label="CPF" field="cpf" />
+			<!--<filter label="Data Cadastro Inicial" field="dataI" filterExpression="dataHoraCadastro &gt;="/>
+			<filter label="Data Cadastro Final" field="dataF" filterExpression="dataHoraCadastro &lt;="/>-->
+			<filter label="Data Cadastro" field="dataHoraCadastro" filterType="range"/>
+			<filter label="Ativo" field="ativo" filterExpression="ativo="/>
+            <filter label="Docência Comprovada" field="docenciaComprovada" filterExpression="docenciaComprovada="/>
+		</filters>
+
+	</module>
+</AG2Manager>

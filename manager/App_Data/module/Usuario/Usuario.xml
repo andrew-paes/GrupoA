@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="Usuario" version="1.0">
+    <settings>
+      <title><![CDATA[Usuários do Manager]]></title>
+      <description><![CDATA[Gerenciamento dos usuários que tem acesso a ferramenta de gerenciamento do portal.]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+      <setting name="assemblyName" value="App_Code" />
+      <setting name="className" value="DeleteUsuario" />
+    </settings>
+
+    <events>
+      <add name="BeforeRegisterDelete" />
+    </events>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="ag2mngUser" primaryKey="userId" />
+
+    <queries>
+
+      <query section="list" type="Sql" sql="
+
+          SELECT [userId]
+          ,[name]
+          ,[email]
+          ,[login]
+          ,[password]
+          ,CASE WHEN [active] = 1 THEN 'Sim' ELSE 'Não'END AS [active]
+          ,CASE WHEN [deleted] = 1 THEN 'Sim' ELSE 'Não'END AS [deleted]
+          FROM [dbo].[ag2mngUser] WHERE deleted = 0  
+          
+     " />
+
+    </queries>
+
+    <forms>
+      <edit type="control" src="Usuario.ascx" />
+    </forms>
+
+    <!-- Configuracao dos campos que compoe um modulo -->
+    <fields>
+      <TextBox name="nome" label="Nome" sort="true" dataFieldName="name" showInList="true" maxlength="80" />
+      <TextBox name="email" label="E-mail" sort="true" dataFieldName="email" showInList="true" maxlength="80" />
+    </fields>
+
+    <filters>
+      <filter label="Nome" field="nome" />
+      <filter label="E-mail" field="email" />
+    </filters>
+
+  </module>
+
+
+</AG2Manager>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="chamadaProgramaAtualizacao" version="1.0">
+		<settings>
+			<title><![CDATA[Chamada de Programa de Atualização]]></title>
+			<description><![CDATA[Chamada de Programa de Atualização.]]></description>
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+			<setting name="assemblyName" value="App_Code" />
+			<setting name="className" value="DeleteProgramaAtualizacaoChamada" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="ProgramaAtualizacaoChamada" primaryKey="programaAtualizacaoChamadaId" />
+
+		<events>
+			<add name="BeforeRegisterDelete" />
+		</events>
+
+		<queries>
+			<query section="list" sql="
+             select   ProgramaAtualizacaoChamada.programaAtualizacaoChamadaId,
+		                  ProgramaAtualizacaoChamada.primeiraChamadaTitulo,
+	                    ProgramaAtualizacaoChamada.primeiraChamadaTexto,
+		                  ProgramaAtualizacaoChamada.primeiraChamadaUrl,
+		                  ProgramaAtualizacaoChamada.segundaChamadaTitulo,
+		                  ProgramaAtualizacaoChamada.segundaChamadaTexto,
+		                  ProgramaAtualizacaoChamada.segundaChamadaUrl,
+		                  CASE WHEN ProgramaAtualizacaoChamada.ativo = 1 THEN 'Sim' ELSE 'Não'END AS ativo
+             from ProgramaAtualizacaoChamada
+             " />
+		</queries>
+
+		<!--LEFT JOIN ProgramaAtualizacaoChamadaLocalizacao ON ProgramaAtualizacaoChamadaLocalizacao.programaAtualizacaoChamadaId=ProgramaAtualizacaoChamada.programaAtualizacaoChamadaId-->
+
+		<forms>
+			<edit type="control" src="../chamadaProgramaAtualizacao/chamadaProgramaAtualizacao.ascx" />
+		</forms>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+			<TextBox name="PrimeiraChamadaTitulo" label="Titulo da Primeira Chamada" sort="true" dataFieldName="primeiraChamadaTitulo" showInList="true" required="false" maxlength="256" >
+				<attributes>
+					<attribute name="Width" value="250px" />
+				</attributes>
+			</TextBox>
+			<TextBox name="SegundaChamadaTitulo" label="Titulo da Segunda Chamada" sort="true" dataFieldName="segundaChamadaTitulo" showInList="true" required="false" maxlength="256" >
+				<attributes>
+					<attribute name="Width" value="250px" />
+				</attributes>
+			</TextBox>
+
+			<CheckBox name="ExibeNoSite"     label="Exibe no Site?" sort="true" dataFieldName="ativo" showInList="true" required="true" dbType="boolean" />
+
+		</fields>
+
+		<filters>
+			<filter label="Exibe no Site?" field="ExibeNoSite" />
+		</filters>
+
+	</module>
+
+
+</AG2Manager>

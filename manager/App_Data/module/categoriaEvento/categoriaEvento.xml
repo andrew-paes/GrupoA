@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="CategoriaEvento" version="1.0">
+    <settings>
+      <title><![CDATA[Evento]]></title>
+      <description><![CDATA[Gerenciamento de Eventos do portal.]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+      <setting name="assemblyName" value="App_Code" />
+      <setting name="className" value="DeleteCategoriaEvento" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="evento" primaryKey="categoriaEventoId" />
+
+
+    <queries>
+      <query section="list" sql="SELECT * FROM CategoriaEvento ORDER BY nomeCategoriaEvento ASC" />
+    </queries>
+
+    <forms>
+      <edit type="control" src="categoriaEvento.ascx" />
+    </forms>
+
+    <!-- Configuracao dos campos que compoe um modulo -->
+    <fields>
+      <TextBox name="nomeCategoriaEvento" label="Nome" sort="true" dataFieldName="nomeCategoriaEvento" showInList="true" required="false" maxlength="256" >
+        <attributes>
+          <attribute name="Width" value="250px" />
+        </attributes>
+      </TextBox>
+    </fields>
+
+    <filters>
+      <filter label="Nome" field="nomeCategoriaEvento" />
+    </filters>
+
+  </module>
+
+
+</AG2Manager>

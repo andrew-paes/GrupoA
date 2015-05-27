@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="Titulo" version="1.0">
+		<settings>
+			<title><![CDATA[Solicitação de Título para Avaliação]]></title>
+			<description><![CDATA[Gerenciamento de Solicitações de Título para Avaliação de Professores do portal.]]></description>
+
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+			<setting name="assemblyName" value="App_Code" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="TituloSolicitacao" primaryKey="tituloSolicitacaoId" />
+
+
+		<queries>
+			<query section="list" sql="SELECT * FROM (
+                                            SELECT 
+                                                TituloSolicitacao.tituloSolicitacaoId
+                                                , Produto.nomeProduto
+                                                , TituloImpresso.isbn13
+                                                , Usuario.nomeUsuario
+                                                , Usuario.cadastroPessoa
+                                                , TituloSolicitacao.dataSolicitacao
+                                                , TituloSolicitacaoStatus.statusSolicitacao
+                                                , TituloSolicitacaoStatus.tituloSolicitacaoStatusId
+                                                , CASE WHEN ativo = 1 THEN 'Sim' ELSE 'Não'END AS strAtivo
+                                                , CASE WHEN TituloAvaliacao.tituloAvaliacaoId IS NULL THEN 0 ELSE 1 END AS Avaliado
+                                                , CASE WHEN TituloAvaliacao.tituloAvaliacaoId IS NULL 
+                                                    THEN 
+                                                        CASE WHEN TituloSolicitacaoStatus.tituloSolicitacaoStatusId = 2 
+                                                            THEN 'Pendente' 
+                                                            ELSE '-'
+                                                            END
+                                                    ELSE 'Avaliado' 
+                                                    END AS strAvaliacao
+                                                , CASE WHEN TituloAvaliacao.avaliacao IS NULL OR TituloAvaliacao.avaliacao = ''
+                                                    THEN 
+                                                        0
+                                                    ELSE 1
+                                                    END AS avaliacaoPublicacao
+                                                , CASE WHEN TituloAvaliacao.avaliacao IS NULL OR TituloAvaliacao.avaliacao = ''
+                                                    THEN 
+                                                        'Não'
+                                                    ELSE 'Sim'
+                                                    END AS strAvaliacaoPublicacao
+                                            FROM 
+                                                TituloSolicitacao
+                                                INNER JOIN TituloSolicitacaoStatus ON TituloSolicitacaoStatus.tituloSolicitacaoStatusId = TituloSolicitacao.tituloSolicitacaoStatusId
+                                                INNER JOIN Titulo ON Titulo.tituloId = TituloSolicitacao.tituloId
+                                                INNER JOIN TituloImpresso ON TituloImpresso.tituloId = TituloSolicitacao.tituloId
+                                                INNER JOIN Produto ON Produto.produtoId = TituloImpresso.tituloImpressoId
+                                                INNER JOIN Professor ON Professor.professorId = TituloSolicitacao.professorId
+                                                INNER JOIN Usuario ON Usuario.usuarioId = Professor.professorId
+                                                LEFT JOIN TituloAvaliacao ON TituloAvaliacao.tituloSolicitacaoId = TituloSolicitacao.tituloSolicitacaoId
+                                        ) AS Q
+                                        ORDER BY dataSolicitacao DESC"
+			/>
+		</queries>
+
+		<forms>
+			<edit type="control" src="solicitacaoTituloAvaliacao.ascx" />
+		</forms>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+			<TextBox name="titulo" label="Título" sort="true" dataFieldName="NomeProduto" showInList="true" required="false" maxlength="256" >
+				<attributes>
+					<attribute name="Width" value="250px" />
+				</attributes>
+			</TextBox>
+            <TextBox name="isbn13" label="ISBN 13" sort="true" dataFieldName="isbn13" showInList="true" required="false" maxlength="17" />
+            <TextBox name="NomeProfessor" label="Nome do Professor" sort="true" dataFieldName="nomeUsuario" showInList="true" required="false" maxlength="256" >
+				<attributes>
+					<attribute name="Width" value="250px" />
+				</attributes>
+			</TextBox>
+			
+			<TextBox name="CPF" label="CPF" sort="true" dataFieldName="cadastroPessoa" showInList="false" required="false" maxlength="17" />
+			<Date name="DataSolicitacao" label="Solicitação" sort="true" dataFieldName="dataSolicitacao" showInList="true" required="false" maxlength="256" >
+				<attributes>
+					<attribute name="Width" value="250px" />
+				</attributes>
+			</Date>
+
+			<ListBox name="statusEditora"
+				label="Status Editora"
+				dataFieldName="statusSolicitacao"
+				showInList="true"
+				inListUseField="statusSolicitacao"
+				required="true"
+				dataSource="TituloSolicitacaoStatus"
+				dataTextField="statusSolicitacao"
+				dataValueField="tituloSolicitacaoStatusId"
+				sort="true"
+			/>
+            <CheckBox name="statusAvaliacaoPub" label="Status Avaliação Publicação" dataFieldName="avaliacaoPublicacao" dbType="boolean" Checked="true" translation="true" showInList="false" sort="true" />
+            <TextBox name="Status Professor" label="Status Professor" sort="true" dataFieldName="strAvaliacao" showInList="true" required="false" maxlength="8" />
+            <!--<CheckBox name="Avaliados" label="Avaliados" dataFieldName="avaliado" required="false" showInList="false" dbType="boolean" />-->
+            <CheckBox name="statusProfessor" label="Status Professor" dataFieldName="avaliado" dbType="StringFixedLength"  Checked="true" translation="true" showInList="false" sort="true" />
+            
+                        
+		</fields>
+		<filters>
+			<filter label="Título" field="titulo"/>
+			<filter label="ISBN 13" field="isbn13"/>
+			<filter label="Professor" field="NomeProfessor"/>
+			<filter label="CPF" field="CPF"/>
+			<filter label="Status" field="Status"/>
+			<filter label="Data Solicitação" field="DataSolicitacao" filterType="range"/>
+            <filter label="Status Editora" field="statusEditora" filterExpression="tituloSolicitacaoStatusId=" />
+            <filter label="Status Professor" field="statusProfessor" filterExpression="avaliado=" />
+            <filter label="Destaque de Avaliação" field="statusAvaliacaoPub" filterExpression="avaliacaoPublicacao=" />
+		</filters>
+
+	</module>
+
+
+</AG2Manager>

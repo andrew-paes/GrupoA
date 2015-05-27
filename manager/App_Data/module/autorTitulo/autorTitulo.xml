@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="autorTitulo" version="1.0">
+    <settings>
+      <title><![CDATA[Autor - Título]]></title>
+      <description><![CDATA[Autor - Título]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="Titulo" primaryKey="tituloId" />
+
+    <queries>
+      <!--criado uma view por existir um bug do manager que não possibilita um subselect-->
+      <query section="list" sql="SELECT * FROM viewTitulosAutores" />
+    </queries>
+    <forms>
+      <edit type="control" src="autorTitulo.ascx" />
+    </forms>
+
+    <!-- Configuracao dos campos que compoe um modulo -->
+    <fields>
+      <TextBox name="nomeTitulo" label="Título" sort="true" dataFieldName="nomeTitulo" showInList="true" required="true" maxlength="200" />
+      <TextBox name="subtituloLivro" label="Subtítulo" sort="true" dataFieldName="subtituloLivro" showInList="true" required="true" maxlength="200"/>
+      <TextBox name="isbn13" label="ISBN" sort="true" dataFieldName="isbn13" showInList="true" maxlength="50" />
+      <CheckBox name="existeAutor" label="Existe Autor" dataFieldName="existeAutor" sort="true" required="false" showInList="false" dbType="boolean" />
+    </fields>
+
+    <filters>
+      <filter label="Título" field="nomeTitulo" />
+      <filter label="Possui Autor" field="existeAutor" filterExpression="existeAutor="/>
+    </filters>
+  </module>
+</AG2Manager>

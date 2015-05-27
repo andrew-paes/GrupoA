@@ -1,0 +1,17 @@
+﻿
+DIV#MainContents 
+{
+    background-color: White;
+    padding: 2em;
+    border: 1px solid gray;
+}
+
+H1 { margin-top: 0; padding-top: 0; }
+
+.btnCancel{height: 15px;}
+.divUploader{border: 1px solid #cccccc;width:450px;height: 100px;}
+.divFoto{{border: 1px solid #cccccc;width:80px;height: 60px;display: none;}
+.progress{border: 1px solid red; height:.75em;}
+DIV.ProgressBar {border: 1px solid black;height:.75em;display:-moz-inline-stack; display:inline-block; *display:inline; }
+DIV.ProgressBar DIV { background-color: Orange; font-size: 1pt; height:100%; }
+SPAN.asyncUploader OBJECT {top: 5px; left: 10px; }

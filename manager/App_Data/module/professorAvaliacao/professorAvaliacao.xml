@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="professorAvaliacao" version="1.0">
+    <settings>
+      <title><![CDATA[Avaliação do Professor]]></title>
+      <description><![CDATA[Professor.]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="Usuario" primaryKey="tituloAvaliacaoId" />
+
+    <queries>
+        <query section="list" sql=" select Usuario.usuarioId, Usuario.nomeUsuario, Usuario.emailUsuario, 
+                                           TituloImpresso.isbn13,
+	                                         Produto.nomeProduto,
+	                                         CASE WHEN TituloAvaliacao.finalizada = 1 THEN 'Sim' ELSE 'Não'END AS finalizada,
+                                           TituloAvaliacao.dataRealizacaoAvaliacao,
+                                           TituloAvaliacao.tituloAvaliacaoId
+                                    from Usuario
+                                    INNER JOIN Professor          ON Usuario.usuarioId=Professor.professorId
+                                    INNER JOIN TituloSolicitacao  ON Professor.professorId=TituloSolicitacao.professorId
+                                    INNER JOIN TituloAvaliacao    ON TituloSolicitacao.tituloSolicitacaoId=TituloAvaliacao.tituloSolicitacaoId
+									                  INNER JOIN TituloImpresso     ON TituloSolicitacao.tituloId=TituloImpresso.tituloId
+                                    INNER JOIN Produto            ON TituloImpresso.tituloImpressoId=Produto.produtoId
+                                    ORDER BY TituloAvaliacao.dataRealizacaoAvaliacao DESC" />
+    </queries>
+    <forms>
+      <edit type="control" src="../professorAvaliacao/professorAvaliacao.ascx" />
+    </forms>
+
+    <fields>
+      <TextBox name="avaliacaoNome" label="Nome do Professor" sort="true" dataFieldName="nomeUsuario" showInList="true" required="true" maxlength="200" />
+      <TextBox name="avaliacaoNomeProduto" label="Nome do Título" sort="true" dataFieldName="nomeProduto" showInList="true" required="true" maxlength="20" />
+      <TextBox name="avaliacaoIsbn13" label="ISBN13" sort="true" dataFieldName="isbn13" showInList="true" required="true" maxlength="20" />
+      <CheckBox name="avaliacaoFinalizada"     label="Finalizada?" sort="true" dataFieldName="finalizada" showInList="true" required="true" dbType="boolean" />
+      <Date name="avaliacaoDataRealizacao" label="Data realização avaliação" sort="true" dataFieldName="dataRealizacaoAvaliacao" required="false" showInList="true" dbType="date" /> />
+    </fields>
+
+    <filters>
+      <filter label="Nome do Professor" field="avaliacaoNome" />
+      <filter label="Nome do Título"    field="avaliacaoNomeProduto" />
+      <filter label="ISBN13"            field="avaliacaoIsbn13" />
+    </filters>
+
+  </module>
+
+
+</AG2Manager>

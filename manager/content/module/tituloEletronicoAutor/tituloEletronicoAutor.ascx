@@ -1,0 +1,32 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="tituloEletronicoAutor.ascx.cs" Inherits="content_module_tituloEletronicoAutor_tituloEletronicoAutor" %>
+<%@ Register src="../../../ctl/ag2RelacionarList.ascx" tagname="ag2RelacionarList" tagprefix="uc1" %>
+<label><b>Título Eletrônico:</b></label><br />
+<asp:Label runat="server" ID="lblTitulo" Text="" CssClass="frmborder" Width="200px" />
+<br />
+<br />
+<label><b>ISBN 13:</b></label><br />
+<asp:Label runat="server" ID="lblIsbn13" Text="" CssClass="frmborder" Width="200px" />
+<br />
+<br />
+<asp:Label runat="server" ID="Label2" Font-Bold="true" Text="Filtros da Listagem:" />
+
+<table width="420px" border="0" cellpadding="10" cellspacing="10">
+    <tr>
+        <td>
+            <asp:TextBox runat="server" ID="txtTitulo" Width="200px" CssClass="frmborder" MaxLength="128"></asp:TextBox>
+        </td>
+        <td>
+            &nbsp;<asp:Button runat="server" ID="btnPesquisar" Text="Pesquisar" Width="90px"
+                OnClick="btnPesquisar_Click" />
+        </td>
+    </tr>
+</table>
+<br />
+<uc1:ag2RelacionarList ID="listRel" runat="server" />
+<br />
+<br />
+<div class="boxesc" style="vertical-align: bottom;">
+    <asp:ImageButton ID="btnExecute" runat="server" ImageUrl="~/img/btn_executar.gif"
+        Width="73" Height="20" BorderWidth="0" AlternateText="Executar" ImageAlign="AbsMiddle"
+        CausesValidation="true" ValidationGroup="1" OnClick="btnExecute_Click" />
+</div>

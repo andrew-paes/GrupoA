@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="pessoa" version="1.0">
+		<settings>
+			<title><![CDATA[Leitor]]></title>
+			<description><![CDATA[Leitor.]]></description>
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+		</settings>
+
+        <options>
+            <option querySection="export" value="excel" name="Exportar (Excel)" />
+        </options>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="Usuario" primaryKey="usuarioId" />
+
+		<queries>
+			<!-- Importante: essa query tem um código fixo 1 para o Perfil = Leitores -->
+			<query section="list" sql="SELECT 
+											u.usuarioId
+											, u.nomeUsuario
+											, u.cadastroPessoa
+											, u.dataHoraCadastro
+											, case when tipoPessoa = 1 then 'PF' else 'PJ' end as 'tipoPessoaDesc'
+											, u.tipoPessoa
+											, u.emailUsuario
+											, u.ativo
+											, case when ativo = 1 then 'Sim' else 'Não' end as 'strAtivo'
+										FROM 
+											Usuario u
+											INNER JOIN UsuarioPerfil up ON u.usuarioId = up.usuarioId
+											INNER JOIN Perfil p ON up.perfilId = p.perfilId AND p.perfilId=1
+										ORDER BY 
+											nomeUsuario"
+			/>
+            <query section="export" sql="SELECT 
+											u.usuarioId
+											, u.nomeUsuario
+											, '''' + CONVERT(VARCHAR(50), u.cadastroPessoa) AS cadastroPessoa
+											, u.dataHoraCadastro
+											, case when tipoPessoa = 1 then 'PF' else 'PJ' end as 'tipoPessoaDesc'
+											, u.tipoPessoa
+											, u.emailUsuario
+											, u.ativo
+											, case when ativo = 1 then 'Sim' else 'Não' end as 'strAtivo'
+										FROM 
+											Usuario u
+											INNER JOIN UsuarioPerfil up ON u.usuarioId = up.usuarioId
+											INNER JOIN Perfil p ON up.perfilId = p.perfilId AND p.perfilId=1
+										ORDER BY 
+											nomeUsuario"
+			/>
+		</queries>
+		<forms>
+			<edit type="control" src="pessoa.ascx" />
+		</forms>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+			<TextBox name="nome" label="Nome/Razão Social" sort="true" dataFieldName="nomeUsuario" showInList="true" required="true" maxlength="200" />
+			<TextBox name="cpf" label="CPF/CNPJ" sort="true" dataFieldName="cadastroPessoa" showInList="true" required="false" maxlength="50" />
+			<TextBox name="email" label="E-mail" sort="true" dataFieldName="emailUsuario" showInList="true" required="true" maxlength="200" />
+			<Date name="dataI" label="Data Cadastro" dataFieldName="dataHoraCadastro" required="false" showInList="false" dbType="date" maxlength="10" />
+			<Date name="dataF" label="Data Cadastro" dataFieldName="dataHoraCadastro" required="false" showInList="false" dbType="date" maxlength="10" />
+			<Date name="data" label="Data Cadastro" dataFieldName="dataHoraCadastro" required="false" showInList="true" dbType="date" maxlength="10" />
+			<CheckBox name="ativo" label="Ativo" dataFieldName="strAtivo" sort="true" required="false" showInList="true" dbType="boolean" />
+			<CheckBox name="tipoPessoa" label="Tipo Pessoa" dataFieldName="tipoPessoaDesc" sort="true" required="false" showInList="true" dbType="boolean" />
+		</fields>
+
+		<filters>
+			<filter label="Nome/Razão Social" field="nome" />
+			<filter label="E-mail" field="email" />
+			<filter label="CPF/CNPJ" field="cpf" />
+			<filter label="Data Cadastro/Fundação Inicial" field="dataI" filterExpression="dataHoraCadastro &gt;="/>
+			<filter label="Data Cadastro/Fundação Final" field="dataF" filterExpression="dataHoraCadastro &lt;="/>
+			<filter label="Ativo" field="ativo" filterExpression="ativo="/>
+			<filter label="Tipo" field="tipoPessoa" filterExpression="tipoPessoa="/>
+		</filters>
+
+	</module>
+
+
+</AG2Manager>

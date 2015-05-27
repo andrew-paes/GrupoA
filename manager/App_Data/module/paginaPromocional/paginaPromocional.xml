@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="autor" version="1.0">
+		<settings>
+			<title><![CDATA[Pagina Promocional]]></title>
+			<description><![CDATA[Pagina Promocional]]></description>
+
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="PaginaPromocional" primaryKey="paginaPromocionalId" />
+
+		<queries>
+			<query section="list" sql="SELECT 
+											PaginaPromocional.*
+											, Arquivo.nomeArquivo
+										FROM 
+											PaginaPromocional
+											LEFT JOIN Arquivo ON Arquivo.arquivoId = PaginaPromocional.arquivoId
+										ORDER BY 
+											PaginaPromocional.tituloPagina" />
+		</queries>
+
+		<forms>
+			<edit type="control" src="paginaPromocional.ascx" />
+		</forms>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+			<TextBox name="tituloPagina" label="Titulo da Página" sort="true" dataFieldName="tituloPagina" showInList="true" required="true" maxlength="128" />
+			<TextBox name="subtituloPagina" label="Subtitulo da Página" sort="true" dataFieldName="subtituloPagina" showInList="true" required="true" maxlength="256" />
+			<TextBox name="resumo" label="Resumo" sort="true" dataFieldName="resumo" showInList="false" required="true" maxlength="128" />
+			<TextBox name="linkMidia" label="Link URL" sort="true" dataFieldName="linkMidia" showInList="true" required="true" maxlength="256" />
+			<TextBox name="nomeArquivo" label="Imagem" sort="true" dataFieldName="nomeArquivo" showInList="true" required="true" maxlength="256" />
+		</fields>
+
+		<filters>
+			<filter label="Titulo da Página" field="tituloPagina" />
+		</filters>
+	</module>
+</AG2Manager>

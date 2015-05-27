@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="userPerfil" version="1.0">
+    <settings>
+      <title><![CDATA[Perfil]]></title>
+      <description><![CDATA[Gerenciamento]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+      <setting name="assemblyName" value="App_Code" />
+      <setting name="className" value="DeletePerfil" />
+    </settings>
+
+    <events>
+      <add name="BeforeRegisterDelete" />
+    </events>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="ag2mngPerfil" primaryKey="perfilId" />
+
+    <queries>
+      <query section="list" type="StoredProcedure" sql="ag2mngPerfil_Select" >
+      </query>
+    </queries>
+    
+    <forms>
+      <edit type="control" src="userPerfil.ascx" />
+    </forms>
+
+   <!-- Configuracao dos campos que compoe um modulo -->
+   <fields>
+     <TextBox name="nome" label="Nome" sort="true" dataFieldName="name" dbType="String"  showInList="true" required="true" maxlength="200"  />
+   </fields>
+
+  </module>
+</AG2Manager>

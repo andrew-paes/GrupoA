@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="secao" version="1.0">
+        <settings>
+            <title><![CDATA[Cadastro de Assinatura de Revista]]></title>
+            <description><![CDATA[Cadastro de Assinatura de Revista]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+
+            <!--<setting name="assemblyName" value="App_Code" />
+      <setting name="className" value="DeleteContatoSetor" />-->
+
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="RevistaAssinatura" primaryKey="revistaAssinaturaId" />
+
+        <!--<events>
+      <add name="BeforeRegisterDelete" />
+    </events>-->
+
+        <queries>
+            <query section="list" sql="SELECT RevistaAssinatura.revistaAssinaturaId,
+	                                           RevistaAssinatura.numeroExemplares,
+	                                           Produto.nomeProduto,
+	                                           Revista.nomeRevista,
+	                                           Revista.revistaId,
+                                               Produto.homologado,
+                                               CASE WHEN Produto.homologado = 1 THEN 'Sim' ELSE 'Não'END AS strHomologado
+                                        FROM RevistaAssinatura
+                                        INNER JOIN Produto ON RevistaAssinatura.revistaAssinaturaId = Produto.produtoId
+                                        INNER JOIN Revista ON RevistaAssinatura.revistaId = Revista.revistaId " />
+        </queries>
+        <forms>
+            <edit type="control" src="assinaturaRevista.ascx" />
+        </forms>
+
+        <!-- Configuracao dos campos que compoe um modulo -->
+        <fields>
+
+            <ListBox name="nomeRevista" label="Nome da Revista" sort="true" dataFieldName="Revista.revistaId" showInList="true" inListUseField="nomeRevista" dataSource="Revista" dataTextField="nomeRevista" dataValueField="revistaId" />
+            <TextBox name="revistaId" label="Id da Revista" sort="true" dataFieldName="nomeRevista" showInList="false" required="true" maxlength="256" />
+            <TextBox name="numeroExemplares" label="Número de Exemplares" sort="true" dataFieldName="numeroExemplares" showInList="true" required="true" maxlength="7"  />
+            <TextBox name="nomeProduto"  label="Nome da Assinatura" sort="true" dataFieldName="nomeProduto" showInList="true" required="true"  maxlength="19"/>
+            <CheckBox name="homologado" label="Homologado" sort="true" dataFieldName="strHomologado" required="false" showInList="true" dbType="boolean" />
+
+        </fields>
+        <filters>
+            <filter label="Nome da Revista" field="nomeRevista"/>
+            <filter label="Nome da Assinatura" field="nomeProduto"/>
+            <filter label="Homologado" field="homologado" filterExpression="Produto.Homologado="/>
+        </filters>
+    </module>
+</AG2Manager>

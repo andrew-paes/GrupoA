@@ -1,0 +1,485 @@
+/* RESETING SELECTORS
+----------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-family: inherit;
+	vertical-align: baseline;
+ 	/*position:relative;*/
+}
+/* remember to define focus styles! */
+:focus {outline: 0;}
+html {overflow-y: scroll;}
+body {background: #DDEFF1 url(../img/bgr_body.jpg) repeat-x;color: #000;font-family: tahoma;font-size: 62.5%;line-height: 1;}
+body.popup {background: #fff url(../img/biblioteca/bgr_album-popup.png) repeat-x;color: #000;font-family: tahoma;font-size: 62.5%;line-height: 1;text-align: center;}
+body.protegido {background: #fff url(../img/biblioteca/bgr_body-protegido.png) repeat-x;color: #000;font-family: tahoma;font-size: 62.5%;line-height: 1;text-align: center;}
+ol, ul {list-style: none;}
+/* tables still need 'cellspacing="0"' in the markup */
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {text-align: left;font-weight: normal;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+
+a {color: #2D4492;text-decoration: none;}
+a:hover {text-decoration: underline;}
+.clear {clear:both;height:1px;overflow:hidden;}
+.hr hr {display: none;}
+.botao {display: block;text-indent: -9999px;}
+br.clear {clear: both;}
+p {color:#333333;}
+
+/* LAYOUT
+----------------------------------------------- */
+
+/* cabecalho */
+#cabecalho {background: url(../img/bgr_header.jpg) center top no-repeat;display: block;height:144px;text-align: center;}
+#cabecalho #cabecalhodentro {height:124px;margin: 0 auto;text-align: left;position: relative;width: 752px; }
+#cabecalho #cabecalhodentro .guiaderamais {background: url(../img/bgr_guia-de-ramais.jpg) no-repeat;height: 104px;right:0;width: 163px;bottom:0;padding:0 0 0 60px;position: absolute;display:block;}
+
+
+
+/* corpo */
+#corpo {margin: 0 auto;text-align: left;width: 774px;margin-top: -12px;font-size: 1.1em;display: block;z-index: 50;}
+#corpo span {font-size: 0.8em;}
+#corpotopo {background: url(../img/bgr_corpo-topo.png) no-repeat;}
+#corporodape {background: url(../img/bgr_corpo-rodape.gif) left bottom no-repeat;min-height: 550px;padding: 12px;}
+.interna #corporodape {background: none;padding: 12px;}
+.corporodapeinterna {z-index: 40;
+background: url(../img/interna/bgr_corpo-rodape-interna.png) no-repeat;
+height: 350px;
+margin: -350px auto 0px;
+width: 777px;
+}
+
+
+
+
+#barralateral {display: inline;float: left;width:164px;position: relative;z-index: 50;}
+#barralateral .caixalateralcorpo {background: url(../img/bgr_caixa-barra-corpo.jpg) 0 10px no-repeat;width: 164px;}
+#barralateral .caixalateraltopo {background: url(../img/bgr_caixa-barra-topo.gif) no-repeat;}
+#barralateral .caixalateralrodape {background: url(../img/bgr_caixa-barra-rodape.gif) left bottom no-repeat;min-height:193px;}
+
+
+/* miolo */
+#miolo {float:left;display: inline;width:573px;min-height: 300px;margin: 0 0 0 13px;position: relative;z-index: 40;}
+
+#conteudo-principal-capa {display: inline;float: left;width: 342px;}
+#conceitualcontainer {display: block;height: 155px;margin-bottom: 5px;position: relative;width: 342px;}
+#conceitualcontainer * {left: 0;position: absolute;top: 0;}
+
+#conteudo-principal-capa .aniversariantes {background: url(../img/bgr_rodape-aniversariantes-do-dia_.png) left bottom no-repeat;display: inline;height:212px;float: left;width: 167px;margin: 0 0 14px 0;}
+.aniversariantes, .aniversariantes a {color:#993300;}
+.aniversariantes ul {background: url(../img/bgr_lista-aniversariantes.png) no-repeat;height: 102px;width: 168px;padding-top: 35px;}
+.aniversariantes ul.off {background: url(../img/bgr_lista-aniversariantes-off.png) no-repeat;}
+.aniversariantes ul.off li {background: url(../img/bgr_lista-item-aniversariantes-off.png) center top no-repeat;padding-top:58px;text-align: center;padding: 60px 10px 0;}
+.aniversariantes ul li {padding:0 0 0 10px;height:50px;}
+.aniversariantes ul li .setor {color:#333333;display:block;padding: 1px 0;}
+.aniversariantes .txt_total {background: url(../img/txt_total.gif) no-repeat;display: inline;float: left;height: 7px;margin: 7px 5px 0 13px;text-indent: -9999px;width: 31px;}
+.aniversariantes .numerototal {display: inline;float: left;margin: 6px 0 0 0px;}
+.aniversariantes .listacompleta {background: url(../img/btn_lista-completa-aniversariantes.png) no-repeat;cursor: hand;display:inline;float: left;height: 18px;margin: 2px 0 0 10px;text-indent: -9999px;width: 89px;}
+
+
+#conteudo-principal-capa .decasa {background: url(../img/bgr_rodape-aniversariantes-de-casa_.png) left bottom no-repeat;display: inline;height:210px;float: left;margin-left:5px;width: 168px;}
+.decasa, .decasa a {color:#2D4492;}
+.decasa ul {background: url(../img/bgr_lista-aniversariantes-de-casa.png) no-repeat;height: 107px;width: 168px;padding-top: 30px;}
+.decasa ul.off {background: url(../img/bgr_lista-aniversariantes-de-casa-off.png) no-repeat;}
+.decasa ul.off li {background: url(../img/bgr_lista-item-aniversariantes-de-casa-off.png) center top no-repeat;padding-top:58px;text-align: center;padding: 65px 10px 0;}
+.decasa .idade {color:#8B8B8B;font-size: 0.8em;}
+.decasa .listacompleta {background: url(../img/btn_lista-completa-aniversariantes-de-casa.png) no-repeat;}
+
+div.listaprofissaododia {background: url(../img/bgr_lista-profissao-do-dia.gif) left bottom no-repeat;padding: 5px 15px;width: 314px;margin-bottom: 15px;}
+div.listaprofissaododia ul li {color:#6C3109;display:inline;float: left;margin:0 25px 2px 22px;border-right: 1px solid #E9D7C8;width:130px;}
+div.listaprofissaododia ul li.par {border-right: 0px solid #E9D7C8;margin:0 0 0 0;}
+
+ul.ferramentas {height: 35px;margin-bottom: 10px;}
+ul.ferramentas li {float: left;display: inline;}
+ul.ferramentas li {background: url(../img/bgr_ferramentas-sistema.gif) no-repeat;display: block;height: 35px;margin-right: 6px;width: 168px;}
+ul.ferramentas li.agendamento {background: url(../img/bgr_ferramentas-agendamento.gif) no-repeat;margin-right: 0;}
+ul.ferramentas li a {display: block;margin: 5px 15px 0 42px;}
+
+fieldset.linksimportantes {background: url(../img/bgr_links-importantes.gif) no-repeat;height: 41px;position: relative;width: 342px;}
+fieldset.linksimportantes select {border: 1px solid #7F9DB9;display: inline;float: left;width:261px;margin: 10px 5px 0 44px;font-size: 0.9em;height: 19px;}
+fieldset.linksimportantes .botaook {float: left;margin: 10px 0 0 0; }
+
+
+#conteudo-auxiliar-capa {display: inline;float: left;margin-left: 12px;width: 216px;position: relative;font-size: 0.9em;}
+.listanoticiaseventos {background: url(../img/bgr_ul-noticias-eventos.png) no-repeat;height: 34px;position: relative;width: 216px;}
+.listanoticiaseventos li {position: absolute;height: 14px;left: 30px;top: 10px;width: 50px;}
+.listanoticiaseventos li a {display: block;height: 14px;width: 50px;text-indent: -9999px;}
+.listanoticiaseventos li.eventos {top: 10px;left: 135px;}
+div.noticiaseventoscapa {background: url(../img/bgr_noticiaseventos.gif) left bottom no-repeat;margin: 0 0 12px;min-height: 210px;width: 216px;}
+div.noticiaseventoscapa .noticiaseventoscapacontainer {height: 162px;margin: 0 10px 12px 17px;overflow: auto;}
+
+div.noticiaseventoscapa .listachamadas li {border-bottom: 1px solid #C3DAED;margin:0 0 5px;padding:0 0 10px; }
+div.noticiaseventoscapa .listachamadas img.thumbnoticias {border: 3px solid #fff;display: inline;float: left;margin: 0 5px 0 0;}
+div.noticiaseventoscapa .listachamadas p.textochamada, div.noticiaseventoscapa .listachamadas p.textochamada a  {color: #2D4492;line-height: 130%; }
+.vertodasasnoticias {background: url(../img/btn_ver-todas-as-noticias.gif) center top no-repeat;width: 216px;height: 18px;position: relative;}
+
+
+.cardapiododiatopo {background: url(../img/bgr_cardapiododia-topo.png) no-repeat;margin-bottom: 12px;width: 216px;}
+.cardapiododiarodape {background: url(../img/bgr_cardapiododia-rodape.png) left bottom no-repeat;color:#AD5C33;min-height:154px;padding:10px 10px 0 14px;}
+.cardapiododiarodape dl {width: 182px;margin-bottom: 10px;}
+.cardapiododiarodape dt {font-weight: bold;padding-bottom: 5px;}
+.cardapiododiarodape dt em {font-weight: normal;font-style: normal;}
+.cardapiododiarodape dd {padding-bottom: 15px;line-height: 130%;background: url(../img/bgr_dl-receita.jpg) left bottom no-repeat;}
+
+.bannerinst01 {float: left;display: inline;}
+.bannerinst02 {float: left;display: inline;margin-left: 15px;}
+
+
+
+#rodape {background: url(../img/bgr_rodape.gif) no-repeat;margin: 5px auto 0;height: 100px;width: 775px;position: relative;}
+#rodape p {color: #5769A8;padding-top: 6px;text-align: center;}
+#rodape .assinaturaag2 {color: #98A9CD;position: absolute;right: 12px;text-decoration: underline;top:7px;}
+
+
+/* LAYOUT INTERNAS
+----------------------------------------------- */
+.miolointernocorpo {background-color: #fff;width: 566px;margin:0 0 15px;}
+.miolointernotopo {background: url(../img/bgr_miolo-interna-topo.gif) no-repeat;}
+.miolointernorodape {background: url(../img/bgr_miolo-interna-rodape.png) left bottom no-repeat;margin-bottom:-10px;min-height:550px;position:relative;}
+
+.coluna {display:inline;float:left;}
+.principal {width:360px;margin-left:25px;}
+.lateral {width:160px;margin-left:10px;}
+.total {width:534px;margin-left:25px;}
+
+.headersecao {background: url(../img/interna/bgr_header-secao.png) left bottom no-repeat;display: block;min-height:76px;margin-bottom: 17px;}
+.caminhodepao {padding-left: 28px;font-size: 1.1em;font-weight: bold;font-family: tahoma;}
+.caminhodepao span.onde {color: #000;}
+.caminhodepao span {color: #993300;}
+.caminhodepao a {font-weight: normal;color: #993300;}
+.caminhodepao a:hover {text-decoration: none;}
+.coluna p {line-height: 135%;margin:0 0 10px 0; }
+
+.vejatbcontainer {background: url(../img/interna/bgr_vejatb.png) no-repeat;min-height: 115px;padding-left: 16px;}
+
+
+/* MENU AUXILIAR 
+----------------------------------------------- */
+.submenucontainercorpo {background: #fff url(../img/interna/bgr_submenucontainercorpo.gif) repeat-y;margin: 0 0 15px;width: 160px;}
+.submenucontainertopo {background: url(../img/interna/bgr_submenucontainertopo.gif) no-repeat;}
+.submenucontainerrodape {background: url(../img/interna/bgr_submenucontainerrodape.gif) left bottom no-repeat;color: #666666;padding: 20px 20px 20px 15px;display: block;height:1%;} /* este height de 1% é para consertar o bug de haslayout*/
+.submenucontainerrodape ul {margin: 10px 0;}
+.submenucontainerrodape ul li {padding: 5px 0; border-top:1px solid #BDD4EA;}
+.submenucontainerrodape ul li a:hover {text-decoration: underline;}
+
+.submenucontainertoposelect {background: url(../img/interna/bgr_submenucontainertopo2.png) no-repeat;}
+.selectbiblioteca {background: url(../img/interna/bgr_submenucontainertopobiblioteca.png) no-repeat;}
+.submenucontainertoposelect .submenucontainerrodape {padding: 10px 10px 20px 8px;}
+.submenucontainertoposelect .submenucontainerrodape select {border: 1px solid #92BFE4;color: #DEA203;font-weight: bold;font-size: 1.0em;margin-bottom: 15px;width: 130px;padding: 2px 0;}
+.submenucontainertoposelect .submenucontainerrodape ul.parentul {margin-bottom: 0px;} /* corrigindo o bug de margem no ie7 */
+
+.submenucontainerrodape ul.parentul li.parentli {padding: 0; border-top:none;background: url(../img/gestao/blt_lista-vcencontra-parent.gif) 0 0 no-repeat;padding-left: 17px;padding-bottom: 6px;display: block;height:1%;} /* este height de 1% é para consertar o bug de haslayout*/
+.submenucontainerrodape ul.child {margin: 3px 0 0 -16px;width: 138px;display: none;}
+.submenucontainerrodape ul.child li {padding: 5px 0 2px 16px; border:none;font-size: 0.8em;background: url(../img/gestao/blt_lista-vcencontra-child.gif) 5px 8px no-repeat;display: block;}
+.submenucontainerrodape ul.child li.itemlista {padding: 2px 0 5px 16px; border:none;font-size: 1.0em;background:none;display: block;color:#2D4492;}
+
+.submenucontainerrodape ul.child li a {display: block;border-bottom: 1px solid #BDD4EA;padding-bottom: 3px;}
+.submenucontainerrodape ul.child li a.ativo {color: #DEA203;font-weight: bold;cursor: default;}
+.submenucontainerrodape ul.child li a.ativo:hover{text-decoration: none;}
+
+ul.childOpen li a.ativo {color: #DEA203;font-weight: bold;cursor: default;}
+ul.childOpen li a.ativo:hover{text-decoration: none;}
+
+
+.submenucontainerrodape ul.parentul li.ligado {background-position: -157px 0;}
+
+
+
+/* MENU
+----------------------------------------------- */
+.menu {margin: 0 0 20px;}
+.menu li {background: url(../img/bgr_menu-item.gif) no-repeat;width: 164px;min-height: 22px;margin-bottom: 5px;position: relative;}
+.menu li a {display: block;padding: 5px 0 0 10px; }
+.menu li.instituto {background: url(../img/bgr_menu-item-instituto.gif) no-repeat;width: 164px;min-height: 35px;}
+.menu li:hover, .menu li.sfover {background-position: left bottom;color: #fff;}
+.menu li:hover a, .menu li.sfover a {color:#fff;} /* letter-spacing: -1px;font-weight: bold; */
+.menu li:hover a:hover, .menu li.sfover a:hover {text-decoration: none;}
+
+
+/* abrindo os submenus */
+
+.menu li ul {display: none;background: #5085C5 url(../img/bgr_ul-submenu.png) no-repeat;width: 147px;position: absolute;top: 0;left: 164px;padding: 5px 0 20px;}
+/*.menu li:hover ul, .menu li.hover ul  {display: block;}*/ /* linha comentado para colocar no js o efeito de hover*/
+
+.menu li ul li {background: url(../img/bgr_submenu-li.gif) left bottom no-repeat;font-size: 0.9em;padding: 0px;min-height: 5px;margin-bottom: 0;width: 137px;}
+.menu li ul li a {background: url(../img/blt_submenu-item.gif) 6px center no-repeat;color: #fff;padding: 0px;width: 137px;padding: 6px 0 10px 14px; }
+.menu li:hover ul li, .menu li.sfover ul li {background: url(../img/bgr_submenu-li.gif) left bottom no-repeat;font-size: 0.9em;}
+.menu li:hover ul li a, .menu li.sfover ul li a {color:#fff;letter-spacing: 0px;font-weight: normal;}
+
+.menu li:hover ul li a:hover, .menu li.sfover ul li a:hover 
+{background-position:-194px center;color:#FFD62F; text-decoration:none;
+/*background: url(../img/blt_submenu-item.gif) -6px center no-repeat;font-weight: bold;padding: 6px 0 10px 14px;*/
+}
+
+.sites {padding:19px 0 15px;}
+.sites li {float: left;display: inline;background: url(../img/bgr_barra-links.gif) no-repeat;height: 24px;margin:0 0 0 5px ;width: 75px;}
+.sites li a {display: block;text-align:center;padding: 5px 0 0 0px;}
+
+
+
+/* HEADLINES
+----------------------------------------------- */
+h1 {height: 99px;left: 50px;position: absolute;width: 182px;text-indent: -9999px;top: 12px;}
+h1 a {background: url(../img/ttl_h1.png) no-repeat;display: block;height: 99px;width: 182px;text-indent: -9999px;cursor: hand;}
+h2 {text-indent: -9999px;}
+.guiaderamais h2 {background: url(../img/ttl_h2-guia-de-ramais.gif) left bottom no-repeat;display: block;font-size: 0.1em;height: 12px;padding-top: 25px;width: 93px;}
+.aniversariantes h2 {background: url(../img/ttl_h2-do-dia.png) no-repeat;font-size: 0.1em;height: 47px;width: 168px;}
+.decasa h2 {background: url(../img/ttl_h2-de-casa.png) no-repeat;font-size: 0.1em;height: 47px;width: 168px;}
+h2.profissao {background: url(../img/ttl_h2-profissao-do-dia.png) no-repeat;height: 34px;width: 344px;}
+h2.cardapiododia {background: url(../img/ttl_h2-cardapio.gif) no-repeat;height: 34px;width: 216px;}
+
+/* internas títulos */
+div#h2secaocontainer {height:51px;width:510px;position:relative;}
+div#h2secaocontainer * {position:absolute;top:12px;left:16px;}
+
+h2.secao {width: 100%;height:45px;background: url(../img/gestao/txt_h2-qualidade.gif) 20px bottom no-repeat;margin-bottom: 6px;}
+h2.qualidade {background-image: url(../img/gestao/txt_h2-qualidade.gif);}
+h2.qualidade-reconhecida {background-image: url(../img/gestao/txt_h2-qualidade-reconhecida.gif);}
+h2.funcoes-da-acreditacao {background-image: url(../img/gestao/txt_h2-funcoes-da-acreditacao.gif);}
+h2.motivacao-dos-envolvidos {background-image: url(../img/gestao/txt_h2-motivacao-dos-envolvidos.gif);}
+h2.o-processo {background-image: url(../img/gestao/txt_h2-o-processo.gif);}
+h2.o-conceito-de-aprimoramento {background-image: url(../img/gestao/txt_h2-o-conceito-de-aprimoramento.gif);}
+h2.a-evolucao-padrao-hospitalar {background-image: url(../img/gestao/txt_h2-a-evolucao-padrao-hospitalar.gif);}
+h2.conheca-o-ccq {background-image: url(../img/gestao/txt_h2-conheca-o-ccq.gif);}
+h2.projeto-acao {background-image: url(../img/gestao/txt_h2-projeto-acao.gif);}
+h2.projeto-01 {background-image: url(../img/gestao/txt_h2-projeto-01.gif);}
+
+h2.sim {background-image: url(../img/gestao/txt_h2-sim.gif);}
+h2.gestao-estrategica {background-image: url(../img/gestao/txt_h2-gestao-estrategica.gif);}
+h2.redesenho-de-processos {background-image: url(../img/gestao/txt_h2-redesenho-de-processos.gif);}
+h2.gmd {background-image: url(../img/gestao/txt_h2-gmd.gif);}
+h2.sistema-integrado-informatica {background-image: url(../img/gestao/txt_h2-sistema-integrado-informatica.gif);}
+
+/* biblioteca */
+h2.publicacoes {background-image: url(../img/biblioteca/txt_h2-publicacoes.gif);}
+h2.balanco-social {background-image: url(../img/biblioteca/txt_h2-balanco-social.gif);}
+
+h3 {color: #993300;font-size: 100%;font-weight: bold;margin:0px 0 5px 0; }
+.lateral h3 {color: #333399; }
+h4 {color: #000;font-size: 100%;font-weight: bold;margin:0px 0 10px 0; }
+h5 {color: #993300;font-size: 100%;font-weight: normal;margin:0px 0 5px 0; }
+
+/* CLASSES
+----------------------------------------------- */
+#cabecalho #cabecalhodentro .data {bottom: 0;color: #2D4492;font-size: 1.0em;position: absolute;right: 230px;}
+#cabecalho #cabecalhodentro .guiaderamais input.nomeousetor {border: 1px solid #0055A5;background: url(../img/bgr_input-ramais.png) 1px 1px no-repeat;color: #2D4492;float: left;font-size: 0.9em;height: 14px;width: 112px;margin: 5px 0;padding:2px 0 0 3px;}
+#cabecalho #cabecalhodentro .guiaderamais .botao_ok {float: left;margin: 5px 0 10px 3px;}
+#cabecalho #cabecalhodentro .guiaderamais a {font-size: 1.1em;text-decoration:underline;}
+#cabecalho #cabecalhodentro .guiaderamais a:hover {text-decoration:underline;background-color:#E6FBFF;}
+#barralateral .hr {background: url(../img/hr-barra-lateral.png) no-repeat;width: 164px;height: 9px;margin-bottom: 10px;}
+
+
+/* internas */
+.img_olhoum {float: left;margin-right: 10px;}
+div.olho {float: left;display: inline;color: #5588C6;margin:0 10px 15px 0;}
+div.olhothumb {border: 1px solid #C3D7EC;background-color: #fff;}
+div.olhothumb img {display: block;padding: 1px; }
+div.olho .legenda {display: block;margin-top: -8px;}
+
+.listasimples {display: inline;float: left;margin:0 15px 15px 0;list-style-position:outside;}
+.listasimples li {background: url(../img/interna/blt_listasimples.gif) left 5px no-repeat;padding:0px 0 8px 8px;display: block;line-height: 110%;}
+.listasimples li a {text-decoration: underline;line-height:116%;}
+.listasimples li a:hover {text-decoration: underline;background-color:#E6FBFF;line-height:116%;}
+
+ul.semlink {display: inline;float: left;margin:0 5px 5px 0;list-style-position:outside;}
+ul.semlink li {background:url(../img/interna/blt_listasimples_semlink.gif) left 5px no-repeat;color:#333333;display: block;padding:0px 0 8px 8px;}
+
+ul.semlink2 li {background:url(../img/interna/blt_listasimples_semlink2.gif) left 5px no-repeat;}
+/*
+ul.semlink2 li:first-letter {padding-left: 8px;}
+
+ul.semlink2 {display: inline;float: none;margin:0 5px 5px 0;list-style-position:outside;}
+ul.semlink2 li {background:url(../img/interna/blt_listasimples_semlink2.gif) left 5px no-repeat;color:#333333;display: block;padding:0px 0 8px 0px;}
+ul.semlink2 li:first-letter {padding-left: 8px;}*/
+ul.semlink2 li b {color: #993300;}
+
+.listasimplescolunadois {display: inline;float: left;margin:0 0px 15px 0px;list-style-position:outside;}
+.listasimplescolunadois li {background: url(../img/interna/blt_listasimples.gif) left 5px no-repeat;padding:0px 0 8px 8px;display: block;}
+
+.interna .principal .hr {background: url(../img/interna/fio_hr-central.gif) left bottom no-repeat;width: 100%px;height: 1px;margin: 0px 0 15px 0;}
+
+b.ano {color: #993300;}
+
+ol {list-style-type: decimal;margin-left: auto;list-style-position: inside;margin-bottom: 15px;}
+ol li {padding:0px 0 8px 0px;color: #333;line-height: 130%;}
+
+div.imagemcomum {display: block;margin-bottom: 15px;}
+div.imagemcomum img {display: block;border: 1px solid #C3D7EC;}
+
+ul.voltaretopo {background: url(../img/interna/fio_hr-central.gif) left -12px no-repeat;height: 37px;margin-top: 15px;margin-left: 15px;} 
+ul.voltaretopo li {float: left;display: inline;margin-right:15px;width: 53px;height: 17px;}
+ul.voltaretopo li a {display: block;width: 53px;height: 17px;text-indent: -9999px;}
+ul.voltaretopo li.voltar a {background: url(../img/interna/btn_voltar.gif) no-repeat;}
+ul.voltaretopo li.topo a {background: url(../img/interna/btn_topo.gif) no-repeat;}
+
+
+.thumbnail {float: left;display: inline;color: #5588C6;border: 1px solid #C3D7EC;margin-right: 10px;position: relative;}
+.thumbnailfoto {margin-right: 0px;}
+.thumbnail img.thumb {border: 0px solid #fff;display: block;margin: 0px 0px;}
+.thumbnail .lupadezoom {position: absolute;right: 2px;top:2px;}
+
+
+/* internas submenu */
+.submenucontainerrodape b {color: #2D4492;font-weight: bold;}
+.submenucontainerrodape ul li b {color: #CC9900;font-weight: bold;}
+.submenucontainertoposelect p, .submenucontainertoposelect select {color: #2D4492;margin: 0 0 0 5px;}
+
+
+/* biblioteca*/
+.capapublicacao {float:left;display:inline;margin-right:10px;border:1px solid #C3C3C3;}
+.resumopublicacao {float:left;display:inline;width:270px;}
+.resumopublicacao ul li {font-size:0.9em;}
+.resumopublicacao ul li.documentopdf {color:#993300;background: url(../img/biblioteca/ico_download-pdf.png) no-repeat;padding-top:8px;padding-bottom:8px;padding-left:22px;}
+.resumopublicacao ul li.documentopdf a {color:#993300;}
+
+.resumopublicacao ul li.todas {background: url(../img/interna/blt_listasimples.gif) 17px 4px no-repeat;padding-left: 22px;}
+.resumopublicacao ul li.todas a:hover {background-color: #E6FBFF;}
+.baixarreader {color: #333333;font-size: 0.9em;background: url(../img/biblioteca/ico_adobe-pdf.png) 290px top no-repeat;padding-top:8px;padding-bottom:8px;}
+.baixarreader a {color: #333333;text-decoration: underline;}
+.bs ul {margin-top:10px;}
+
+.navegapaginas {background: url(../img/interna/bgr_navegacao-paginas.png) repeat-x;height: 29px;position: relative;}
+.navegapaginas a {color:#2D4492;text-decoration: underline;}
+.navegapaginas a.anterior {position: absolute;top: 10px;left: 10px;font-size:0.9em;height:20px;text-decoration: none;}
+.navegapaginas a.proxima {position: absolute;top: 10px;right: 10px;font-size:0.9em;height:20px;text-decoration: none;}
+
+.navegapaginas ul {text-align: center;padding-top: 9px;}
+.navegapaginas ul li {display: inline;background: url(../img/interna/bgr_separador-navega-ul.gif) right 3px no-repeat;padding: 0 7px 0 7px;font-family: arial;}
+.navegapaginas ul li.ultimo {background: url(../img/interna/bgr_separador-navega-ul_.gif) right 3px no-repeat;}
+
+.navegapaginas ul li.ativo a {text-decoration: none;font-weight: bold;}
+
+.fieldsetbuscacorpo {background: url(../img/biblioteca/bgr_fieldset_busca_corpo.gif) repeat-y;width: 360px;margin-bottom: 14px;}
+.fieldsetbuscatopo {background: url(../img/biblioteca/bgr_fieldset_busca_topo.gif) no-repeat;}
+.fieldsetbuscarodape {background: url(../img/biblioteca/bgr_fieldset_busca_rodape.gif) left bottom no-repeat;padding: 13px 0px 0px 10px;}
+
+.fieldsetbuscarodape label {color: #993300;display: inline;float: left;font-size: 0.9em;margin-bottom: 5px;margin-right: 19px;width:162px;}
+.fieldsetbuscarodape label.coluna2 {margin-right: 0px;}
+.fieldsetbuscarodape label input, .fieldsetbuscarodape label select {font-size: 0.9em;margin-top: 3px;border: 1px solid #7F9DB9;font-family: tahoma;padding:3px;width: 156px;}
+.fieldsetbuscarodape label.coluna2 input {width: 141px;}
+
+.fieldsetbuscarodape label select {width: 164px;}
+.fieldsetbuscarodape label.area {width: 264px;}
+.fieldsetbuscarodape label select.palavrachave {width: 254px;}
+
+.fieldsetbuscarodape label.coluna2 select {width: 151px;}
+.fieldsetbuscarodape .botaobuscar {float: right;display: inline;margin-right: 20px;}
+p.resumoresultado {background-color: #F3F7FB;border: 1px solid #CBDCED;font-size:0.9em;padding:5px 10px;display: none;}
+
+
+.tabelaresultado {width: 530px;margin-top: 10px;margin-bottom: 15px;}
+.tabelaresultado th {color:#666666;font-size: 0.9em;font-weight: bold;padding:0 10px 5px;background: url(../img/biblioteca/bgr_th.gif) right bottom no-repeat;}
+.tabelaresultado .ultimo {background: url(../img/biblioteca/bgr_tr.gif) right bottom no-repeat;vertical-align: middle;}
+.tabelaresultado tr.even td {background-color: #FFF5DF;}
+.tabelaresultado th.data {width: 39px;}
+.tabelaresultado th.titulo {width: 150px;}
+.tabelaresultado th.autor {width: 90px;}
+.tabelaresultado th.tipo {width: 40px;}
+.tabelaresultado th.area {width: 53px;}
+.tabelaresultado td {background: url(../img/biblioteca/bgr_td.gif) right bottom no-repeat;color:#333333;font-size: 0.9em;padding:10px;}
+
+
+.tableformularios th.titulo {width: 170px;}
+.tableformularios th.area {width: 120px;}
+.tableformularios th.arquivo {width: 127px;vertical-align: top;}
+.tableformularios .download {float: left;display: inline;width: 60px;margin-right: 5px;font-weight: normal;}
+.tableformularios .ico_download {float: left;display: inline;}
+
+.containerpaginacao {padding-right: 4px;margin-bottom: 20px;}
+
+.albuns h3 {margin-bottom: 10px;}
+.albuns label {width:285px;margin-right: 0px;}
+.albuns label input  {width:269px;}
+.albuns .botaobuscar {float: left;display: inline;;margin-right: 0px;;margin-top: 13px;}
+
+.listaalbuns {background: url(../img/biblioteca/bgr_tr.gif) left top no-repeat;}
+.listaalbuns td {color: #333333;padding-top:13px;padding-bottom:13px;}
+.listaalbuns td a {font-weight: bold;display: block;color: #333333;padding-top: 3px;}
+.listaalbuns tr.even td {background-color:#F8F1DE;}
+
+.totalabum {margin-top: -20px;}
+h3.nomealbum {padding-bottom: 5px;background: url(../img/biblioteca/bgr_tr.gif) left bottom no-repeat;margin-bottom: 15px;}
+h3 span {font-weight: normal;}
+h3 span.data {display: block;padding-bottom: 3px;}
+h3 .nrodefotos {font-size: 1.0em;font-family: tahoma;font-weight: normal;font-style: normal;}
+
+ul.listadefotos li {float: left;display: inline;width:126px;margin-right: 8px;margin-bottom: 18px;}
+ul.listadefotos li.ultimo {float: left;display: inline;width:126px;margin-right: 0px;_margin-left: -2px;}
+.thumbcontainer {float: left;display: inline;position: relative;border: 1px solid #C3D7EC;width:126px;height:90px;}
+.thumbcontainer .thumbnailalbum {border: 1px solid #fff;padding-top:1px;padding-left:1px;display: block;	}
+.thumbcontainer .albumlupa {position: absolute;bottom: 2px;right: 2px;}
+ul.listadefotos li .legendafoto {font-size: 0.9em;display: block;padding-bottom: 5px;}
+
+.popupimg {border: 1px solid #CCCCCC;margin: 10px auto; }
+body.popup .anterior, body.popup .proxima {font-family: tahoma;font-size: 1.0em;}
+body.popup .anterior b, body.popup .proxima b {font-family: tahoma;font-size: 1.1em;}
+
+
+body.popup p {color: #2D6BBA;font-family: tahoma;font-size: 1.1em;font-weight: bold;}
+body.popup p span.nomealbum {color: #333333;font-family: tahoma;font-size: 0.9em;font-weight: normal;display: block;padding: 2px 02px; }
+
+
+.protegidocontainer {margin: 20px;text-align: left;}
+.protegidoinner {margin-left: 20px;text-align: left;}
+.protegidocontainer h3 {font-size: 1.1em;
+background: url(../img/biblioteca/ico_cadeado.png) no-repeat;
+padding-left: 20px;
+padding-top: 5px;
+height: 17px;
+}
+.protegidoinner p.protegido {font-weight: normal;color: #333333;margin-bottom: 10px;}
+
+.protegidoinner label {color: #993300;}
+.protegidoinner label input {font-size: 0.9em;margin: 3px 0 7px;border: 1px solid #7F9DB9;font-family: tahoma;padding:3px;width: 125px;}
+.protegidoinner .botaoentrar {margin-bottom: 5px;}
+.protegidoinner p.esquecido {font-weight: normal;color: #333333;margin-bottom: 10px;font-size: 1.0em;width: 230px;}
+.protegidoinner p.erro {background-color:#CFDDF1;color:#0556A8;font-size: 1.0em;font-weight: bold;padding:2px 5px;width: 158px;margin-bottom: 10px;}
+
+/* manuais e tabelas */
+.resumomanual {padding: 0 40px 0 10px;margin-top: -5px;}
+.resumomanual dt {color: #993300;padding: 0 0 5px; position: relative;}
+.resumomanual dt .downloadmanual img {vertical-align: middle; margin-left: 5px;}
+.resumomanual dd {color: #333333;font-size: 0.9em;line-height: 130%;margin-bottom: 10px;}
+
+
+/* relacao das ugbs */
+.tabelarelacaougbs {width: 359px;background: url(../img/biblioteca/bgr_tr.gif) left bottom no-repeat;}
+.tabelarelacaougbs th {color: #B1643A;font-weight: bold;padding: 3px 0 3px 14px;}
+.tabelarelacaougbs td {padding: 6px 0px 7px 14px;color:#333333;}
+.tabelarelacaougbs tr.even td {background: url(../img/biblioteca/bgr_tr.gif) left top no-repeat;background-color: #FFF6E1;}
+.tabelarelacaougbs tr td.responsavel {color: #B1643A;padding: 5px 0px 5px 5px;width: 135px;}
+
+/* lista downloads assistencia integral */
+.listadownloadcorpo {background: url(../img/institucional/br_arquivosdownload-corpo.gif) repeat-y;width: 361px;}
+.listadownloadtopo {background: url(../img/institucional/br_arquivosdownload-topo.gif) no-repeat;}
+.listadownloadrodape {background: url(../img/institucional/br_arquivosdownload-rodape.gif) left bottom no-repeat;padding: 11px 10px;}
+.listadownloadrodape ul li {padding: 7px 0 0 32px;min-height: 31px;height: auto;!importantheight: 31px;margin-bottom: 5px;}
+.listadownloadrodape ul li.excel {background: url(../img/ico_excel.png) no-repeat;}
+.listadownloadrodape ul li.word {background: url(../img/ico_word.png) no-repeat;}
+.listadownloadrodape ul li.pdf {background: url(../img/ico_acrobat.gif) no-repeat;}
+.listadownloadrodape ul li a {font-weight: bold;color: #000000;display: block;}
+.listadownloadrodape ul li span {color: #993300;}
+
+
+
+#news { background: none;padding: 12px; background-color:White;}
+#interna {background: none;padding: 12px; background-color:White;}
+#miolointernocorpo {background-color: #fff;width: 566px;margin:0 0 15px;}
+
+#editorHtml {width:360px;margin-left:25px; background-color: #fff; text-align: left; font-family: tahoma; font-size: 68.75%; }
+#editorHtml p{line-height: 135%;margin:0 0 10px 0; }
+

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="pedido" version="1.0">
+        <settings>
+            <title><![CDATA[Pedidos]]></title>
+            <description><![CDATA[Consulta de Pedidos do manager]]></description>
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+        </settings>
+
+        <options>
+            <option querySection="export" value="excel" name="Exportar (Excel)" />
+        </options>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="pedido" primaryKey="pedidoId" />
+
+        <queries>
+            <query section="list" sql="SELECT
+                                            pedido.pedidoId
+                                            , PedidoCompraConjunta.compraConjuntaId
+                                            , CASE WHEN PedidoCompraConjunta.compraConjuntaId > 0 THEN 1 ELSE 0 END AS compraConjunta
+                                            , CASE WHEN PedidoCompraConjunta.compraConjuntaId > 0 THEN 'Sim' ELSE 'Não' END AS strCompraConjunta
+                                            , usuario.nomeUsuario
+                                            , usuario.emailUsuario
+                                            , pedido.dataHoraPedido
+                                            , meioPagamento.nome as formaPagamento
+                                            , pedidoStatus.statusPedido
+                                            , pedidoStatus.pedidoStatusId
+                                        FROM
+                                            pedido
+                                            INNER JOIN pedidoStatus ON pedido.pedidoStatusId = pedidoStatus.pedidoStatusId
+                                            INNER JOIN usuario ON pedido.usuarioId = usuario.usuarioId
+                                            INNER JOIN Pagamento ON pagamento.pagamentoId = pedido.pagamentoId
+                                            INNER JOIN meioPagamento ON meioPagamento.meioPagamentoId = pagamento.meioPagamentoId
+                                            LEFT JOIN PedidoCompraConjunta ON PedidoCompraConjunta.pedidoCompraConjuntaId = Pedido.pedidoId
+                                        ORDER BY
+                                            pedido.dataHoraPedido DESC" />
+            <query section="export" sql="SELECT
+                                            pedido.pedidoId
+                                            , PedidoCompraConjunta.compraConjuntaId
+                                            , usuario.nomeUsuario
+                                            , usuario.emailUsuario
+                                            , pedido.dataHoraPedido
+                                            , meioPagamento.nome as formaPagamento
+                                            , pedidoStatus.statusPedido
+                                        FROM
+                                            pedido
+                                            INNER JOIN pedidoStatus ON pedido.pedidoStatusId = pedidoStatus.pedidoStatusId
+                                            INNER JOIN usuario ON pedido.usuarioId = usuario.usuarioId
+                                            INNER JOIN Pagamento ON pagamento.pagamentoId = pedido.pagamentoId
+                                            INNER JOIN meioPagamento ON meioPagamento.meioPagamentoId = pagamento.meioPagamentoId
+                                            LEFT JOIN PedidoCompraConjunta ON PedidoCompraConjunta.pedidoCompraConjuntaId = Pedido.pedidoId
+                                        ORDER BY
+                                            pedido.dataHoraPedido DESC" />
+        </queries>
+
+        <forms>
+            <edit type="control" src="pedido.ascx" />
+        </forms>
+        <fields>
+            <TextBox name="numeroPedido" label="Nº do Pedido" sort="true" dataFieldName="pedidoId" dbType="String"  showInList="true" required="true" maxlength="50"  />
+            <!--<CheckBox name="compraConjunta" label="Compra Coletiva" sort="true" dataFieldName="strCompraConjunta" required="false" showInList="true" dbType="boolean" />-->
+            <TextBox name="compraConjuntaId" label="Nº Compra Coletiva" sort="true" dataFieldName="compraConjuntaId" dbType="String"  showInList="true" required="true" maxlength="50"  />
+            <TextBox name="nomeCliente" label="Cliente" sort="true" dataFieldName="nomeUsuario" dbType="String"  showInList="true" required="true" maxlength="50"  />
+            <TextBox name="email" label="Email" sort="true" dataFieldName="emailUsuario" dbType="String"  showInList="true" required="true" maxlength="50"  />
+            <Date name="dataPedido" label="Data Pedido" sort="true" dataFieldName="dataHoraPedido" required="false" showInList="true" dbType="date" />
+            <TextBox name="formaPagamento" label="Forma de Pagamento" sort="true" dataFieldName="formaPagamento" dbType="String"  showInList="true" required="true" maxlength="100"  />
+            <ListBox name="formaPagamentoFiltro"
+                     label="Forma de Pagamento" sort="true"
+                     dataFieldName="meioPagamentoId"
+                     showInList="false"
+                     inListUseField="meioPagamentoId"
+                     required="true"
+                     dataSource="PROC:GetMeioPagamentoAtivos"
+                     dataTextField="nome"
+                     dataValueField="meioPagamentoId" />
+
+            <ListBox name="statusPedido"
+                   label="Status do Pedido" sort="true"
+                   dataFieldName="pedidoStatusId"
+                   showInList="true"
+                   inListUseField="statusPedido"
+                   required="true"
+                   dataSource="pedidoStatus"
+                   dataTextField="statusPedido"
+                   dataValueField="pedidoStatusId" />
+        </fields>
+        <filters>
+            <filter label="Nº do Pedido" field="numeroPedido" />
+            <filter label="Nº Compra Coletiva" field="compraConjuntaId" />
+            <filter label="Cliente" field="nomeCliente" filterExpression="nomeUsuario"/>
+            <filter label="Email" field="email" />
+            <!--<filter label="Compra Coletiva" field="compraConjunta" filterExpression="compraConjunta="/>-->
+            <filter label="Forma de Pagamento" field="formaPagamentoFiltro" filterExpression="meioPagamento.meioPagamentoId=" />
+            <filter label="Status do Pedido" field="statusPedido" filterExpression="pedidoStatus.pedidoStatusId=" />
+            <filter label="Data Pedido" field="dataPedido" filterType="range"/>
+        </filters>
+    </module>
+</AG2Manager>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="Titulo" version="1.0">
+        <settings>
+            <title><![CDATA[Banner]]></title>
+            <description><![CDATA[Gerenciamento de Banner do portal.]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+            <setting name="assemblyName" value="App_Code" />
+            <setting name="className" value="DeleteBanner" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="banner" primaryKey="BannerId" />
+
+        <events>
+            <add name="BeforeRegisterDelete" />
+        </events>
+
+        <queries>
+            <query section="list" >
+                <sql>
+                    <![CDATA[
+                        SELECT *
+                        FROM viewBanners]]>
+                </sql>
+            </query>
+
+
+        </queries>
+
+        <forms>
+            <edit type="control" src="banner.ascx" />
+        </forms>
+
+        <fields>
+            <TextBox name="nomeBanner" label="Nome" sort="true" dataFieldName="nomeBanner" showInList="true" required="false" maxlength="125" >
+                <attributes>
+                    <attribute name="Width" value="125px" />
+                </attributes>
+            </TextBox>
+            <TextBox name="areas" label="Áreas" sort="false" dataFieldName="areas" showInList="true" required="false" maxlength="131" >
+                <attributes>
+                    <attribute name="Width" value="125px" />
+                </attributes>
+            </TextBox>
+            <CheckBox name="ativo" label="Ativo" sort="true" dataFieldName="strAtivo" required="false" showInList="true" dbType="boolean" />
+
+        </fields>
+        <filters>
+            <filter label="Nome" field="nomeBanner" />
+            <filter label="Ativo" field="ativo" filterExpression="ativo="  />
+        </filters>
+
+    </module>
+
+</AG2Manager>

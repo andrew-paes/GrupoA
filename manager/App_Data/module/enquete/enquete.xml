@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="Titulo" version="1.0">
+		<settings>
+			<title><![CDATA[Enquete]]></title>
+			<description><![CDATA[Gerenciamento de Enquetes do portal.]]></description>
+
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+			<setting name="assemblyName" value="App_Code" />
+			<setting name="className" value="DeleteEnquete" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="enquete" primaryKey="EnqueteId" />
+
+		<events>
+			<add name="BeforeRegisterDelete" />
+		</events>
+
+		<queries>
+			<query section="list" sql="SELECT 
+											DISTINCT e.*
+											, CASE WHEN [ativo] = 1 THEN 'Sim' ELSE 'Não'END AS StrAtivo
+										FROM 
+											Enquete e  
+											LEFT JOIN enqueteLocalizacao el ON el.enqueteId = e.enqueteId
+										ORDER BY 
+											nomeEnquete ASC"
+			/>
+
+		</queries>
+
+		<forms>
+			<edit type="control" src="enquete.ascx" />
+		</forms>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+			<TextBox name="nomeEnquete" label="Nome" sort="true" dataFieldName="nomeEnquete" showInList="true" required="false" maxlength="100" >
+				<attributes>
+					<attribute name="Width" value="250px" />
+				</attributes>
+			</TextBox>
+			<TextBox name="pergunta" label="Nome" sort="true" dataFieldName="pergunta" showInList="true" required="false" maxlength="100" >
+				<attributes>
+					<attribute name="Width" value="250px" />
+				</attributes>
+			</TextBox>
+			<CheckBox name="ativo" label="Ativo" dataFieldName="StrAtivo" sort="true" required="false" showInList="true" dbType="boolean" />
+			<ListBox name="enquetepagina"
+					 label="Página"
+					 dataFieldName="enquetePaginaId"
+					 showInList="false"
+					 inListUseField="nomePagina"
+					 required="true"
+					 dataSource="enquetePagina"
+					 dataTextField="nomePagina"
+					 dataValueField="enquetePaginaId"
+          />
+		</fields>
+
+		<filters>
+			<filter label="Nome" field="nomeEnquete" />
+			<filter label="Ativo" field="ativo" filterExpression="ativo=" />
+			<filter label="Página" field="enquetepagina" />
+		</filters>
+
+	</module>
+
+
+</AG2Manager>

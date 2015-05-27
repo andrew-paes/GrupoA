@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="Titulo" version="1.0">
+    <settings>
+      <title><![CDATA[Programa]]></title>
+      <description><![CDATA[Gerenciamento de Programas do portal.]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+      <setting name="assemblyName" value="App_Code" />
+      <setting name="className" value="DeletePrograma" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="cursoPanamericano" primaryKey="cursoPanamericanoId" />
+
+    <events>
+      <add name="BeforeRegisterDelete" />
+    </events>
+    
+    <queries>
+      <query section="list" sql="
+					SELECT  CursoPanamericano.*
+				  FROM CursoPanamericano
+             " />
+    </queries>
+
+    <forms>
+      <edit type="control" src="Programa.ascx" />
+    </forms>
+
+    <!-- Configuracao dos campos que compoe um modulo -->
+    <fields>
+      <TextBox name="tituloCurso" label="Título do Curso" sort="true" dataFieldName="titulo" showInList="true" required="false" maxlength="256" >
+        <attributes>
+          <attribute name="Width" value="250px" />
+        </attributes>
+      </TextBox>
+      <TextBox name="subTituloCurso" label="Subtítulo do Curso" sort="true" dataFieldName="subtitulo" showInList="true" required="false" maxlength="256" >
+        <attributes>
+          <attribute name="Width" value="250px" />
+        </attributes>
+      </TextBox>
+
+    </fields>
+    <!--<filters>
+      <filter label="Nome" field="nomeBanner" />
+      <filter label="Ativo" field="ativo" filterExpression="ativo="  />
+    </filters>-->
+
+  </module>
+
+
+</AG2Manager>

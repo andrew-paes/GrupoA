@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="secao" version="1.0">
+    <settings>
+      <title><![CDATA[Cadastro de Responsável]]></title>
+      <description><![CDATA[Cadastro de Responsável]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+      <!--<setting name="assemblyName" value="App_Code" />
+      <setting name="className" value="DeleteRevistaSecao" />-->
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="ContatoResponsavel" primaryKey="contatoResponsavelId" />
+
+    <!--<events>
+      <add name="BeforeRegisterDelete" />
+    </events>-->
+
+    <queries>
+      <query section="list" sql="
+                    SELECT ContatoResponsavel.*, ContatoAssunto.*
+                    FROM ContatoResponsavel
+                    INNER JOIN ContatoAssunto ON ContatoResponsavel.contatoAssuntoId = ContatoAssunto.contatoAssuntoId
+                    ORDER BY ContatoResponsavel.nomeResponsavel" />
+    </queries>
+    <forms>
+      <edit type="control" src="contatoResponsavel.ascx" />
+    </forms>
+
+    <!-- Configuracao dos campos que compoe um modulo -->
+    <fields>
+      <TextBox name="nomeResponsavel" label="Nome do Responsável" sort="true" dataFieldName="nomeResponsavel" showInList="true" required="true" maxlength="256" />
+      <TextBox name="nomeAssunto" label="Assunto Contato" sort="true" dataFieldName="nomeAssunto" showInList="true" required="true" maxlength="100" />
+    </fields>
+    <filters>
+      <filter label="Nome do Responsável" field="nomeResponsavel"/>
+    </filters>
+  </module>
+</AG2Manager>

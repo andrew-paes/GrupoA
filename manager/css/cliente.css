@@ -1,0 +1,95 @@
+/* Menu */
+.menu {background-color:#DBDBDB;border-right:1px solid #B4B4B4;border-top:1px solid #B4B4B4;}
+
+/* Itens principais do Menu */
+#menu .itemmenu {position:relative;background:url(../img/bgr_item_menu.gif) repeat-x;border-bottom:1px solid #B4B4B4;padding:8px 7px 7px 7px;display:block;width:124px;}
+#menu .itemmenu a{color:#595959;display:block;width:103px;}
+#menu .itemmenu a:hover{text-decoration:none;color:#000000;}
+#menu .botao {position:absolute;right:3px;top:4px;}
+
+/*#### SUBMENU ####*/
+ul.primary-nav {border-left:4px solid #0066FF;width:134px;background-color:#DBDBDB;color:#595959;border-bottom:1px solid #B4B4B4;}
+ul.primary-nav ul {width:145px;background-color:#FFFFFF;color:#000000;border-bottom:1px solid #B4B4B4;}
+ul.primary-nav li {position: relative;list-style: none;}
+ul.primary-nav li a {display: block;text-decoration: none;color: #595959;padding:5px 5px 5px 13px;border: 1px solid #B4B4B4;border-bottom: 0;}
+/* Fix IE. Hide from IE Mac \*/
+* html ul.primary-nav li { float: left; height: 1%; }
+* html ul.primary-nav li a { height: 1%; }
+/* End */
+ul.primary-nav ul {position: absolute;display: none;left:134px; /* Set 1px less than menu width */top:0;}
+ul.primary-nav li ul li a {padding: 2px 5px;} /* Sub Menu Styles */
+
+ul.primary-nav li:hover ul ul,
+ul.primary-nav li:hover ul ul ul,
+ul.primary-nav li.over ul ul,
+ul.primary-nav li.over ul ul ul {display: none;} /* Hide sub-menus initially */
+
+ul.primary-nav li:hover ul,
+ul.primary-nav li li:hover ul,
+ul.primary-nav li li li:hover ul,
+ul.primary-nav li.over ul,
+ul.primary-nav li li.over ul,
+ul.primary-nav li li li.over ul {display: block;} /* The magic */
+
+ul.primary-nav li.menuparent ul li{background-color:#FFFFFF;}
+ul.primary-nav li.menuparent:hover, ul.primary-nav li.over {color:#595959;background-color:#F4F4F4;}
+ul.primary-nav li a:hover {color:#000000; text-decoration: none;}
+
+ul.primary-nav li.menuparent ul.submenu li a{padding:5px;}
+ul.primary-nav li.menuparent ul.submenu li a:hover{color:#0066FF;}
+
+/*#### FIM SUBMENU ####*/
+
+/* Borda Cliente */
+.borda {border-left:solid 2px #0066FF;}
+.borda2 {background-color:#0066FF;width:2px;}
+
+/* #################################################################### CSS DA HOME LOGADA ####################################################### */
+/* ##### Box ##### */
+.modBox {background:#E9E9E9 /*url(../img/bgr_sombra.gif)*/;padding:0 2px 2px 0;margin-bottom:10px;}
+.modBoxBg{background:#E9E9E9/*url(../img/bgr_sombra.gif) #fff top left repeat-x*/;border-left:solid 1px #969696; border-right:solid 1px #969696; border-bottom:solid 1px #969696;}
+/* titulo */
+.confTtl{background:url(../img/cliente/bgr_box.gif) #C4D3FA top left repeat-x;padding-left:10px;}
+.confTtl span{font:11px "Trebuchet MS";color:#203775;font-weight:bold;}
+/* Operações */
+.confOpc{background:url(../img/cliente/bgr_box.gif) #C4D3FA top left repeat-x;text-align:right;}
+.confOpc a, .confOpc_over a{font:9px "Trebuchet MS";color:#203775;}
+.confOpc img, .confOpc_over img{margin:0 10px;}
+.confOpc select{font:10px Tahoma;color:#3F3F3F;margin-right:3px;}
+.operacoes{visibility:hidden;}
+
+/* ##### Geral ##### */
+.bgrDetBox{background:url(../img/bgr_det_left_box.gif) top left repeat-y;}
+.width100{width:100%;}			
+.padr6{padding-right:6px;}
+
+/* ##### Conteudo ##### */
+h6.modBoxTtl {border:solid 1px #7C85AD;}	
+
+/* ##### Especificos ##### */
+/* Lista com bullet */
+.lista{list-style:none;}
+.lista li{position:relative;padding:5px 25px 5px 16px;background:url(../img/blt_lista.gif) #FFFFFF 8px 12px no-repeat;}
+.lista li.esc{position:relative;padding:5px 25px 5px 16px;background:url(../img/blt_lista.gif) #F4F4F4 8px 12px no-repeat;}
+.lista li img{position:absolute;right:7px;top:7px;}
+.lista li a{color:#3F3F3F;}
+.lista li a:hover{color:#203775;}
+
+/* Lista com bullet numerado */
+.listaNum td.wid100 {width:100%;padding:10px 0;}
+.listaNum tr {background:#FFFFFF;}
+.listaNum tr.esc {background:#F4F4F4;}
+.listaNum td img.cls{margin:10px;}
+.listaNum td img.blt{margin:10px;}
+.listaNum td a{color:#3F3F3F;}
+.listaNum td a:hover{color:#203775;}
+.listaNum td span{color:#203775;font:10px "Trebuchet MS";display:block;padding-top:10px;}
+
+/* Lista Complexa */
+.listaComp{list-style:none;}
+.listaComp li{padding:5px 10px;background:#FFFFFF;}
+.listaComp li.esc{background:#F4F4F4;}
+.listaComp li.ttl{background:#B2BBC0;font-weight:bold;color:#FFFFFF;}
+.listaComp li a{color:#3F3F3F;}
+.listaComp li a:hover{color:#203775;}
+.listaComp li span{font:10px "Trebuchet MS";color:#203775;display:block;padding-bottom:5px;}

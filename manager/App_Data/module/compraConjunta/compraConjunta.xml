@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="compraConjunta" version="1.0">
+		<settings>
+			<title><![CDATA[Compra Coletiva]]></title>
+			<description><![CDATA[Compra Coletiva]]></description>
+
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+			<setting name="assemblyName" value="App_Code" />
+			<setting name="className" value="DeleteCompraConjunta" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="CompraConjunta" primaryKey="compraConjuntaId" />
+
+		<events>
+			<add name="BeforeRegisterDelete" />
+		</events>
+
+		<queries>
+			<query section="list" sql="SELECT
+											TabelaDerivada.*
+											, Produto.nomeProduto
+											, CompraConjuntaStatus.compraConjuntaStatusId
+											, CompraConjuntaStatus.statusCompra                      
+										FROM
+											(
+											SELECT
+												CompraConjunta.compraConjuntaId
+												, CompraConjunta.produtoId AS produtoId
+												, TituloImpresso.isbn13 AS isbn13
+												, CompraConjunta.dataInicialCompra
+												, CompraConjunta.dataFinalCompra
+												, CompraConjunta.dataHoraFinalizacao
+												, CompraConjunta.estoqueSeguranca
+												, CompraConjunta.compraConjuntaStatusId AS CCSId
+												, CompraConjunta.ativa
+												, CASE WHEN CompraConjunta.ativa = 1 THEN 'Sim' ELSE 'Não'END AS strAtiva
+											FROM
+												CompraConjunta
+												INNER JOIN TituloImpresso ON TituloImpresso.tituloImpressoId = CompraConjunta.produtoId
+											UNION
+											SELECT
+												CompraConjunta.compraConjuntaId
+												, CompraConjunta.produtoId AS produtoId
+												, TituloEletronico.isbn13 AS isbn13
+												, CompraConjunta.dataInicialCompra
+												, CompraConjunta.dataFinalCompra
+												, CompraConjunta.dataHoraFinalizacao
+												, CompraConjunta.estoqueSeguranca
+												, CompraConjunta.compraConjuntaStatusId AS CCSId
+												, CompraConjunta.ativa
+												, CASE WHEN CompraConjunta.ativa = 1 THEN 'Sim' ELSE 'Não'END AS strAtiva
+											FROM
+												CompraConjunta
+												INNER JOIN TituloEletronico ON TituloEletronico.tituloEletronicoId = CompraConjunta.produtoId
+											) AS TabelaDerivada
+												INNER JOIN Produto ON Produto.produtoId = TabelaDerivada.produtoId
+												LEFT JOIN CompraConjuntaStatus ON CompraConjuntaStatus.compraConjuntaStatusId = TabelaDerivada.CCSId
+										ORDER BY 
+											nomeProduto ASC"
+			/>
+		</queries>
+		<forms>
+			<edit type="control" src="compraConjunta.ascx" />
+		</forms>
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+            <TextBox name="compraConjuntaId" label="Nº Compra Coletiva" sort="true" dataFieldName="compraConjuntaId" dbType="String"  showInList="true" required="true" maxlength="50"  />
+			<TextBox name="isbn13" label="ISBN13" sort="true" dataFieldName="isbn13" showInList="true" required="true" maxlength="256" />
+			<TextBox name="nomeProduto" label="Título" sort="true" dataFieldName="nomeProduto" showInList="true" required="true" maxlength="256" />
+			<Date name="dataInicialCompra" label="Data Inicial" dataFieldName="dataInicialCompra" sort="true" required="true" showInList="true" dbType="date" />
+			<Date name="dataFinalCompra" label="Data Final" dataFieldName="dataFinalCompra" sort="true" required="true" showInList="true" dbType="date" />
+			<TextBox name="estoqueSeguranca" label="Estoque Segurança" sort="true" dataFieldName="estoqueSeguranca" showInList="true" required="true" maxlength="256" />
+			<CheckBox name="ativa" label="Exibe no site?" dataFieldName="strAtiva" required="false" sort="true" showInList="true" dbType="boolean" />
+			<ListBox name="statusCompra"
+               label="Status do Pedido" sort="true"
+               dataFieldName="compraConjuntaStatusId"
+               showInList="true"
+               inListUseField="statusCompra"
+               required="true"
+               dataSource="CompraConjuntaStatus"
+               dataTextField="statusCompra"
+               dataValueField="compraConjuntaStatusId" />
+		</fields>
+		<filters>
+			<filter label="ISBN13" field="isbn13"/>
+			<filter label="Título" field="nomeProduto"/>
+			<filter label="Exibe no site?" field="ativa" filterExpression="ativa="/>
+			<filter label="Status da Compra" field="statusCompra" filterExpression="CompraConjuntaStatus.compraConjuntaStatusId="/>
+		</filters>
+	</module>
+</AG2Manager>

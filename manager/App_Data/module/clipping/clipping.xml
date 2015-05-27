@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="noticia" version="1.0">
+    <settings>
+      <title><![CDATA[Clipping]]></title>
+      <description><![CDATA[Clipping]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+      <setting name="assemblyName" value="App_Code" />
+      <setting name="className" value="DeleteClipping" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="clipping" primaryKey="clippingId" />
+
+    <events>
+      <add name="BeforeRegisterDelete" />
+    </events>
+
+    <queries>
+      <query section="list" sql="SELECT c.*, ci.*,
+                                  CASE WHEN ci.ativo = 1 THEN 'Sim' ELSE 'Não'END AS strAtivo,
+                                  CASE WHEN ci.destaque = 1 THEN 'Sim' ELSE 'Não'END AS strDestaque
+                                 FROM clipping c
+                                 INNER JOIN ConteudoImprensa ci ON ci.conteudoImprensaId = c.clippingId
+								" />
+    </queries>
+    <forms>
+      <edit type="control" src="clipping.ascx" />
+    </forms>
+
+    <!-- Configuracao dos campos que compoe um modulo -->
+    <fields>
+      <TextBox name="titulo" label="Título" sort="true" dataFieldName="titulo" showInList="true" required="true" maxlength="256" />
+      <CheckBox name="ativo" label="Ativo" dataFieldName="strAtivo" sort="true" required="false" showInList="true" dbType="boolean" />
+      <TextBox name="fonte" label="Fonte" sort="true" dataFieldName="fonte" showInList="true" required="true" maxlength="100" />
+      <Date name="datapublicacao" label="Data Publicação" sort="true" dataFieldName="dataPublicacao" required="false" showInList="true" dbType="date" />
+      <CheckBox name="destaque" label="Destaque" dataFieldName="strDestaque" sort="true" required="false" showInList="true" dbType="boolean" />
+    </fields>
+    <filters>
+      <filter label="Título" field="titulo" />
+      <filter label="Ativo" field="ativo" filterExpression="ativo="/>
+      <filter label="Fonte" field="fonte" />
+      <filter label="Data Publicação" field="datapublicacao" />
+      <filter label="Destaque" field="destaque" filterExpression="destaque="/>
+    </filters>
+  </module>
+</AG2Manager>

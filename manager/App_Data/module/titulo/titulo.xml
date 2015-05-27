@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="Titulo" version="1.0">
+        <settings>
+            <title><![CDATA[Título]]></title>
+            <description><![CDATA[Gerenciamento de Titulos do portal.]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+            <setting name="assemblyName" value="App_Code" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="TituloImpresso" primaryKey="TituloImpressoId" />
+
+        <queries>
+            <query section="list" sql="SELECT 
+                                            *
+                                        FROM 
+                                            viewTituloImpressoListagemManager
+                                        ORDER BY 
+                                            NomeTitulo
+            " />
+        </queries>
+
+        <forms>
+            <edit type="control" src="titulo.ascx" />
+        </forms>
+
+        <!-- Configuracao dos campos que compoe um modulo -->
+        <fields>
+            <TextBox name="titulo" label="Título" sort="true" dataFieldName="NomeTitulo" showInList="true" required="false" maxlength="256" >
+                <attributes>
+                    <attribute name="Width" value="250px" />
+                </attributes>
+            </TextBox>
+            <CheckBox name="exibeSite" label="Exibe Site" sort="true" dataFieldName="strExibeSite" required="false" showInList="true" dbType="boolean" />
+            <CheckBox name="homologado" label="Homologado" sort="true" dataFieldName="strHomologado" required="false" showInList="true" dbType="boolean" />
+            <CheckBox name="possuiCapa" label="Possui Capa" sort="true" dataFieldName="strPossuiCapa" required="false" showInList="true" dbType="boolean" />
+            <TextBox name="isbn13" label="ISBN 13" sort="true" dataFieldName="isbn13" showInList="true" required="false" maxlength="17" />
+            <Date name="dataLancamento" label="Data Lançamento" sort="true" dataFieldName="dataLancamento" required="false" showInList="true" dbType="date" />
+        </fields>
+        <filters>
+            <filter label="Título" field="titulo"/>
+            <filter label="ISBN 13" field="isbn13"/>
+            <filter label="Exibe Site" field="exibeSite" filterExpression="viewTituloImpressoListagemManager.ExibirSite="/>
+            <filter label="Homologado" field="homologado" filterExpression="viewTituloImpressoListagemManager.Homologado="/>
+            <filter label="Possui Capa" field="possuiCapa" filterExpression="viewTituloImpressoListagemManager.possuiCapa=" />
+            <filter label="Data Lançamento" field="dataLancamento" filterType="range"/>
+        </filters>
+    </module>
+</AG2Manager>

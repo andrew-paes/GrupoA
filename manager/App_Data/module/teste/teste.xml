@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="midia" version="1.0">
+        <settings>
+            <title><![CDATA[Mídia]]></title>
+            <description><![CDATA[Mídia]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="tag" primaryKey="tagId" />
+
+        <queries>
+            <query section="list" sql="SELECT * FROM Tag" />
+        </queries>
+
+        <!-- Configuracao dos campos que compoe um modulo -->
+        <fields>
+            <HtmlTextBox
+				label="Descrição"
+				name="nome"
+				dataFieldName="nome"
+				inListUseField="nome"
+				showInList="true"
+				required="false"
+				translation="false"
+                />
+        </fields>
+    </module>
+</AG2Manager>

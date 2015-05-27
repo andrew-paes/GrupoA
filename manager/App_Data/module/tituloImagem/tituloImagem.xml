@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="tituloRelacionado" version="1.0">
+        <settings>
+            <title><![CDATA[Imagens do Título]]></title>
+            <description><![CDATA[Imagens do Título]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="titulo" primaryKey="produtoId" />
+
+        <queries>
+            <query section="list" sql="SELECT 
+	                                        ProdutoId
+	                                        , NomeTitulo
+	                                        , SubTituloLivro
+	                                        , dataPublicacao
+	                                        , isbn13
+	                                        , tipo
+                                        FROM 
+	                                        (
+	                                        SELECT 
+		                                        TituloImpresso.TituloImpressoId as ProdutoId,
+		                                        Titulo.NomeTitulo,
+		                                        Titulo.SubTituloLivro,
+		                                        Titulo.dataPublicacao,
+		                                        TituloImpresso.isbn13,
+		                                        'Impresso' tipo
+	                                        FROM 
+		                                        TituloImpresso
+		                                        JOIN Titulo ON Titulo.TituloId = TituloImpresso.tituloId 
+	                                        UNION
+	                                        SELECT
+		                                        TituloEletronico.TituloEletronicoId as ProdutoId,
+		                                        Titulo.NomeTitulo,
+		                                        Titulo.SubTituloLivro,
+		                                        Titulo.dataPublicacao,
+		                                        TituloEletronico.isbn13,
+		                                        'Eletrônico' tipo
+	                                        FROM 
+		                                        TituloEletronico
+		                                        JOIN Titulo ON Titulo.TituloId = TituloEletronico.tituloId 
+	                                        ) AS Titulo 
+                                        ORDER BY 
+	                                        NomeTitulo
+             " />
+        </queries>
+        <forms>
+            <edit type="control" src="tituloImagem.ascx" />
+        </forms>
+        <!-- Configuracao dos campos que compoe um modulo -->
+        <fields>
+            <TextBox name="NomeTitulo" label="Título" sort="true" dataFieldName="NomeTitulo" showInList="true" required="false" maxlength="256" >
+                <attributes>
+                    <attribute name="Width" value="250px" />
+                </attributes>
+            </TextBox>
+            <TextBox name="subtitulo" label="Sub-Título" sort="true" dataFieldName="SubtituloLivro" showInList="false" required="false" maxlength="100" >
+                <attributes>
+                    <attribute name="Width" value="250px" />
+                </attributes>
+            </TextBox>
+            <TextBox name="isbn13" label="ISBN 13" sort="true" dataFieldName="isbn13" showInList="true" required="false" maxlength="17" />
+            <Date 
+                name="dataPublicacao" 
+                label="Data Publicação" 
+                dataFieldName="dataPublicacao" 
+                required="false" 
+                showInList="true" 
+                dbType="date" 
+                sort="true"
+            />
+            <TextBox name="tipo" label="Tipo" sort="true" dataFieldName="tipo" showInList="true" required="false" maxlength="17" />
+        </fields>
+        <filters>
+            <filter label="Título" field="NomeTitulo"/>
+            <filter label="ISBN 13" field="isbn13"/>
+            <filter label="Data Publicação" field="dataPublicacao" filterType="range"/>
+        </filters>
+    </module>
+</AG2Manager>

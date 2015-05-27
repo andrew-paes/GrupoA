@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="menu" version="1.0">
+    <settings>
+      <title><![CDATA[Menu]]></title>
+      <description><![CDATA[Gerenciamento do Menu do manager]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="60" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="ag2mngMenu" primaryKey="menuId" />
+
+    <queries>
+      <query section="list" sql="SELECT M.*, SM.name as subMenu, CASE M.active WHEN 0 THEN 'Desativado' ELSE 'Ativado' END as activeString
+    FROM ag2mngMenu M
+    LEFT JOIN ag2mngMenu SM on (SM.menuId = M.parentMenuId)
+    ORDER BY M.parentMenuId, M.menuOrder" />
+    </queries>
+
+    <forms>
+      <edit type="control" src="menu.ascx" />
+    </forms>
+
+   <!-- Configuracao dos campos que compoe um modulo -->
+    <!-- parentMenuId, , active, tooltip, menuOrder, moduleName -->
+    <fields>
+      <TextBox name="subMenu" label="Menu Pai" sort="true" dataFieldName="subMenu" dbType="String"  showInList="true" required="true" maxlength="200"  />
+      <TextBox name="name" label="Nome" sort="true" dataFieldName="name" dbType="String"  showInList="true" required="true" maxlength="200"  />
+      <TextBox name="moduleName" label="Nome do módulo" sort="true" dataFieldName="moduleName" dbType="String"  showInList="true" required="true" maxlength="200"  />
+      <TextBox name="menuOrder" label="Ordem" sort="true" dataFieldName="menuOrder" dbType="String"  showInList="true" required="true" maxlength="200"  />
+      <TextBox name="activeString" label="Situação" sort="true" dataFieldName="activeString" dbType="String"  showInList="true" required="true" maxlength="200"  />
+    </fields>
+
+    <filters>
+      <filter label="Menu Pai" field="subMenu" filterExpression="SM.name = "/>
+      <filter label="Menu" field="name" filterExpression="M.name"/>
+      <filter label="Nome do módulo" field="moduleName" filterExpression="M.moduleName = "/>
+    </filters>
+
+
+  </module>
+</AG2Manager>

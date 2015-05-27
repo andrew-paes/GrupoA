@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="autor" version="1.0">
+        <settings>
+            <title><![CDATA[Pagamento]]></title>
+            <description><![CDATA[Pagamento]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+            <!--<setting name="assemblyName" value="App_Code" />
+            <setting name="className" value="DeleteAutor" />-->
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="LogPaymentGateway" primaryKey="logPaymentGatewayId" />
+
+        <!--<events>
+            <add name="BeforeRegisterDelete" />
+        </events>-->
+
+        <queries>
+            <query section="list" sql="SELECT * FROM LogPaymentGateway ORDER BY logPaymentGatewayId DESC" />
+        </queries>
+        <forms>
+            <edit type="control" src="logPagamento.ascx" />
+        </forms>
+
+        <!-- Configuracao dos campos que compoe um modulo -->
+        <fields>
+            <TextBox name="codigoPedido" label="codigoPedido" sort="true" dataFieldName="codigoPedido" showInList="true" required="true" maxlength="128" />
+            <Date name="dataHora" label="Data Hora" dataFieldName="dataHora" sort="true" required="false" showInList="true" dbType="date" />
+        </fields>
+
+        <filters>
+            <filter label="Codigo Pedido" field="codigoPedido" />
+            <filter label="Data Lançamento" field="dataHora" filterType="range"/>
+        </filters>
+    </module>
+</AG2Manager>

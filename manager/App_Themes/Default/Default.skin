@@ -1,0 +1,4 @@
+<asp:Image runat="server" SkinID="IconHelp" CssClass="blt" Width="16" Height="16" BorderWidth="0"  ImageUrl="img/ico_ajuda.gif"  />
+<asp:HyperLink runat="server" SkinID="lnkNewRegister"  imageUrl="img/btn_nova_entrada.gif" Width="87" Height="20" BorderWidth="0" AlternativeText="Nova Entrada" CssClass="mr12"  />
+<asp:RequiredFieldValidator runat="server" CssClass="reqValidators"></asp:RequiredFieldValidator>
+<asp:CustomValidator runat="server" CssClass="reqValidators"></asp:CustomValidator>

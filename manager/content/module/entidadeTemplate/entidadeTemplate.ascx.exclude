@@ -1,0 +1,21 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="entidadeTemplate.ascx.cs" Inherits="content_module_entidadeTemplate_entidadeTemplate" %>
+<asp:Label runat="server" ID="Label1" Font-Bold="true" Text="Nome:"></asp:Label>
+<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtNome" ErrorMessage="Campo Obrigatório" ValidationGroup="1"></asp:RequiredFieldValidator><br />
+<asp:TextBox ID="txtNome" Width="200px" CssClass="frmborder" 
+    MaxLength="100" runat="server"></asp:TextBox>
+<br />
+<br />
+<asp:Label runat="server" ID="Label6" Font-Bold="true" Text="Código:"></asp:Label>
+<br />
+<asp:TextBox ID="txtCodigo" Width="200px" CssClass="frmborder" MaxLength="100"
+	runat="server"></asp:TextBox>
+<br />
+<br />
+<asp:CheckBox runat="server" ID="chkAtivo" Text="Ativo" />
+<br />
+<br />
+<div class="boxesc" style="vertical-align: bottom;">
+    <asp:ImageButton ID="btnExecute" runat="server" ImageUrl="~/img/btn_executar.gif"
+        Width="73" Height="20" BorderWidth="0" AlternateText="Executar" ImageAlign="AbsMiddle"
+        CausesValidation="true" OnClick="btnExecute_Click" ValidationGroup="1" CssClass="btnSubmitForm" />
+</div>

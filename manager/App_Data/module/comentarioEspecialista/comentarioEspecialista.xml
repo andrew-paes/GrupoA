@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="comentarioEspecialista" version="1.0">
+        <settings>
+            <title><![CDATA[Comentário Especialista]]></title>
+            <description><![CDATA[Comentário Especialista]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+            <setting name="assemblyName" value="App_Code" />
+            <setting name="className" value="DeleteTituloInformacaoComentarioEspecialista" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="produto" primaryKey="produtoId" />
+
+        <events>
+            <add name="BeforeRegisterDelete" />
+        </events>
+
+        <queries>
+            <!-- Importante: essa query tem um código fixo 2 para o Perfil = Professor -->
+            <query section="list" sql="SELECT * FROM viewComentarioEspecialista 
+                                       ORDER BY possuiComentarioFiltro ASC, nomeProduto " />
+        </queries >
+        <forms>
+            <edit type="control" src="comentarioEspecialista.ascx" />
+        </forms>
+
+        <fields>
+            <TextBox name="nomeProduto" label="Nome do título" sort="true" dataFieldName="nomeProduto" showInList="true" required="true" maxlength="200" />
+            <TextBox name="isbn13" label="ISBN13 do título" sort="true" dataFieldName="isbn13" showInList="true" required="true" maxlength="20" />
+            <CheckBox name="possuiComentario" label="Possui Comentário" sort="true" dataFieldName="possuiComentario" required="true" showInList="true" dbType="boolean" />
+        </fields>
+
+        <filters>
+            <filter label="Nome do título" field="nomeProduto" />
+            <filter label="ISBN13 do título" field="isbn13" />
+            <filter label="Possui Comentário" field="possuiCapa" filterExpression="viewTituloImpressoListagemManager.possuiCapa=" />
+        </filters>
+
+    </module>
+
+
+</AG2Manager>

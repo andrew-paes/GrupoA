@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="Titulo" version="1.0">
+		<settings>
+			<title><![CDATA[Revistas]]></title>
+			<description><![CDATA[Revistas.]]></description>
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+			<setting name="assemblyName" value="App_Code" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="Revista" primaryKey="RevistaId" />
+
+		<queries>
+			<query section="list" sql="SELECT Revista.*
+										FROM Revista"
+			/>
+		</queries>
+
+		<forms>
+			<edit type="control" src="revista.ascx" />
+		</forms>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+			<TextBox name="NomeRevista" label="Nome" sort="true" dataFieldName="NomeRevista" showInList="true" required="false" maxlength="256" >
+				<attributes>
+					<attribute name="Width" value="250px" />
+				</attributes>o
+			</TextBox>
+			<TextBox name="issn" label="ISSN" dataFieldName="issn" showInList="true" required="false" maxlength="17" sort="true"  />
+            <TextBox name="periodicidade" label="Periodicidade" dataFieldName="periodicidade" showInList="true" required="false" maxlength="17" sort="true"  />
+		</fields>
+		<filters>
+			<filter label="Nome" field="NomeRevista"/>
+		</filters>
+
+	</module>
+
+</AG2Manager>

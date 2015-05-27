@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="instituicao" version="1.0">
+		<settings>
+			<title><![CDATA[Cadastro Instituição]]></title>
+			<description><![CDATA[Cadastro Instituição]]></description>
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+            <setting name="assemblyName" value="App_Code" />
+            <setting name="className" value="DeleteInstituicao" />
+		</settings>
+
+        <events>
+            <add name="BeforeRegisterDelete" />
+        </events>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="Instituicao" primaryKey="instituicaoId" />
+
+		<queries>
+			<query section="list" sql="SELECT
+                                            *
+                                        FROM
+                                            Instituicao
+                                        ORDER BY
+                                            Instituicao.nomeInstituicao"
+			/>
+		</queries>
+		
+		<forms>
+			<edit type="control" src="instituicao.ascx" />
+		</forms>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+            <TextBox name="nomeInstituicao" label="Nome" sort="true" dataFieldName="nomeInstituicao" showInList="true" required="true" maxlength="100" />
+            <TextBox name="cnpj" label="CNPJ" sort="true" dataFieldName="cnpj" showInList="true" required="true" maxlength="100" />
+		</fields>
+		
+		<filters>
+            <filter label="Nome" field="nomeInstituicao" />
+            <filter label="CNPJ" field="cnpj" />
+		</filters>
+		
+	</module>
+	
+</AG2Manager>

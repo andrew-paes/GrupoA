@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="tituloComplemento" version="1.0">
+        <settings>
+            <title><![CDATA[Informações Complementares]]></title>
+            <description><![CDATA[Informações Complementares]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="tituloImpresso" primaryKey="tituloImpressoId" />
+
+        <queries>
+            <query section="list" sql="SELECT 
+	                                      tituloImpressoId
+	                                    , titulo.tituloId
+	                                    , subtituloLivro
+	                                    , numeroPaginas
+	                                    , edicao
+	                                    , dataLancamento
+	                                    , dataPublicacao
+	                                    , maisVendido
+	                                    , nomeTitulo
+	                                    , isbn10
+	                                    , isbn13
+	                                    , produtoId
+	                                    , produtoTipoId
+	                                    , disponivel
+	                                    , fabricanteId
+	                                    , valorUnitario
+	                                    , valorOferta
+	                                    , codigoEAN13
+	                                    , codigoProduto
+	                                    , exibirSite
+	                                    , nomeProduto
+	                                    , utilizaFrete
+	                                    , peso
+	                                    , homologado
+	                                    , CASE WHEN Produto.homologado = 1 THEN 'Sim' ELSE 'Não'END AS strHomologado
+                                    FROM 
+                                    titulo
+                                    INNER JOIN tituloImpresso ON tituloImpresso.tituloId = titulo.tituloId
+                                    INNER JOIN Produto ON Produto.produtoId = TituloImpresso.tituloImpressoId
+                                    ORDER BY 
+                                    nomeTitulo
+            " />
+        </queries>
+        <forms>
+            <edit type="control" src="../tituloComplemento/tituloComplemento.ascx" />
+        </forms>
+
+        <fields>
+            <TextBox name="nomeTitulo" label="Nome do título" sort="true" dataFieldName="nomeTitulo" showInList="true" required="true" maxlength="200" />
+            <TextBox name="isbn13" label="ISBN13 do título" sort="true" dataFieldName="isbn13" showInList="true" required="true" maxlength="20" />
+            <CheckBox name="homologado" label="Homologado" sort="true" dataFieldName="strHomologado" required="false" showInList="true" dbType="boolean" />
+            <Date name="dataLancamento" label="Data Lançamento" sort="true" dataFieldName="dataLancamento" required="false" showInList="true" dbType="date" />
+        </fields>
+
+        <filters>
+            <filter label="Nome do título" field="nomeTitulo" />
+            <filter label="ISBN13 do título" field="isbn13" />
+            <filter label="Homologado" field="homologado" filterExpression="Produto.homologado="/>
+            <filter label="Data Lançamento" field="dataLancamento" filterType="range"/>
+        </filters>
+
+    </module>
+
+
+</AG2Manager>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="autor" version="1.0">
+        <settings>
+            <title><![CDATA[Log Sincronização de Cliente]]></title>
+            <description><![CDATA[Log Sincronização de Cliente]]></description>
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="LogOcorrencia" primaryKey="logOcorrenciaId" />
+
+        <queries>
+            <query section="list" sql="SELECT
+	                                        *
+                                            , CASE WHEN LogOcorrencia.logEventoId = 1 THEN 'Prospect' ELSE 'Customer' END tipoCliente
+                                            , CONVERT(VARCHAR, DATEPART(HOUR, LogOcorrencia.dataHoraOcorrencia)) + ':' + CONVERT(VARCHAR, DATEPART(MINUTE, LogOcorrencia.dataHoraOcorrencia)) AS hora
+                                        FROM
+	                                        LogOcorrencia
+                                        WHERE
+	                                        LogOcorrencia.logEventoId != 3
+                                        ORDER BY
+	                                        LogOcorrencia.logOcorrenciaId DESC" />
+        </queries>
+        <forms>
+            <edit type="control" src="logCliente.ascx" />
+        </forms>
+
+        <!-- Configuracao dos campos que compoe um modulo -->
+        <fields>
+            <TextBox name="logOcorrenciaId" label="Ocorrencia" sort="true" dataFieldName="logOcorrenciaId" showInList="true" required="true" maxlength="128" />
+            <TextBox name="tipoCliente" label="Tipo Cliente" sort="true" dataFieldName="tipoCliente" showInList="true" required="true" maxlength="128" />
+            <Date name="dataHoraOcorrencia" label="Data Ocorrência" dataFieldName="dataHoraOcorrencia" sort="true" required="false" showInList="true" dbType="date" />
+            <TextBox name="hora" label="Hora" sort="true" dataFieldName="hora" showInList="true" required="true" maxlength="128" />
+        </fields>
+
+        <filters>
+            <filter label="Codigo Ocorrência" field="logOcorrenciaId" />
+            <filter label="Data Ocorrência" field="dataHoraOcorrencia" filterType="range"/>
+        </filters>
+    </module>
+</AG2Manager>

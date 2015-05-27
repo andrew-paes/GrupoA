@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="noticia" version="1.0">
+		<settings>
+			<title><![CDATA[Release]]></title>
+			<description><![CDATA[Release]]></description>
+
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+			<setting name="assemblyName" value="App_Code" />
+			<setting name="className" value="DeleteNoticia" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="noticia" primaryKey="noticiaId" />
+
+		<events>
+			<add name="BeforeRegisterDelete" />
+		</events>
+
+		<queries>
+			<query section="list" sql="SELECT 
+										  n.*
+										  , ci.*
+										  , CASE WHEN ativo = 1 THEN 'Sim' ELSE 'Não'END AS strAtivo
+										  , CASE WHEN destaque = 1 THEN 'Sim' ELSE 'Não'END AS strDestaque
+										  , cn.nomeCategoriaNoticia
+									  FROM 
+										  noticia n
+										  JOIN categoriaNoticia cn ON cn.categoriaNoticiaId = n.categoriaNoticiaId
+										  JOIN ConteudoImprensa ci ON ci.conteudoImprensaId = n.noticiaId"
+      />
+		</queries>
+		<forms>
+			<edit type="control" src="noticia.ascx" />
+		</forms>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+			<TextBox name="titulo" label="Título" sort="true" dataFieldName="titulo" showInList="true" required="true" maxlength="256" />
+			<CheckBox name="ativo" label="Ativo" dataFieldName="strAtivo" sort="true" required="false" showInList="true" dbType="boolean" />
+			<TextBox name="autor" label="Autor" sort="true" dataFieldName="autor" showInList="true" required="true" maxlength="100" />
+			<TextBox name="fonte" label="Fonte" sort="true" dataFieldName="fonte" showInList="true" required="true" maxlength="100" />
+			<CheckBox name="destaque" label="Destaque" dataFieldName="strDestaque" sort="true" required="false" showInList="true" dbType="boolean" />
+			<Date name="dataNoticia" label="Data Publicação" dataFieldName="dataPublicacao" sort="true" required="false" showInList="true" dbType="date" />
+			<ListBox name="categoriaNoticia"
+					 label="Categoria"
+					 dataFieldName="categoriaNoticiaId"
+					 showInList="true"
+					 inListUseField="nomecategoriaNoticia"
+					 required="true"
+					 dataSource="categoriaNoticia"
+					 dataTextField="nomecategoriaNoticia"
+					 dataValueField="categoriaNoticiaId"
+					 sort="true"
+          />
+		</fields>
+		<filters>
+			<filter label="Título" field="titulo"/>
+			<filter label="Ativo" field="ativo" filterExpression="ativo="/>
+			<filter label="Autor" field="autor"/>
+			<filter label="Fonte" field="fonte"/>
+			<filter label="Destaque" field="destaque" filterExpression="destaque="/>
+			<filter label="Data" field="dataPublicacao" filterExpression="dataPublicacao="/>
+			<filter label="Categoria" field="categoriaNoticia"  filterExpression="cn.categoriaNoticiaId=" />
+		</filters>
+	</module>
+</AG2Manager>

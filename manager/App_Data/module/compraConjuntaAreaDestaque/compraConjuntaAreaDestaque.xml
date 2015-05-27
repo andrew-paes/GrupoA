@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="compraConjuntaAreaDestaque" version="1.0">
+        <settings>
+            <title><![CDATA[Compra Coletiva Área Destaque]]></title>
+            <description><![CDATA[Compra Coletiva Área Destaque]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="CompraConjuntaPagina" primaryKey="compraConjuntaPaginaId" />
+
+        <queries>
+            <!-- Importante: essa query tem um código fixo 2 para o Perfil = Professor -->
+            <query section="list" sql=" SELECT CompraConjuntaPagina.compraConjuntaPaginaId,
+                                               CompraConjuntaPagina.pagina
+                                        FROM CompraConjuntaPagina 
+                                        ORDER BY CompraConjuntaPagina.pagina" />
+        </queries >
+        <forms>
+            <edit type="control" src="../compraConjuntaAreaDestaque/compraConjuntaAreaDestaque.ascx" />
+        </forms>
+
+        <fields>
+            <TextBox name="txtNomePagina" label="Nome da Página" sort="true" dataFieldName="pagina" showInList="true" required="true" maxlength="150" />
+        </fields>
+
+        <!--<filters>
+            <filter label="Nome da Página" field="txtNomePagina" />
+        </filters>-->
+
+    </module>
+
+
+</AG2Manager>

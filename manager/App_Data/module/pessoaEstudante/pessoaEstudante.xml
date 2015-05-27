@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="pessoa" version="1.0">
+    <settings>
+      <title><![CDATA[Estudante]]></title>
+      <description><![CDATA[Estudante.]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="Usuario" primaryKey="usuarioId" />
+
+    <queries>
+        <!-- Importante: essa query tem um código fixo 4 para o Perfil = Estudante -->
+        <query section="list" sql=" SELECT u.usuarioId
+                                          ,u.nomeUsuario
+                                          ,u.cadastroPessoa
+                                          ,u.dataHoraCadastro
+	                                      , case when tipoPessoa = 1 then 'PJ' else 'PF' end as 'tipoPessoaDesc'
+                                        , u.tipoPessoa
+                                        , u.ativo
+                                        , case when ativo = 1 then 'Sim' else 'Não' end as 'strAtivo'
+                                      FROM Usuario u
+	                                    INNER JOIN UsuarioPerfil up ON u.usuarioId = up.usuarioId
+	                                    INNER JOIN Perfil p ON up.perfilId = p.perfilId AND p.perfilId=4
+                                      ORDER BY nomeUsuario" />
+    </queries>
+    <forms>
+      <edit type="control" src="../pessoa/pessoa.ascx" />
+    </forms>
+
+    <!-- Configuracao dos campos que compoe um modulo -->
+    <fields>
+      <TextBox name="nome" label="Nome" sort="true" dataFieldName="nomeUsuario" showInList="true" required="true" maxlength="128" />
+      <TextBox name="cpf" label="CPF" sort="true" dataFieldName="cadastroPessoa" showInList="true" required="false" maxlength="14" />
+      <Date name="dataI" label="Data Cadastro Inicio" dataFieldName="dataHoraCadastro" required="false" showInList="true" dbType="date" />
+      <Date name="dataF" label="Data Cadastro Fim" dataFieldName="dataHoraCadastro" required="false" showInList="false" dbType="date" />
+      <CheckBox name="ativo" label="Ativo" dataFieldName="strAtivo" required="false" showInList="true" dbType="boolean" />
+    </fields>
+
+    <filters>
+      <filter label="Nome" field="nome"/>
+      <filter label="CPF" field="cpf"/>
+      <filter label="Tipo Pessoa" field="tipoPessoaDesc"/>
+      <filter label="Data Cadastro Inicial" field="dataI" filterExpression="dataHoraCadastro &gt;="/>
+      <filter label="Data Cadastro Final" field="dataF" filterExpression="dataHoraCadastro &lt;="/>
+    </filters>
+
+  </module>
+
+
+</AG2Manager>

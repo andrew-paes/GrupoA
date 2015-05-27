@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="Titulo" version="1.0">
+		<settings>
+			<title><![CDATA[Revista Grupo A]]></title>
+			<description><![CDATA[Gerenciamento de Revistas Grupo A do portal.]]></description>
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+			<setting name="assemblyName" value="App_Code" />
+			<setting name="className" value="DeleteRevistaGrupoA" />
+		</settings>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="RevistaGrupoAEdicao" primaryKey="revistaGrupoAEdicaoId" />
+
+		<events>
+			<add name="BeforeRegisterDelete" />
+		</events>
+
+		<queries>
+			<query section="list" sql="SELECT 
+											r.*              
+										FROM 
+											revistagrupoaedicao r
+										ORDER BY 
+											r.anoPublicacao ASC
+											, r.mesPublicacao ASC
+											, r.numeroEdicao
+             " />
+		</queries>
+
+		<forms>
+			<edit type="control" src="revistaGrupoA.ascx" />
+		</forms>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+			<TextBox name="AnoPublicacao" label="Ano Publicação" sort="true" dataFieldName="anoPublicacao" showInList="true" required="false" maxlength="60" >
+				<attributes>
+					<attribute name="Width" value="100px" />
+				</attributes>
+			</TextBox>
+			<TextBox name="MesPublicacao" label="Mês Publicação" sort="true" dataFieldName="mesPublicacao" showInList="true" required="false" maxlength="60" >
+				<attributes>
+					<attribute name="Width" value="100px" />
+				</attributes>
+			</TextBox>
+			<TextBox name="NumeroEdicao" label="Ordem" sort="true" dataFieldName="numeroEdicao" showInList="true" required="false" maxlength="60" >
+				<attributes>
+					<attribute name="Width" value="100px" />
+				</attributes>
+			</TextBox>
+			<TextBox name="TituloRevista" label="Título" sort="true" dataFieldName="tituloRevista" showInList="true" required="false" maxlength="256" >
+				<attributes>
+					<attribute name="Width" value="250px" />
+				</attributes>
+			</TextBox>
+		</fields>
+
+		<filters>			
+			<filter label="Ano Publicação" field="AnoPublicacao" />
+      <filter label="Mês Publicação" field="MesPublicacao" />
+			<filter label="Ordem" field="NumeroEdicao" />
+			<filter label="Titulo" field="TituloRevista" />
+		</filters>
+
+	</module>
+
+</AG2Manager>

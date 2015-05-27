@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="CategoriaNoticia" version="1.0">
+    <settings>
+      <title><![CDATA[Categoria de Notícia]]></title>
+      <description><![CDATA[Gerenciamento de categoria de Noticias.]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+      <setting name="assemblyName" value="App_Code" />
+      <!--<setting name="className" value="DeleteCategoriaEvento" />-->
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="categorianoticia" primaryKey="categorianoticiaId" />
+
+
+    <queries>
+      <query section="list" sql="SELECT * FROM CategoriaNoticia ORDER BY nomeCategoriaNoticia ASC" />
+    </queries>
+
+    <forms>
+      <edit type="control" src="noticiacategoria.ascx" />
+    </forms>
+
+    <!-- Configuracao dos campos que compoe um modulo -->
+    <fields>
+      <TextBox name="nomeCategoriaNoticia" label="Nome" sort="true" dataFieldName="nomeCategoriaNoticia" showInList="true" required="false" maxlength="256" >
+        <attributes>
+          <attribute name="Width" value="250px" />
+        </attributes>
+      </TextBox>
+    </fields>
+
+    <filters>
+      <filter label="Nome" field="nomeCategoriaNoticia" />
+    </filters>
+
+  </module>
+
+
+</AG2Manager>
+

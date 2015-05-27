@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="pessoa" version="1.0">
+    <settings>
+      <title><![CDATA[Meio Pagamento]]></title>
+      <description><![CDATA[Meio Pagamento]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+      <setting name="assemblyName" value="App_Code" />
+      <setting name="className" value="DeleteMeioPagamento" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="meioPagamento" primaryKey="meioPagamentoId" />
+
+    <events>
+      <add name="BeforeRegisterDelete" />
+    </events>
+
+    <queries>
+      <!-- Importante: essa query tem um código fixo 2 para o Perfil = Professor -->
+      <query section="list" sql=" SELECT *,
+                                        CASE WHEN ativo = 1 THEN 'Sim' ELSE 'Não'END AS strAtivo
+                                      FROM meioPagamento 
+                                      ORDER BY nome" />
+    </queries>
+    <forms>
+      <edit type="control" src="../meioPagamento/meioPagamento.ascx" />
+    </forms>
+
+    <fields>
+      <TextBox name="meioPagamentoId" label="Identificador" sort="true" dataFieldName="meioPagamentoId" showInList="true" required="true" maxlength="100" />
+      <TextBox name="nome" label="Nome" sort="true" dataFieldName="nome" showInList="true" required="true" maxlength="100" />
+      <TextBox name="codigoLegado" label="Codigo Legado" sort="true" dataFieldName="codigoLegado" showInList="true" required="true" maxlength="100" />
+      <CheckBox name="ativo" label="Ativo" dataFieldName="strAtivo" sort="true" required="false" showInList="true" dbType="boolean" />
+    </fields>
+
+    <filters>
+      <filter label="Identificador" field="meioPagamentoId" />
+      <filter label="Nome" field="nome" />
+      <filter label="Ativo" field="ativo" filterExpression="ativo="/>
+    </filters>
+
+  </module>
+
+
+</AG2Manager>

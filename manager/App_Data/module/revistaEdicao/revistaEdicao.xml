@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="secao" version="1.0">
+    <settings>
+      <title><![CDATA[Revista Edição]]></title>
+      <description><![CDATA[Revista Edição]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="RevistaEdicao" primaryKey="revistaEdicaoId" />
+
+    <queries>
+      <query section="list" sql="SELECT RevistaEdicao.revistaEdicaoId,
+                                     RevistaEdicao.tituloEdicao,
+                                     RevistaEdicao.numeroEdicao,
+                                     RevistaEdicao.anoPublicacao,
+                                     RevistaEdicao.mesPublicacao,
+                                     CASE WHEN RevistaEdicao.ativo = 1 THEN 'Sim' ELSE 'Não'END AS strAtivo,
+                                     Revista.nomeRevista,
+                                     Revista.revistaId,
+	                                 Produto.homologado,
+                                     CASE WHEN Produto.homologado = 1 THEN 'Sim' ELSE 'Não'END AS strHomologado
+                                 FROM RevistaEdicao
+                                 INNER JOIN Revista ON RevistaEdicao.revistaId = Revista.revistaId
+                                 INNER JOIN Produto ON RevistaEdicao.revistaEdicaoId = Produto.produtoId
+                                 ORDER BY RevistaEdicao.anoPublicacao DESC, RevistaEdicao.mesPublicacao DESC" />
+    </queries>
+    <forms>
+      <edit type="control" src="revistaEdicao.ascx" />
+    </forms>
+
+    <!-- Configuracao dos campos que compoe um modulo -->
+    <fields>
+
+      <ListBox name="nomeRevista" label="Nome da Revista" sort="true" dataFieldName="Revista.revistaId" showInList="true" inListUseField="nomeRevista" dataSource="Revista" dataTextField="nomeRevista" dataValueField="revistaId" />
+      <TextBox name="revistaId" label="Id da Revista" sort="true" dataFieldName="nomeRevista" showInList="false" required="true" maxlength="256" />
+      <TextBox name="numeroEdicao" label="Número da Edição" sort="true" dataFieldName="numeroEdicao" showInList="true" required="true" maxlength="5"  />
+      <TextBox name="anoPublicacao" label="Ano de Publicação" sort="true" dataFieldName="anoPublicacao" showInList="true" required="true" maxlength="5" dbtype="numeric"  />
+      <TextBox name="mesPublicacao" label="Mês de Publicação" sort="true" dataFieldName="mesPublicacao" showInList="true" required="true" maxlength="5"  />
+      <TextBox name="tituloEdicao"  label="Título da Edição" sort="true" dataFieldName="tituloEdicao" showInList="true" required="true"  maxlength="19"/>
+      <CheckBox name="ativo" label="Ativo" sort="true" dataFieldName="strAtivo" required="false" showInList="true" dbType="boolean" />
+      <CheckBox name="homologado" label="Homologado" sort="true" dataFieldName="strHomologado" required="false" showInList="true" dbType="boolean" />
+      
+    </fields>
+    <filters>
+      <filter label="Nome da Revista" field="nomeRevista"/>
+      <filter label="Número da Edição" field="numeroEdicao"/>
+      <filter label="Título da Edição" field="tituloEdicao"/>
+      <filter label="Ano de Publicação" field="anoPublicacao"/>
+      <filter label="Mês de Publicação" field="mesPublicacao"/>
+      <filter label="Ativo" field="ativo" filterExpression="RevistaEdicao.ativo="/>
+      <filter label="Homologado" field="homologado" filterExpression="Produto.Homologado="/>
+    </filters>
+  </module>
+</AG2Manager>

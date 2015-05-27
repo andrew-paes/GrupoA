@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="midia" version="1.0">
+        <settings>
+            <title><![CDATA[Mídia]]></title>
+            <description><![CDATA[Mídia]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+            <setting name="assemblyName" value="App_Code" />
+            <setting name="className" value="DeleteMidia" />
+        </settings>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="midia" primaryKey="midiaId" />
+
+        <events>
+            <add name="BeforeRegisterDelete" />
+        </events>
+
+        <queries>
+            <query section="list" sql="SELECT Midia.midiaId,
+	                                        Midia.tituloMidia,
+	                                        MidiaTipo.tipoMidia,
+                                            CASE WHEN Midia.ativo = 1 THEN 'Sim' ELSE 'Não'END AS StrAtivo
+                                        FROM Midia
+                                        INNER JOIN MidiaTipo ON Midia.midiaTipoId = MidiaTipo.midiaTipoId
+                                        ORDER BY tituloMidia" />
+        </queries>
+        <forms>
+            <edit type="control" src="midia.ascx" />
+        </forms>
+
+        <!-- Configuracao dos campos que compoe um modulo -->
+        <fields>
+            <TextBox name="tituloMidia" label="Título" sort="true" dataFieldName="tituloMidia" showInList="true" required="true" maxlength="120" />
+            <TextBox name="tipoMidia" label="Tipo" sort="true" dataFieldName="tipoMidia" showInList="true" required="true" maxlength="120" />
+            <CheckBox name="ativo" label="Ativo" dataFieldName="StrAtivo" sort="true" required="false" showInList="true" dbType="boolean" />
+        </fields>
+
+        <filters>
+            <filter label="Título" field="tituloMidia" />
+            <filter label="Ativo" field="ativo" filterExpression="Midia.ativo=" />
+        </filters>
+    </module>
+</AG2Manager>

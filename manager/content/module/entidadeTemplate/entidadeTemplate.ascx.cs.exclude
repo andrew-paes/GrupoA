@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Ag2.Manager.Helper;
+using GrupoA.BusinessLogicalLayer;
+using GrupoA.BusinessObject;
+
+public partial class content_module_entidadeTemplate_entidadeTemplate : SmartUserControl
+{
+    #region Eventos
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {            
+            LoadForm();
+        }
+    }
+
+    protected void btnExecute_Click(object sender, EventArgs e)
+    {
+        Page.MaintainScrollPositionOnPostBack = false;
+        SaveEntidadeTemplate();
+
+    }
+
+    #endregion
+
+    #region Métodos
+
+    protected void LoadForm()
+    {
+        if (IdRegistro > 0)
+        {
+            EntidadeTemplate entidadeTemplate = new EntidadeTemplateBLL().Carregar(new EntidadeTemplate() { EntidadeTemplateId = Convert.ToInt32(IdRegistro) });
+            this.txtEntidadeTemplateId.Text = entidadeTemplate.EntidadeTemplateId.ToString();
+            this.txtNome.Text = entidadeTemplate.Nome;
+            this.txtCodigo.Text = entidadeTemplate.Codigo;
+            this.chkAtivo.Checked = entidadeTemplate.Ativo;
+            //não alterar PK
+            this.txtEntidadeTemplateId.Enabled = false;
+        }
+    }
+    protected void SaveEntidadeTemplate()
+    {
+        EntidadeTemplateBLL entidadeTemplateBLL = new EntidadeTemplateBLL();
+        EntidadeTemplate entidadeTemplate = new EntidadeTemplate();
+        entidadeTemplate.EntidadeTemplateId = Convert.ToInt32(this.txtEntidadeTemplateId.Text);
+        entidadeTemplate.Nome = this.txtNome.Text;
+        entidadeTemplate.CodigoLegado = this.txtCodigoLegado.Text;
+        entidadeTemplate.Ativo = this.chkAtivo.Checked;
+        if (IdRegistro > 0)
+        {
+            
+            entidadeTemplateBLL.Atualizar(entidadeTemplate);
+            Util.ShowUpdateMessage();
+        }
+        else
+        {
+            entidadeTemplateBLL.Inserir(entidadeTemplate);
+            Util.ShowInsertMessage();
+        }
+    }
+
+    #endregion
+}

@@ -1,0 +1,25 @@
+﻿*{margin: 0;padding: 0;}
+body, div, p, .txt{font: 11px "Trebuchet MS";color: #3F3F3F;line-height: 16px;}
+h1, h2{ font-family: Verdana; font-weight: bold; text-align: left; font-size: 18px; padding: 0 0 0 0; margin: 2px 0 0 0; color: #6B6B6B;}
+.inputFile{border: 1px solid #ccc; font-size: 12; height: 20px; padding: 2px;}
+.btnManager{cursor:pointer; text-decoration: none;}
+.btnCancelarModal{cursor:pointer; text-decoration: none;}
+.divBarraBotao{margin-top: 10px; border: 1px solid #ccc; padding: 5px; background-color: #f4f4f4; overflow: hidden; height: 22px;}
+.divBarraBotao div{float: right;}
+.frmborder{border: solid 1px #CCCCCC;font: 11px "Trebuchet MS";color: #3F3F3F;background-color: #FFF7F2;padding: 2px 4px;}
+.divCampo{margin-top: 10px;}
+.divBtnCancelar{margin-right: 10px;}
+
+.divListFiles{border: 1px solid #ccc; background-color: #f4f4f4; padding: 3px;}
+.divItemListaArquivo{border: 1px solid #ccc; padding: 3px; background-color: #fff; margin-top: 3px; overflow: auto;}
+.divItemThumbDOC{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px; background-image: url(../img/icon_word.png);}
+.divItemThumbPPT{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px; background-image: url(../img/icon_powerPoint.png);}
+.divItemThumbPDF{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px; background-image: url(../img/icon_pdf.png);}
+.divItemThumbXLS{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px; background-image: url(../img/icon_excel.png);}
+.divItemThumbZIP{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px; background-image: url(../img/icon_zip.png);}
+.divItemThumbTXT{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px; background-image: url(../img/icon_txt.png);}
+.divItemThumbIMG{width: 122px; height: 90px; border: 1px solid #ccc; float: left; margin-right:10px;}
+.divInfoArquivo{float: right; text-align: right; border: 0px solid red;}
+.divInfoArquivo div span{color: #000;}
+.divDeleteFile{float: right; border: 0px solid red; margin-left: 5px;}
+.divEditFile{margin-top: 3px;}

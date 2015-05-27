@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="tituloRelacionado" version="1.0">
+    <settings>
+      <title><![CDATA[Autores do título]]></title>
+      <description><![CDATA[Autores do título.]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="TituloImpresso" primaryKey="TituloImpressoId" />
+
+    <queries>
+      <query section="list" sql="
+                                   SELECT 
+	                                    TituloImpresso.TituloImpressoId, 
+	                                    Produto.NomeProduto, 
+	                                    Titulo.subtituloLivro, 
+	                                    Titulo.numeroPaginas, 
+	                                    Titulo.edicao, 
+	                                    Titulo.dataLancamento, 
+	                                    Titulo.dataPublicacao, 
+	                                    Titulo.tituloId, 
+				                              TituloImpresso.peso,
+				                              TituloImpresso.isbn13,
+	                                    Produto.produtoId, 
+	                                    Produto.produtoTipoId, 
+	                                    Produto.disponivel, 
+	                                    Produto.fabricanteId, 
+	                                    Produto.valorUnitario, 
+	                                    Produto.valorOferta, 
+	                                    Produto.codigoEAN13, 
+	                                    Produto.codigoProduto, 
+	                                    Conteudo.conteudoId, 
+	                                    Conteudo.conteudoTipoId, 
+	                                    Conteudo.dataHoraCadastro,
+	                                    CASE WHEN Produto.ExibirSite = 1 THEN 'Sim' ELSE 'Não'END AS strExibeSite
+                                  FROM Titulo
+                                  INNER JOIN TituloImpresso ON TituloImpresso.tituloId=Titulo.tituloId
+                                  INNER JOIN Produto ON TituloImpresso.TituloImpressoId=Produto.produtoId
+                                  INNER JOIN Conteudo ON Produto.produtoId=Conteudo.conteudoId
+                                  ORDER BY Produto.NomeProduto DESC " />
+    </queries>
+    <forms>
+      <edit type="control" src="tituloAutor.ascx" />
+    </forms>
+    <!-- Configuracao dos campos que compoe um modulo -->
+    <fields>
+      <TextBox name="titulo" label="Título" sort="true" dataFieldName="NomeProduto" showInList="true" required="false" maxlength="256" >
+        <attributes>
+          <attribute name="Width" value="250px" />
+        </attributes>
+      </TextBox>
+      <TextBox name="subtitulo" label="Sub-Título" sort="true" dataFieldName="subtituloLivro" showInList="false" required="false" maxlength="100" >
+        <attributes>
+          <attribute name="Width" value="250px" />
+        </attributes>
+      </TextBox>
+      <TextBox name="isbn13" label="ISBN 13" sort="true" dataFieldName="isbn13" showInList="true" required="false" maxlength="17" />
+      <Date name="dataPublicacao" label="Data Publicação" dataFieldName="dataPublicacao" required="false" showInList="true" dbType="date" />
+    </fields>
+    <filters>
+      <filter label="Título" field="titulo"/>
+      <filter label="ISBN 13" field="isbn13"/>
+      <filter label="Data Publicação" field="dataPublicacao" filterType="range"/>
+    </filters>
+  </module>
+</AG2Manager>

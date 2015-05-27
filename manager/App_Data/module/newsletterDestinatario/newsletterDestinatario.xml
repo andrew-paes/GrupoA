@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+    <module name="newsletterDestinatario" version="1.0">
+        <settings>
+            <title><![CDATA[Destinatários Newsletter]]></title>
+            <description><![CDATA[Gerenciamento de Destinatários de Newsltter]]></description>
+
+            <setting name="controlVersion"  value="false" />
+            <setting name="multiLanguage" value="false" />
+            <setting name="paging" value="true" />
+            <setting name="pageSize" value="15" />
+        </settings>
+
+        <options>
+            <option querySection="export" value="excel" name="Exportar (Excel)" />
+        </options>
+
+        <!-- Configuracao da tabela que recebe os dados -->
+        <table name="NewsletterDestinatario" primaryKey="newsletterDestinatarioId" />
+
+        <queries>
+            <query section="list" sql="SELECT 
+	                                        *
+                                        FROM
+	                                        NewsletterDestinatario
+                                        ORDER BY
+	                                        nomeDestinatario
+            " />
+
+            <query section="export" sql="SELECT 
+	                                        *
+                                        FROM
+	                                        NewsletterDestinatario
+                                        ORDER BY
+	                                        nomeDestinatario
+            " />
+        </queries>
+
+        <forms>
+            <edit type="control" src="newsletterDestinatario.ascx" />
+        </forms>
+
+        <!-- Configuracao dos campos que compoe um modulo -->
+        <fields>
+            <TextBox name="nomeDestinatario" label="Nome" sort="true" dataFieldName="nomeDestinatario" required="false" showInList="true" maxlength="17" />
+            <TextBox name="emailDestinatario" label="E-mail" sort="true" dataFieldName="emailDestinatario" required="false" showInList="true" maxlength="17" />
+            <Date name="dataHoraCadastro" label="Data Cadastro" sort="true" dataFieldName="dataHoraCadastro" required="false" showInList="true" dbType="date" />
+        </fields>
+        <filters>
+            <filter label="Nome" field="nomeDestinatario"/>
+            <filter label="E-mail" field="emailDestinatario"/>
+            <filter label="Data Cadastro" field="dataHoraCadastro" filterType="range"/>
+        </filters>
+    </module>
+</AG2Manager>

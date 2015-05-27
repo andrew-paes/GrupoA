@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="Titulo" version="1.0">
+    <settings>
+      <title><![CDATA[Promoção]]></title>
+      <description><![CDATA[Gerenciamento de Promoções do portal.]]></description>
+
+      <setting name="controlVersion"  value="false" />
+      <setting name="multiLanguage" value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="15" />
+      <setting name="assemblyName" value="App_Code" />
+      <setting name="className" value="DeletePromocao" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="promocao" primaryKey="promocaoId" />
+    
+    <events>
+      <add name="BeforeRegisterDelete" />
+    </events>
+
+    <queries>
+      <query section="list" sql="
+             SELECT 
+              p.*
+			        ,PromocaoTipo.tipoPromocao 
+              ,CASE WHEN [Ativa] = 1 THEN 'Sim' ELSE 'Não'END AS StrAtiva
+              ,CASE WHEN p.origemSistema = 1 THEN 'Sim' ELSE 'Não'END AS StrOrigemSistema
+             FROM Promocao p
+             INNER JOIN PromocaoTipo ON PromocaoTipo.promocaoTipoId = p.promocaoTipoId
+             ORDER BY p.promocaoId DESC
+             " />
+    </queries>
+
+    <forms>
+      <edit type="control" src="promocao.ascx" />
+    </forms>
+
+    <!-- Configuracao dos campos que compoe um modulo -->
+    <fields>
+       <TextBox name="NomePromocao" label="Nome" sort="true" dataFieldName="nomePromocao" showInList="true" required="false" maxlength="256" >
+        <attributes>
+          <attribute name="Width" value="250px" />
+        </attributes>
+      </TextBox>
+      <Date name="dataPromocaoInicio" label="Data de Início" sort="true" dataFieldName="dataHoraInicio" showInList="true" required="false" maxlength="256" >
+        <attributes>
+          <attribute name="Width" value="250px" />
+        </attributes>
+      </Date>
+      <Date name="dataPromocaoFim" label="Data de Fim" sort="true" dataFieldName="dataHoraFim" showInList="true" required="false" maxlength="256" >
+        <attributes>
+          <attribute name="Width" value="250px" />
+        </attributes>
+      </Date>
+      <CheckBox name="Ativa" label="Ativa" dataFieldName="StrAtiva" required="false" showInList="true" dbType="boolean" />
+      <ListBox name="tipoPromocao"
+               label="Tipo de Promoção"
+               dataFieldName="promocaoTipoId"
+               showInList="true"
+               inListUseField="tipoPromocao"
+               required="true"
+               dataSource="PromocaoTipo"
+               dataTextField="tipoPromocao"
+               dataValueField="promocaoTipoId"
+          />
+        <CheckBox name="OrigemSistema" label="Gerado Pelo Sistema" dataFieldName="StrOrigemSistema" required="false" showInList="true" dbType="boolean" />
+    </fields>
+
+    <filters>
+      <filter label="Nome Promoção" field="NomePromocao" />
+      <filter label="Data de Início" field="dataPromocaoInicio" filterExpression="dataHoraInicio &gt;=" />
+      <filter label="Data de Fim" field="dataPromocaoFim" filterExpression="dataHoraFim &lt;=" />
+      <filter label="Ativa" field="Ativa" filterExpression="Ativa=" />
+      <filter label="Tipo de Promoção" field="tipoPromocao" />
+      <filter label="Promoção anivesariantes" field="OrigemSistema" filterExpression="OrigemSistema=" />
+    </filters>
+
+  </module>
+
+
+</AG2Manager>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+	<module name="disciplina" version="1.0">
+		<settings>
+			<title><![CDATA[Cadastro Disciplina]]></title>
+			<description><![CDATA[Cadastro Disciplina]]></description>
+			<setting name="controlVersion"  value="false" />
+			<setting name="multiLanguage" value="false" />
+			<setting name="paging" value="true" />
+			<setting name="pageSize" value="15" />
+            <setting name="assemblyName" value="App_Code" />
+            <setting name="className" value="DeleteDisciplina" />
+		</settings>
+
+        <events>
+            <add name="BeforeRegisterDelete" />
+        </events>
+
+		<!-- Configuracao da tabela que recebe os dados -->
+		<table name="Disciplina" primaryKey="disciplinaId" />
+
+		<queries>
+			<query section="list" sql="SELECT
+                                            *
+                                        FROM
+                                            Disciplina
+                                        ORDER BY
+                                            Disciplina.descricao"
+			/>
+		</queries>
+		
+		<forms>
+			<edit type="control" src="disciplina.ascx" />
+		</forms>
+
+		<!-- Configuracao dos campos que compoe um modulo -->
+		<fields>
+            <TextBox name="descricao" label="Nome" sort="true" dataFieldName="descricao" showInList="true" required="true" maxlength="100" />
+		</fields>
+		
+		<filters>
+            <filter label="Nome" field="descricao" />
+		</filters>
+		
+	</module>
+	
+</AG2Manager>

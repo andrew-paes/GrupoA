@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AG2Manager version="1.0">
+  <module name="idioma" version="1.0">
+    <!--Habilita o multi idioma para o módulo-->
+    <settings>
+      <title><![CDATA[Configuração de Idiomas]]></title>
+      <description><![CDATA[Configuração de Idiomas]]></description>
+
+      <setting name="multiLanguage"  value="false" />
+      <setting name="controlVersion"  value="false" />
+      <setting name="paging" value="true" />
+      <setting name="pageSize" value="10" />
+    </settings>
+
+    <!-- Configuracao da tabela que recebe os dados -->
+    <table name="noticia" primaryKey="noticiaId" />
+
+    <forms>
+      <list type="control" src="idioma.ascx" />
+    </forms>
+
+    <!-- CONFIGURACAO DOS CAMPOS QUE COMPOE UM MODULO -->
+    <fields />
+
+  </module>
+
+</AG2Manager>
